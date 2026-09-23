@@ -127,22 +127,24 @@ width: 75%;
 
 /* 1. GTranslate Nice Dropdown (.gt_switcher) */
 .iddi-header__lang .gt_switcher {
-	border-radius: 20px !important;
-	border: 1.5px solid var(--color-alice-blue, #EAEFF5) !important;
-	background: #FFFFFF !important;
+	border-radius: 0 !important;
+	border: none !important;
+	background: transparent !important;
 	font-family: inherit !important;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+	box-shadow: none !important;
 	transition: all 0.3s ease !important;
 }
 
 .iddi-header__lang .gt_switcher:hover {
-	border-color: var(--color-flame-orange, #E45E25) !important;
-	box-shadow: 0 4px 12px rgba(228, 94, 37, 0.12) !important;
+	border: none !important;
+	box-shadow: none !important;
 }
 
 .iddi-header__lang .gt_switcher .gt_selected {
 	background: transparent !important;
-	border-radius: 20px !important;
+	border-radius: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
 	padding: 0 !important;
 }
 
@@ -150,28 +152,34 @@ width: 75%;
 	display: inline-flex !important;
 	align-items: center !important;
 	gap: 6px !important;
-	padding: 6px 12px !important;
-	font-size: 14px !important;
-	font-weight: 500 !important;
+	padding: 6px 8px !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
 	color: var(--color-oxford-blue, #192954) !important;
 	text-decoration: none !important;
 	line-height: 1 !important;
+	transition: color 0.3s ease !important;
+}
+
+.iddi-header__lang .gt_switcher .gt_selected a:hover {
+	color: var(--color-flame-orange, #E45E25) !important;
 }
 
 .iddi-header__lang .gt_switcher .gt_selected a img {
-	border-radius: 2px !important;
+	border-radius: 0 !important;
+	border: none !important;
 	margin: 0 !important;
 	vertical-align: middle !important;
 }
 
 .iddi-header__lang .gt_switcher .gt_options {
 	position: absolute !important;
-	top: calc(100% + 6px) !important;
+	top: calc(100% + 4px) !important;
 	left: 0 !important;
 	min-width: 100% !important;
 	background: #FFFFFF !important;
 	border: 1px solid var(--color-alice-blue, #EAEFF5) !important;
-	border-radius: 12px !important;
+	border-radius: 8px !important;
 	box-shadow: 0 10px 25px rgba(25, 41, 84, 0.12) !important;
 	padding: 6px !important;
 	z-index: 999999 !important;
@@ -183,7 +191,7 @@ width: 75%;
 	align-items: center !important;
 	gap: 8px !important;
 	padding: 8px 12px !important;
-	border-radius: 8px !important;
+	border-radius: 4px !important;
 	font-size: 13px !important;
 	font-weight: 500 !important;
 	color: var(--color-oxford-blue, #192954) !important;
@@ -196,31 +204,37 @@ width: 75%;
 	color: var(--color-flame-orange, #E45E25) !important;
 }
 
-/* 2. GTranslate Native Select (.gt_selector) */
+/* 2. GTranslate Native Select / any select inside (.gt_selector) */
+.iddi-header__lang select,
 .iddi-header__lang select.gt_selector {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background-color: #FFFFFF;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23192954' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-	background-repeat: no-repeat;
-	background-position: right 10px center;
-	border: 1.5px solid var(--color-alice-blue, #EAEFF5);
-	border-radius: 20px;
-	padding: 6px 28px 6px 12px;
-	font-size: 14px;
-	font-weight: 500;
-	color: var(--color-oxford-blue, #192954);
+	background-color: transparent !important;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23192954' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+	background-repeat: no-repeat !important;
+	background-position: right 2px center !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	padding: 6px 20px 6px 4px !important;
+	font-size: 15px !important;
+	font-weight: 600 !important;
+	color: var(--color-oxford-blue, #192954) !important;
 	cursor: pointer;
-	outline: none;
-	transition: all 0.3s ease;
+	outline: none !important;
+	transition: color 0.3s ease !important;
 	line-height: 1.2;
 }
 
+.iddi-header__lang select:hover,
+.iddi-header__lang select:focus,
 .iddi-header__lang select.gt_selector:hover,
 .iddi-header__lang select.gt_selector:focus {
-	border-color: var(--color-flame-orange, #E45E25);
-	box-shadow: 0 2px 8px rgba(228, 94, 37, 0.12);
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	color: var(--color-flame-orange, #E45E25) !important;
 }
 
 /* 3. GTranslate Flags Only mode */
@@ -228,7 +242,9 @@ width: 75%;
 	display: inline-flex;
 	align-items: center;
 	padding: 2px 4px;
-	border-radius: 4px;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
 	transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -238,7 +254,8 @@ width: 75%;
 }
 
 .iddi-header__lang a.glink img {
-	border-radius: 2px;
+	border-radius: 0 !important;
+	border: none !important;
 	display: block;
 }
 
@@ -583,12 +600,13 @@ body:has(.iddi-header-search.open-popup)::after {
 	}
 
 	.iddi-header__lang .gt_switcher .gt_selected a,
+	.iddi-header__lang select,
 	.iddi-header__lang select.gt_selector {
-		font-size: 13px;
-		padding: 5px 10px;
-	}
-	.iddi-header__lang select.gt_selector {
-		padding-right: 24px;
+		font-size: 13px !important;
+		padding: 4px 18px 4px 2px !important;
+		border: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
 	}
 }
 @media (max-width: 768px) { 
@@ -628,11 +646,12 @@ body:has(.iddi-header-search.open-popup)::after {
 		margin-right: 0;
 	}
 	.iddi-header__lang .gt_switcher .gt_selected a,
+	.iddi-header__lang select,
 	.iddi-header__lang select.gt_selector {
-		font-size: 12px;
-		padding: 4px 8px;
-	}
-	.iddi-header__lang select.gt_selector {
-		padding-right: 20px;
+		font-size: 12px !important;
+		padding: 4px 16px 4px 2px !important;
+		border: none !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
 	}
 }
