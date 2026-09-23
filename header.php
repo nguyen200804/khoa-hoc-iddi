@@ -94,17 +94,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<nav class="iddi-header__popup-menu-nav fs-18__xl fs-16__md">
 								<?php
 								wp_nav_menu( array(
-									'menu'           => 3,
+									'theme_location' => 'mobile-menu',
 									'container'      => false,
 									'items_wrap'     => '<ul class="">%3$s</ul>',
-									'fallback_cb'    => false,
+									'fallback_cb'    => function() {
+										wp_nav_menu( array(
+											'theme_location' => 'primary-menu',
+											'menu'           => 3,
+											'container'      => false,
+											'items_wrap'     => '<ul class="">%3$s</ul>',
+											'fallback_cb'    => false,
+										) );
+									},
 								) );
 								?>
 							</nav>
 							<div class="iddi-header__popup-menu-actions d-flex">
 								<button class="button-header contact-now" 
         onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()">
-    Đăng ký ngay
+    <?php iddi_tr_e('Đăng ký ngay'); ?>
 </button>
 
 								<a class="button-header call-now" href="tel:0369750194"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span>0369 750 194</span></a>
@@ -144,28 +152,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<nav class="iddi-header__nav ">
 					<?php
 					wp_nav_menu( array(
-						'menu'           => 3,
+						'theme_location' => 'primary-menu',
 						'container'      => false,
 						'items_wrap'     => '<ul class="iddi-header__nav-list d-flex flex-jc-center">%3$s</ul>',
-						'fallback_cb'    => false,
+						'fallback_cb'    => function() {
+							wp_nav_menu( array(
+								'menu'           => 3,
+								'container'      => false,
+								'items_wrap'     => '<ul class="iddi-header__nav-list d-flex flex-jc-center">%3$s</ul>',
+								'fallback_cb'    => false,
+							) );
+						},
 					) );
 					?>
 				</nav>
 
 				
 
-
 				<div class="iddi-header__lang">
-					<?php echo do_shortcode('[gtranslate]'); ?>
+					<?php 
+					if ( function_exists( 'iddi_render_language_switcher' ) ) {
+						iddi_render_language_switcher();
+					}
+					?>
 				</div>
 
-				<button class="button-header contact-now d-none__xl" onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()"><span>Đăng ký ngay</span></button>
+				<button class="button-header contact-now d-none__xl" onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()"><span><?php iddi_tr_e('Đăng ký ngay'); ?></span></button>
 
 				<a class="button-header call-now d-none__xl" href="tel:0369750194"><span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span>0369 750 194</span></span></a>
 
 
 				<div class="iddi-header__btn-search">
-					<button class="reset-button button-open-search" aria-label="Tìm kiếm">
+					<button class="reset-button button-open-search" aria-label="<?php echo esc_attr( iddi_tr('Tìm kiếm') ); ?>">
 						<svg viewBox="0 0 512 512" data-name="11 Search" xmlns="http://www.w3.org/2000/svg">
 							<path data-name="Path 16" d="M497.914 497.913a48.085 48.085 0 0 1-68.008 0l-84.863-84.863a222.6 222.6 0 0 1-120.659 35.717C100.469 448.767 0 348.313 0 224.383S100.469 0 224.384 0c123.931 0 224.384 100.452 224.384 224.383a222.87 222.87 0 0 1-35.718 120.676l84.864 84.863a48.066 48.066 0 0 1 0 67.991m-273.53-433.8a160.274 160.274 0 1 0 160.274 160.269A160.27 160.27 0 0 0 224.384 64.109Z" fill-rule="evenodd" fill="currentColor"/>
 						</svg>

@@ -19,6 +19,9 @@ function homenest_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'homenest_enqueue_styles');
 
+// Nạp các helper đa ngôn ngữ Polylang cho IDDI Academy
+require_once get_template_directory() . '/inc/polylang-helpers.php';
+
 
 
 
@@ -287,8 +290,9 @@ function homenest_theme_setup() {
 
 	// 2. Đăng ký các vị trí hiển thị Menu trên Website
 	register_nav_menus(array(
-		'primary-menu' => __('Menu Chính (Header)', 'homenest'),
-		'footer-menu'  => __('Menu Chân Trang (Footer)', 'homenest'),
+		'primary-menu' => __('Menu Chính (Header)', 'iddi-academy'),
+		'mobile-menu'  => __('Menu Mobile (Popup)', 'iddi-academy'),
+		'footer-menu'  => __('Menu Chân Trang (Footer)', 'iddi-academy'),
 	));
 
 	// 3. Kích hoạt tính năng Ảnh đại diện (Thumbnail) cho bài viết/trang
