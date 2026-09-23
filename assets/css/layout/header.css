@@ -158,11 +158,11 @@ width: 75%;
 	color: var(--color-oxford-blue, #192954) !important;
 	text-decoration: none !important;
 	line-height: 1 !important;
-	transition: color 0.3s ease !important;
+	transition: none !important;
 }
 
 .iddi-header__lang .gt_switcher .gt_selected a:hover {
-	color: var(--color-flame-orange, #E45E25) !important;
+	color: var(--color-oxford-blue, #192954) !important;
 }
 
 .iddi-header__lang .gt_switcher .gt_selected a img {
@@ -223,7 +223,7 @@ width: 75%;
 	color: var(--color-oxford-blue, #192954) !important;
 	cursor: pointer;
 	outline: none !important;
-	transition: color 0.3s ease !important;
+	transition: none !important;
 	line-height: 1.2;
 }
 
@@ -234,7 +234,7 @@ width: 75%;
 	border: none !important;
 	box-shadow: none !important;
 	outline: none !important;
-	color: var(--color-flame-orange, #E45E25) !important;
+	color: var(--color-oxford-blue, #192954) !important;
 }
 
 /* 3. GTranslate Flags Only mode */
