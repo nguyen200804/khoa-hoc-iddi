@@ -245,3 +245,62 @@ add_filter( 'acf/settings/current_language', function( $lang ) {
 	}
 	return $lang;
 } );
+
+/**
+ * 5. Tự động gán ngôn ngữ mặc định (Tiếng Việt) cho các bài viết / khóa học chưa có ngôn ngữ
+ * Khắc phục hiện tượng cột cờ Polylang bị trắng hoàn toàn (thiếu dấu tick, dấu (+) và bút chỉnh sửa)
+ */
+add_action( 'load-edit.php', function() {
+	if ( ! function_exists( 'pll_default_language' ) || ! function_exists( 'pll_set_post_language' ) ) {
+		return;
+	}
+
+	$screen = get_current_screen();
+	$post_type = $screen ? $screen->post_type : '';
+	if ( ! $post_type ) {
+		return;
+	}
+
+	$supported_types = array( 'lp_course', 'lp_lesson', 'lp_quiz', 'post', 'page', 'event', 'giang-vien' );
+	if ( ! in_array( $post_type, $supported_types, true ) ) {
+		return;
+	}
+
+	$default_lang = pll_default_language( 'slug' );
+	if ( ! $default_lang ) {
+		$default_lang = 'vi';
+	}
+
+	// Lấy các bài viết thuộc post type hiện tại chưa có ngôn ngữ
+	$unassigned_posts = get_posts( array(
+		'post_type'      => $post_type,
+		'posts_per_page' => 100,
+		'post_status'    => 'any',
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'language',
+				'operator' => 'NOT EXISTS',
+			),
+		),
+		'fields'         => 'ids',
+		'no_found_rows'  => true,
+	) );
+
+	if ( ! empty( $unassigned_posts ) ) {
+		foreach ( $unassigned_posts as $p_id ) {
+			pll_set_post_language( $p_id, $default_lang );
+		}
+	}
+} );
+
+add_action( 'load-post.php', function() {
+	if ( ! function_exists( 'pll_default_language' ) || ! function_exists( 'pll_set_post_language' ) || ! function_exists( 'pll_get_post_language' ) ) {
+		return;
+	}
+	$post_id = isset( $_GET['post'] ) ? absint( $_GET['post'] ) : 0;
+	if ( $post_id && ! pll_get_post_language( $post_id ) ) {
+		$default_lang = pll_default_language( 'slug' ) ?: 'vi';
+		pll_set_post_language( $post_id, $default_lang );
+	}
+} );
+
