@@ -81,6 +81,20 @@
             }
         });
 
+        // 8. Xử lý Toggle Dropdown Ngôn ngữ (Language Switcher)
+        $(document).on('click', '.gt_switcher .gt_selected a, .iddi-header__lang-toggle', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const $switcher = $(this).closest('.gt_switcher, .iddi-header__lang-dropdown');
+            $switcher.toggleClass('is-open');
+        });
+
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.gt_switcher, .iddi-header__lang-dropdown').length) {
+                $('.gt_switcher, .iddi-header__lang-dropdown').removeClass('is-open');
+            }
+        });
+
         $(window).on('resize', updateMenuHeight);
     });
 })(jQuery);

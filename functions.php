@@ -133,7 +133,7 @@ function my_theme_enqueue_assets() {
 	wp_enqueue_style('comment-style', get_template_directory_uri() . '/assets/css/comments.css', array('default-style'), '1.0.0');
 
 	// 4. Tải tài nguyên Layout (Phụ thuộc vào file Default)
-	wp_enqueue_style('header-style', get_template_directory_uri() . '/assets/css/layout/header.css', array('default-style'), '1.0.0');
+	wp_enqueue_style('header-style', get_template_directory_uri() . '/assets/css/layout/header.css', array('default-style'), time());
 	wp_enqueue_style('footer-style', get_template_directory_uri() . '/assets/css/layout/footer.css', array('default-style'), '1.0.0');
 
 

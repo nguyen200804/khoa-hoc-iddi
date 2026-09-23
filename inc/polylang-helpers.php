@@ -174,37 +174,36 @@ function iddi_render_language_switcher( $args = array() ) {
 
 			$current_slug = strtoupper( $current_lang['slug'] );
 			?>
-			<div class="iddi-header__lang-dropdown" id="iddi-lang-dropdown">
-				<button type="button" class="iddi-header__lang-toggle reset-button" aria-haspopup="true" aria-expanded="false" title="<?php echo esc_attr( $current_lang['name'] ); ?>">
-					<?php if ( ! empty( $current_lang['flag'] ) ) : ?>
-						<span class="iddi-header__lang-flag">
-							<img src="<?php echo esc_url( $current_lang['flag'] ); ?>" alt="<?php echo esc_attr( $current_lang['name'] ); ?>" width="18" height="12" loading="eager" />
+			<div class="gt_switcher notranslate iddi-header__lang-dropdown" id="iddi-lang-dropdown">
+				<div class="gt_selected">
+					<a href="javascript:void(0)" class="iddi-header__lang-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="<?php echo esc_attr( $current_lang['name'] ); ?>">
+						<?php if ( ! empty( $current_lang['flag'] ) ) : ?>
+							<span class="iddi-header__lang-flag">
+								<img src="<?php echo esc_url( $current_lang['flag'] ); ?>" alt="<?php echo esc_attr( $current_lang['name'] ); ?>" width="18" height="12" loading="eager" />
+							</span>
+						<?php endif; ?>
+						<span class="iddi-header__lang-code"><?php echo esc_html( $current_slug ); ?></span>
+						<span class="iddi-header__lang-arrow">
+							<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
 						</span>
-					<?php endif; ?>
-					<span class="iddi-header__lang-code"><?php echo esc_html( $current_slug ); ?></span>
-					<span class="iddi-header__lang-arrow">
-						<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-					</span>
-				</button>
-				<ul class="iddi-header__lang-menu">
+					</a>
+				</div>
+				<div class="gt_options iddi-header__lang-menu">
 					<?php foreach ( $languages as $slug => $lang ) : 
 						$is_active = ! empty( $lang['current_lang'] );
 						?>
-						<li class="iddi-header__lang-item <?php echo $is_active ? 'is-active' : ''; ?>">
-							<a href="<?php echo esc_url( $lang['url'] ); ?>" class="iddi-header__lang-link" <?php echo $is_active ? 'aria-current="true"' : ''; ?>>
-								<?php if ( ! empty( $lang['flag'] ) ) : ?>
-									<span class="iddi-header__lang-flag">
-										<img src="<?php echo esc_url( $lang['flag'] ); ?>" alt="<?php echo esc_attr( $lang['name'] ); ?>" width="18" height="12" loading="lazy" />
-									</span>
-								<?php endif; ?>
-								<span class="iddi-header__lang-name"><?php echo esc_html( $lang['name'] ); ?></span>
-								<span class="iddi-header__lang-tag"><?php echo esc_html( strtoupper( $slug ) ); ?></span>
-							</a>
-						</li>
+						<a href="<?php echo esc_url( $lang['url'] ); ?>" class="iddi-header__lang-link <?php echo $is_active ? 'is-active' : ''; ?>" <?php echo $is_active ? 'aria-current="true"' : ''; ?>>
+							<?php if ( ! empty( $lang['flag'] ) ) : ?>
+								<span class="iddi-header__lang-flag">
+									<img src="<?php echo esc_url( $lang['flag'] ); ?>" alt="<?php echo esc_attr( $lang['name'] ); ?>" width="18" height="12" loading="lazy" />
+								</span>
+							<?php endif; ?>
+							<span class="iddi-header__lang-name"><?php echo esc_html( $lang['name'] ); ?></span>
+						</a>
 					<?php endforeach; ?>
-				</ul>
+				</div>
 			</div>
 			<?php
 			return;
@@ -213,29 +212,25 @@ function iddi_render_language_switcher( $args = array() ) {
 
 	// Fallback khi Polylang chưa kích hoạt hoặc đang khởi tạo
 	?>
-	<div class="iddi-header__lang-dropdown iddi-header__lang-fallback" id="iddi-lang-dropdown">
-		<button type="button" class="iddi-header__lang-toggle reset-button" aria-haspopup="true" aria-expanded="false">
-			<span class="iddi-header__lang-code">VI</span>
-			<span class="iddi-header__lang-arrow">
-				<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg>
-			</span>
-		</button>
-		<ul class="iddi-header__lang-menu">
-			<li class="iddi-header__lang-item is-active">
-				<a href="#" class="iddi-header__lang-link">
-					<span class="iddi-header__lang-name">Tiếng Việt</span>
-					<span class="iddi-header__lang-tag">VI</span>
-				</a>
-			</li>
-			<li class="iddi-header__lang-item">
-				<a href="#" class="iddi-header__lang-link">
-					<span class="iddi-header__lang-name">English</span>
-					<span class="iddi-header__lang-tag">EN</span>
-				</a>
-			</li>
-		</ul>
+	<div class="gt_switcher notranslate iddi-header__lang-dropdown iddi-header__lang-fallback" id="iddi-lang-dropdown">
+		<div class="gt_selected">
+			<a href="javascript:void(0)" class="iddi-header__lang-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+				<span class="iddi-header__lang-code">VI</span>
+				<span class="iddi-header__lang-arrow">
+					<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</span>
+			</a>
+		</div>
+		<div class="gt_options iddi-header__lang-menu">
+			<a href="#" class="iddi-header__lang-link is-active">
+				<span class="iddi-header__lang-name">Tiếng Việt</span>
+			</a>
+			<a href="#" class="iddi-header__lang-link">
+				<span class="iddi-header__lang-name">English</span>
+			</a>
+		</div>
 	</div>
 	<?php
 }
