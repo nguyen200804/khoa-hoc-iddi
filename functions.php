@@ -149,7 +149,7 @@ function my_theme_enqueue_assets() {
         'header-script', 
         get_template_directory_uri() . '/assets/js/layout/header.js', 
         array('jquery', 'default-script'), 
-        '1.1.0', 
+        time(), 
         true
     );
 

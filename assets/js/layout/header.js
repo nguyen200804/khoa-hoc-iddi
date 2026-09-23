@@ -81,7 +81,19 @@
             }
         });
 
-        // 8. Xử lý Toggle Dropdown Ngôn ngữ (Language Switcher)
+        // 8. Xử lý Toggle & Hover Buffer cho Dropdown Ngôn ngữ (Language Switcher)
+        let langHoverTimeout;
+
+        $(document).on('mouseenter', '.gt_switcher, .iddi-header__lang-dropdown', function() {
+            clearTimeout(langHoverTimeout);
+            $(this).addClass('is-hovered');
+        }).on('mouseleave', '.gt_switcher, .iddi-header__lang-dropdown', function() {
+            const $this = $(this);
+            langHoverTimeout = setTimeout(function() {
+                $this.removeClass('is-hovered');
+            }, 250); // Grace period: 250ms giúp rê chuột xéo không bị rơi menu
+        });
+
         $(document).on('click', '.gt_switcher .gt_selected a, .iddi-header__lang-toggle', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -91,7 +103,7 @@
 
         $(document).on('click', function(e) {
             if (!$(e.target).closest('.gt_switcher, .iddi-header__lang-dropdown').length) {
-                $('.gt_switcher, .iddi-header__lang-dropdown').removeClass('is-open');
+                $('.gt_switcher, .iddi-header__lang-dropdown').removeClass('is-open is-hovered');
             }
         });
 
