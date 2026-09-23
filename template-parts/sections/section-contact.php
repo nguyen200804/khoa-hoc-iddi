@@ -11,7 +11,7 @@ enqueue_section_assets('section-contact', true);
 
     <div class="iddi-section-contact__header">
         <?php 
-        $contact_main_title = get_field('contact_section__main_title', 'option'); 
+        $contact_main_title = function_exists('iddi_get_field_option') ? iddi_get_field_option('contact_section__main_title') : get_field('contact_section__main_title', 'option'); 
         if ( $contact_main_title ) : ?>
             <div class="iddi-section-contact__title fs-40 fw-300 italic-font text-color-oxford-blue fs-24__xl fs-20__lg">
                 <?php echo wp_kses_post($contact_main_title); ?>
@@ -22,7 +22,10 @@ enqueue_section_assets('section-contact', true);
     
 			
 			
-			<?php echo do_shortcode ('[contact-form-7 id="7d92c07" title="Liên hệ ngay"]') ?>
+			<?php 
+			$contact_form_code = function_exists('iddi_tr') ? iddi_tr('[contact-form-7 id="7d92c07" title="Liên hệ ngay"]') : '[contact-form-7 id="7d92c07" title="Liên hệ ngay"]';
+			echo do_shortcode( $contact_form_code ); 
+			?>
 
 </div>
 

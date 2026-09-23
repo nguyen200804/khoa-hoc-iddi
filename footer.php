@@ -1,9 +1,9 @@
 <?php 
-    // Lấy dữ liệu từ ACF (Giả định nằm trong Option Page, nếu không hãy bỏ ', 'option')
-    $col1 = get_field('footer__column_1', 'option');
-    $col2 = get_field('footer__column_2', 'option');
-    $col3 = get_field('footer__column_3', 'option');
-    $copyright = get_field('footer__copy_right', 'option');
+    // Lấy dữ liệu từ ACF với cơ chế an toàn đa ngôn ngữ
+    $col1 = function_exists('iddi_get_field_option') ? iddi_get_field_option('footer__column_1') : get_field('footer__column_1', 'option');
+    $col2 = function_exists('iddi_get_field_option') ? iddi_get_field_option('footer__column_2') : get_field('footer__column_2', 'option');
+    $col3 = function_exists('iddi_get_field_option') ? iddi_get_field_option('footer__column_3') : get_field('footer__column_3', 'option');
+    $copyright = function_exists('iddi_get_field_option') ? iddi_get_field_option('footer__copy_right') : get_field('footer__copy_right', 'option');
 ?>
 
 <footer class="iddi-footer p-relative">
@@ -39,8 +39,16 @@
                     <div class="iddi-footer__widget"> 
                         <?php
                             if(!empty($col2['select_menu'])) {
+                                $footer_menu_id = $col2['select_menu'];
+                                // Tự động lấy ID menu dịch tương ứng với ngôn ngữ hiện tại nếu có
+                                if ( function_exists('pll_get_term') && is_numeric($footer_menu_id) ) {
+                                    $trans_menu_id = pll_get_term( $footer_menu_id );
+                                    if ( $trans_menu_id ) {
+                                        $footer_menu_id = $trans_menu_id;
+                                    }
+                                }
                                 wp_nav_menu(array(
-                                    'menu'            => $col2['select_menu'], // Sử dụng ID từ ACF
+                                    'menu'            => $footer_menu_id,
                                     'container'       => false,
                                     'menu_class'      => 'iddi-footer__link-list fs-18 fw-400 upper-text text-color-oxford-blue fs-14__xl fs-14__lg',
                                     'fallback_cb'     => false,
@@ -134,7 +142,7 @@
         
         <div class="iddi-footer__bottom">
             <div class="iddi-footer__copyright fs-14 center-text text-color-oxford-blue fs-14__xl">
-                <?php echo $copyright; ?>
+                <?php echo $copyright ? $copyright : (function_exists('iddi_tr') ? iddi_tr('Copyright © 2026 IDDI Academy. All rights reserved.') : 'Copyright © 2026 IDDI Academy'); ?>
             </div>
         </div>
     </div>

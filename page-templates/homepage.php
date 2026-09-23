@@ -227,10 +227,10 @@ add_action('wp_head', function() use ($first_banner_url, $srcset, $sizes) {
 								<div class="iddi-homepage__values-implant-img-tooth-technology-group p-absolute">
 									<img loading="lazy" decoding="async" class="iddi-homepage__values-implant-img-tooth-technology-img" src="/wp-content/uploads/2026/03/tooth-e1774579712536.png" width="500" height="500" alt="Mô hình răng công nghệ Implant">
 								</div>
-								<span class="iddi-homepage__values-label _1 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><span class="fw-400">Tiêu chuẩn đào tạo </span> <br>Quốc Tế</span>
-								<span class="iddi-homepage__values-label _2 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><span class="fw-400">Đào tạo chuyên nghiệp từ </span><br>Giáo sư đầu ngành</span>
-								<span class="iddi-homepage__values-label _3 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><span class="fw-400">Dựa trên bằng chứng </span> <br>khoa học</span>
-								<span class="iddi-homepage__values-label _4 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><span class="fw-400">Tiên phong công nghệ trong </span><br>chẩn đoán và điều trị</span>
+								<span class="iddi-homepage__values-label _1 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><?php iddi_tr_e('Tiêu chuẩn đào tạo Quốc Tế'); ?></span>
+								<span class="iddi-homepage__values-label _2 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><?php iddi_tr_e('Đào tạo chuyên nghiệp từ Giáo sư đầu ngành'); ?></span>
+								<span class="iddi-homepage__values-label _3 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><?php iddi_tr_e('Dựa trên bằng chứng khoa học'); ?></span>
+								<span class="iddi-homepage__values-label _4 fs-18 fw-300 d-i-block text-color-oxford-blue p-absolute fs-11__md fs-9__sm"><?php iddi_tr_e('Tiên phong công nghệ trong chẩn đoán và điều trị'); ?></span>
 							</div>
 						</div>
 					</div>
@@ -587,7 +587,7 @@ add_action('wp_head', function() use ($first_banner_url, $srcset, $sizes) {
 			</div>
 			<div class="iddi-homepage__education-insights-footer center-text">
 				<a href="/events" class="iddi-homepage__education-insights-btn fs-32 fw-300 italic-font d-i-flex flex-center-v text-color-oxford-blue fs-20__xl fs-18__lg fs-16__md fs-14__sm" aria-label="Xem chi tiết các khóa học và sự kiện đào tạo">
-					<span>Xem chi tiết</span>
+					<span><?php iddi_tr_e('Xem chi tiết'); ?></span>
 					<?php echo get_my_svg('explore'); ?>
 				</a>
 			</div>
@@ -599,7 +599,7 @@ add_action('wp_head', function() use ($first_banner_url, $srcset, $sizes) {
 			<div class="iddi-homepage__get-in-touch-header">
 				<div class="iddi-homepage__number iddi-homepage__get-in-touch-id-wrap d-flex gap-xl flex-ai-end"> 
 					<span class="iddi-homepage__number-number iddi-homepage__get-in-touch-number iddi-homepage__heading-number d-i-block fw-400"><span>06</span></span>
-					<h2 class="iddi-homepage__number-text iddi-homepage__get-in-touch-heading fw-300 italic-font text-color-oxford-blue">Liên <br>hệ</h2>
+					<h2 class="iddi-homepage__number-text iddi-homepage__get-in-touch-heading fw-300 italic-font text-color-oxford-blue"><?php iddi_tr_e('Liên hệ'); ?></h2>
 				</div>
 			</div>
 			<?php get_template_part('template-parts/sections/section-contact'); ?>

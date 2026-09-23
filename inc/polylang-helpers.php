@@ -99,6 +99,14 @@ function iddi_register_polylang_strings() {
 	pll_register_string( 'Event Contact Price', 'Liên hệ', 'IDDI Event' );
 	pll_register_string( 'Event No Related Events', 'Chưa có sự kiện liên quan.', 'IDDI Event' );
 
+	// --- Homepage & Sections ---
+	pll_register_string( 'Homepage Tooth Label 1', 'Tiêu chuẩn đào tạo Quốc Tế', 'IDDI Homepage' );
+	pll_register_string( 'Homepage Tooth Label 2', 'Đào tạo chuyên nghiệp từ Giáo sư đầu ngành', 'IDDI Homepage' );
+	pll_register_string( 'Homepage Tooth Label 3', 'Dựa trên bằng chứng khoa học', 'IDDI Homepage' );
+	pll_register_string( 'Homepage Tooth Label 4', 'Tiên phong công nghệ trong chẩn đoán và điều trị', 'IDDI Homepage' );
+	pll_register_string( 'Homepage Get in Touch', 'Liên hệ', 'IDDI Homepage' );
+	pll_register_string( 'Contact Form Shortcode', '[contact-form-7 id="7d92c07" title="Liên hệ ngay"]', 'IDDI Contact Form' );
+
 	// --- Common Buttons & Labels ---
 	pll_register_string( 'Common Read More', 'Xem thêm', 'IDDI Common' );
 	pll_register_string( 'Common Close', 'Đóng', 'IDDI Common' );
@@ -245,6 +253,39 @@ add_filter( 'acf/settings/current_language', function( $lang ) {
 	}
 	return $lang;
 } );
+
+/**
+ * Helper lấy ACF Option an toàn, tự động fallback về ngôn ngữ mặc định nếu bản dịch chưa được nhập
+ * Giúp giao diện (Footer, Logo, Contact, Testimonials) không bị biến mất khi chưa kịp dịch Option
+ *
+ * @param string $selector Tên trường ACF option
+ * @param bool $fallback_default Có fallback về ngôn ngữ mặc định nếu rỗng hay không
+ * @return mixed
+ */
+if ( ! function_exists( 'iddi_get_field_option' ) ) {
+	function iddi_get_field_option( $selector, $fallback_default = true ) {
+		if ( ! function_exists( 'get_field' ) ) {
+			return false;
+		}
+
+		$value = get_field( $selector, 'option' );
+
+		// Nếu rỗng và được phép fallback
+		if ( empty( $value ) && $fallback_default && function_exists( 'pll_default_language' ) && function_exists( 'pll_current_language' ) ) {
+			$current = pll_current_language( 'slug' );
+			$default = pll_default_language( 'slug' );
+
+			if ( $current && $default && $current !== $default ) {
+				// Tạm thời bỏ filter current_language để lấy option của ngôn ngữ mặc định
+				add_filter( 'acf/settings/current_language', '__return_false', 999 );
+				$value = get_field( $selector, 'option' );
+				remove_filter( 'acf/settings/current_language', '__return_false', 999 );
+			}
+		}
+
+		return $value;
+	}
+}
 
 /**
  * 5. Tự động gán ngôn ngữ mặc định (Tiếng Việt) cho các bài viết / khóa học chưa có ngôn ngữ
