@@ -1,0 +1,597 @@
+.page-single-event {
+	background: url(/wp-content/uploads/2026/02/background-scroll.webp) center /cover;
+	background-attachment: fixed;
+}
+
+.iddi-event-detail {
+	background-color: #FFFFFFCC;
+}
+
+
+
+.iddi-event-detail__header {
+	padding-top: calc(90 / var(--vw));
+}
+.iddi-event-detail__location svg {
+	width: 1em;
+	fill: var(--color-flame-orange);
+}
+
+
+
+.iddi-event-detail__speakers {
+    background-color: #FFFFFFCC;
+    padding-top: calc(80/var(--vw));
+}
+.iddi-event-detail__content + .iddi-event-detail__speakers {
+	padding-top: 0;
+}
+.iddi-event-detail__speakers-title {
+	margin-bottom: calc(40 / var(--vw));
+	--text-color: #2fa8a1;
+}
+.iddi-event-detail__speakers-container {
+	background-color: #162a30;
+	--text-color: #fff;
+}
+.iddi-event-detail__speakers-container * {
+	color: var(--text-color);
+}
+.iddi-event-detail__speakers-list {
+	grid-gap: calc(50/var(--vw)) calc(80/var(--vw));
+}
+.iddi-event-detail__speakers-item:nth-of-type(n + 2) {
+	padding-top: calc(50 / var(--vw));
+	border-top: 1px solid #3c4c51;
+}
+.iddi-event-detail__speakers-topic {
+	--text-color: #dddba9;
+	margin: calc(10 / var(--vw)) 0 calc(8 / var(--vw));
+	min-height: 2.4em;
+}
+
+.iddi-event-detail__speakers-meta {
+	width: 20%;
+}
+.iddi-event-detail__speakers-bio {
+	width: 80%;
+	padding-left: calc(50/var(--vw));
+}
+.iddi-event-detail__speakers-item:nth-of-type(3n + 1) .iddi-event-detail__speakers-label--number {--text-color: #2fa8a1;}
+.iddi-event-detail__speakers-item:nth-of-type(3n + 2) .iddi-event-detail__speakers-label--number {--text-color: #307199;}
+.iddi-event-detail__speakers-item:nth-of-type(3n + 3) .iddi-event-detail__speakers-label--number {--text-color: #91348f;}
+
+.iddi-event-detail__speakers-label--number > .number {
+	background-color: var(--text-color);
+	color: #fff;
+	padding: 0 calc(3/var(--vw));
+	font-size: 0.8em;
+}
+.iddi-event-detail__speakers-label--time {
+	margin-left: calc(8 / var(--vw));
+}
+.iddi-event-detail__speakers-name {
+	margin-top: calc(10 / var(--vw));
+}
+.iddi-event-detail__speakers-avatar {
+	aspect-ratio: 1;
+	object-position: top;
+}
+.iddi-event-detail__speakers-country {
+	margin-top: calc(6 / var(--vw));
+}
+.iddi-event-detail__speakers-item:nth-of-type(even) .iddi-event-detail__speakers-bio {
+	order: -1;
+}
+.iddi-event-detail__speakers-bio-item {
+	line-height: 1.6em;
+}
+
+
+
+
+.iddi-event-detail__content {
+    background-color: #FFFFFFCC;
+    padding: calc(80 / var(--vw)) 0;
+}
+.iddi-event-detail__content * {
+	line-height: 1.5em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h1, 
+:where(.iddi-event-detail__content > .iddi__container) h2, 
+:where(.iddi-event-detail__content > .iddi__container) h3, 
+:where(.iddi-event-detail__content > .iddi__container) h4, 
+:where(.iddi-event-detail__content > .iddi__container) h5, 
+:where(.iddi-event-detail__content > .iddi__container) h6 {
+	display: inline-block;
+	font-weight: 600;
+	font-family: 'Playfair Display';
+}
+
+.iddi-event-detail__content > .iddi__container img {
+	border-radius: 12px !important;
+}
+
+:where(.iddi-event-detail__content > .iddi__container)  p,
+:where(.iddi-event-detail__content > .iddi__container)  ul {
+	margin-bottom: 1em;
+	display: block;
+}
+:where(.iddi-event-detail__content > .iddi__container) p:has(+ p > img) {
+	margin-bottom: 3em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h1{
+	font-size: 2em; 
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h2{
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h3{
+	font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h4{
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h5{
+	font-size: .83em;
+	margin-top: 1.67em;
+	margin-bottom: 1.67em;
+}
+:where(.iddi-event-detail__content > .iddi__container) h6{
+	font-size: .67em;
+	margin-top: 2.33em;
+	margin-bottom: 2.33em;
+}
+:where(.iddi-event-detail__content > .iddi__container) ul {
+	list-style: unset;
+	padding-left: 1.5em;
+}
+
+
+
+.iddi-event-detail__day-nav {
+	margin-bottom: calc(50/ var(--vw));
+}
+.iddi-event-detail__day-nav > div{
+	position: static !important;
+}
+.iddi-schedule-pagination .swiper-pagination-bullet {
+	width: unset;
+	height: unset;
+	background-color: transparent;
+}
+.iddi-event-detail__day-nav .swiper-pagination-bullet-active {
+	color: var(--color-flame-orange);
+}
+.iddi-event-detail__day {
+	z-index: 0 !important;
+}
+.iddi-event-detail__schedule {
+	background-color: #FFFFFFCC;
+	padding-top: calc(80/var(--vw));
+	padding-bottom: calc(80/var(--vw));
+}
+.iddi-event-detail__schedule-heading {
+	margin-bottom: calc(40 / var(--vw));
+}
+.iddi-event-detail__schedule-heading:nth-of-type(n+ 2) {
+	margin-top: calc(80 / var(--vw));
+}
+.iddi-event-detail__schedule-col {
+	width: calc(720 / var(--vw));
+}
+.iddi-event-detail__schedule-divider {
+	width: 1px;
+	background-color: #B8BDCA;
+}
+
+.iddi-event-detail__schedule-list {
+	margin-top: calc(28 / var(--vw));
+}
+.iddi-event-detail__timeline > li > span.time {
+    font-size: 1.15em;
+    margin-bottom: calc(16/ var(--vw));
+}
+.iddi-event-detail__timeline-content:has(> h4):nth-of-type(n + 2) {
+    margin-top: calc(14 / var(--vw));
+}
+.iddi-event-detail__schedule-media {
+	margin-top: calc(36 / var(--vw));
+}
+.iddi-event-detail__schedule-img {
+	width: calc(620 / var(--vw));
+}
+
+
+/* Conference speakers */
+.iddi-event-detail__extra-info {
+	background-color: #fff;
+	padding-top: calc(80/var(--vw));
+	padding-bottom: calc(80/var(--vw));
+}
+.iddi-event-detail__extra-info > .iddi__container {
+	width: calc(1140 / var(--vw));
+	margin: 0 auto;
+	box-sizing: content-box;
+}
+
+.iddi-event-detail__info-card--speakers {
+	width: calc(761 / var(--vw));
+}
+.iddi-event-detail__info-title {
+	margin-bottom: calc(16 / var(--vw));
+}
+.iddi-event-detail__info-title svg {
+	width: 1em;
+	fill: var(--color-flame-orange);
+}
+.iddi-event-detail__speakers-grid {
+	column-count: 2;
+	padding-left: calc(40 / var(--vw));
+}
+.iddi-event-detail__speaker-tag {
+	margin-bottom: calc(24/var(--vw));
+}
+
+.iddi-event-detail__info-card--patronage {
+	width: calc(315 / var(--vw));
+}
+.iddi-event-detail__timeline {
+	gap: calc(32 / var(--vw));
+}
+.iddi-event-detail__timeline-content > h4 {
+    margin-bottom: calc(10 / var(--vw));
+}
+.iddi-event-detail__timeline-content > div {
+	line-height: 1.4em;
+}
+.iddi-event-detail__timeline-content:not(:has(> h4)), .iddi-event-detail__timeline-content:not(:has(> h4)) > div {
+    margin-top: 0;
+}
+
+
+/* All tickets include */
+.iddi-event-detail__tickets {
+	background-color: #FFFFFFCC;
+	padding: calc(80 / var(--vw)) 0 calc(120 / var(--vw));
+	backdrop-filter: blur(50px);
+}
+.iddi-event-detail__tickets-btn {
+    font-size: calc(24 / var(--vw));
+    margin-top: calc(80 / var(--vw));
+    padding: 1em 2em;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	transition: background-color .3s ease;
+}
+.iddi-event-detail__tickets-btn:hover {
+	background-color: #ae471c;
+}
+.iddi-event-detail__tickets-info {
+	margin-top: calc(40 / var(--vw));
+}
+
+
+
+/* 2026 - DIGITAL DENTISTRY EVENTS */
+.iddi-event-detail__related-events {
+	background-color: #FFFFFF59;
+	padding-top: calc(125 / var(--vw));
+	padding-bottom: calc(185 / var(--vw));
+}
+.iddi-event-detail__related-events-list {
+	margin: calc(70 / var(--vw)) auto 0;
+	width: calc(1288 / var(--vw));
+	grid-gap: calc(88 / var(--vw));
+}
+.iddi-event-detail__related-events-thumb > img {
+    aspect-ratio: 16/9;
+}
+.iddi-event-detail__related-events-excerpt {
+	margin-bottom: auto;
+}
+
+.iddi-event-detail__related-events-enrol {
+    width: 50%;
+    height: 100%;
+    align-content: center;
+    padding: 1em 0;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+	transition: background-color .3s ease;
+}
+.iddi-event-detail__related-events-enrol:hover {
+	background-color: #ae471c;
+}
+
+.iddi-event-detail__contact {
+	background-image: linear-gradient(to bottom, #FFFFFFF2, #EAEFF5);
+	padding: calc(90 / var(--vw)) 0;
+}
+
+@media (max-width: 1279px) {
+	.iddi-event-detail__header {
+		padding-top: 64px;
+	}
+
+	.iddi-event-detail__speakers {
+		padding-top: 28px;
+	}
+	.iddi-event-detail__speakers-header {
+		margin-bottom: 32px;
+	}
+	.iddi-event-detail__speakers-label--time  {
+		font-size: 8px;
+	}
+
+	
+	.iddi-event-detail__content {
+    padding: 52px 0;
+}
+
+
+	.iddi-event-detail__schedule {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.iddi-event-detail__schedule-list {
+		margin-top: 20px;
+	}
+
+	.iddi-event-detail__schedule-col {
+		width: min(100%, 480px);
+	}
+	.iddi-event-detail__schedule-heading {
+		margin-bottom: 28px;
+	}
+	.iddi-event-detail__schedule-heading:nth-of-type(n+ 2) {
+		margin-top: 48px;
+	}
+	.iddi-event-detail__schedule-img {
+		width: calc(100% - 70px);
+	}
+	.iddi-event-detail__schedule-media {
+		margin-top: 24px;
+	}
+
+
+	.iddi-event-detail__timeline {
+		gap: 24px;
+	}
+	.iddi-event-detail__timeline-content > div {
+		margin-top: 8px;
+	}
+	.iddi-event-detail__timeline-content > h4 {
+    margin-bottom: 8px;
+}
+	.iddi-event-detail__timeline-content:has(> h4):nth-of-type(n + 2) {
+    margin-top: 12px;
+}
+	.iddi-event-detail__timeline > li > span.time {
+    margin-bottom: 14px;
+}
+
+
+	.iddi-event-detail__extra-info {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.iddi-event-detail__extra-info > .iddi__container {
+		width: min(100%, 760px);
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
+
+
+	.iddi-event-detail__info-title {
+		margin-bottom: 12px;
+	}
+	.iddi-event-detail__info-card--patronage {
+		width: 210px;
+	}
+	.iddi-event-detail__info-card--speakers {
+		width: min(100%, 500px);
+	}
+
+
+	.iddi-event-detail__speakers-bio {
+		padding-left: 32px;
+	}
+	.iddi-event-detail__speaker-tag {
+		margin-bottom: 16px;
+	}
+
+
+
+	.iddi-event-detail__tickets {
+		padding: 50px 0 78px;
+	}
+	.iddi-event-detail__tickets-info {
+		margin-top: 28px;
+	}
+	.iddi-event-detail__tickets-btn {
+		font-size: 18px;
+		margin-top: 50px;
+		padding: 16px 24px;
+	}
+
+
+	.iddi-event-detail__related-events {
+		padding-top: 80px;
+		padding-bottom: 120px;
+	}
+	.iddi-event-detail__related-events-list {
+		margin: 48px auto 0;
+		width: min(100%, 850px);
+		grid-gap: 60px;
+	}
+
+
+
+	.iddi-event-detail__contact {
+		padding: 60px 0;
+	}
+
+}
+
+@media (max-width: 1024px) {
+	.iddi-event-detail__speakers-list {
+		/*     grid-gap: calc(50/var(--vw)) calc(80/var(--vw)); */
+	}
+	.iddi-event-detail__speakers-item:nth-of-type(n + 3) {
+		padding-top: calc(50 / var(--vw));
+		border-top: 1px solid #3c4c51;
+	}
+	.iddi-event-detail__speaker-tag {
+		margin-bottom: 14px;
+	}
+	
+		.iddi-event-detail__content {
+    padding: 50px 0;
+}
+
+
+	.iddi-event-detail__schedule-media {
+		margin-top: 20px;
+	}
+	.iddi-event-detail__schedule-img {
+		width: calc(100% - 32px);
+	}
+
+
+	.iddi-event-detail__tickets {
+		padding: 50px 0 60px;
+	}
+	.iddi-event-detail__tickets-info {
+		margin-top: 20px;
+	}
+	.iddi-event-detail__tickets-btn {
+		font-size: 16px;
+		margin-top: 36px;
+		padding: 16px 24px;
+	}
+
+
+	.iddi-event-detail__related-events {
+		padding-top: 64px;
+		padding-bottom: 80px;
+	}
+	.iddi-event-detail__related-events-list {
+		margin: 32px auto 0;
+		width: min(100%, 850px);
+		grid-gap: 48px;
+	}
+
+
+}
+
+
+@media (max-width: 768px) {
+	.iddi-event-detail__speakers-item:nth-of-type(n + 2) {
+		padding-top: calc(50 / var(--vw));
+		border-top: 1px solid #3c4c51;
+	}
+
+
+
+	.iddi-event-detail__extra-info {
+		padding-top: 42px;
+		padding-bottom: 50px;
+	}
+
+
+
+	.iddi-event-detail__tickets {
+		padding: 45px 0 50px;
+	}
+	.iddi-event-detail__tickets-info {
+		margin-top: 16px;
+	}
+	.iddi-event-detail__tickets-btn {
+		font-size: 14px;
+		margin-top: 28px;
+		padding: 12px 20px;
+	}
+
+
+	.iddi-event-detail__related-events {
+		padding-top: 42px;
+		padding-bottom: 50px;
+	}
+	.iddi-event-detail__related-events-list {
+		margin: 28px auto 0;
+		width: min(100%, 850px);
+		grid-gap: 16px;
+	}
+}
+@media (max-width: 576px) {
+	.iddi-event-detail__header {
+		padding-top: 40px;
+	}
+
+	.iddi-event-detail__speakers-meta {
+		width: 30%;
+	}
+	.iddi-event-detail__speakers-bio {
+		width: 70%;
+		padding-left: 20px;
+	}
+	.iddi-event-detail__speakers-topic {
+		margin: 5px 0 5px;
+	}
+
+	.iddi-event-detail__schedule-list {
+		width: 100%;
+	}
+	.iddi-event-detail__schedule-img {
+		width: 100%;
+	}
+	.iddi-event-detail__schedule-list {
+    margin-top: 18px;
+}
+	.iddi-event-detail__schedule-heading:nth-of-type(n+ 2) {
+    margin-top: 40px;
+}
+	.iddi-event-detail__schedule-heading {
+    margin-bottom: 20px;
+}
+	.iddi-event-detail__schedule-label {
+		font-size: 22px;
+	}
+
+	
+	.iddi-event-detail__timeline-content > h4 {
+    margin-bottom: 5px;
+}
+.iddi-event-detail__timeline-content > div {
+    margin-top: 5px;
+}
+	.iddi-event-detail__timeline {
+    gap: 16px;
+}
+	.iddi-event-detail__timeline > li > span.time {
+    margin-bottom: 8px;
+}
+	.iddi-event-detail__timeline-content:has(> h4):nth-of-type(n + 2) {
+    margin-top: 10px;
+}
+	
+	
+	.iddi-event-detail__info-card--patronage {
+		width: 210px;
+		margin: 0 auto;
+		padding-top: 24px;
+	}
+	
+	
+}

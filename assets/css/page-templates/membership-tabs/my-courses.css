@@ -1,0 +1,242 @@
+/* ==========================================================================
+   MY COURSES TAB
+   ========================================================================== */
+
+/* Search & Filters */
+.iddi-membership-filters {
+    margin-bottom: 32px;
+    justify-content: space-between;
+}
+.iddi-membership-search {
+    width: 33%;
+    min-width: 300px;
+}
+.iddi-membership-search__form {
+    position: relative;
+    width: 100%;
+}
+
+.iddi-membership-search__input {
+    width: 100%;
+    padding: 12px 48px 12px 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 30px;
+    background-color: #F8F9FA;
+    font-size: 14px;
+    color: #1E293B;
+    transition: all 0.3s;
+}
+
+.iddi-membership-search__input:focus {
+    outline: none;
+    background-color: #FFFFFF;
+    border-color: #ED6C32;
+    box-shadow: 0 0 0 3px rgba(237, 108, 50, 0.1);
+}
+
+.iddi-membership-search__btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #64748B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.iddi-membership-search__btn:hover {
+    color: #1E293B;
+}
+
+.iddi-membership-filter-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.iddi-membership-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #64748B;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s;
+}
+
+.iddi-membership-btn:hover {
+    color: #1E293B;
+    border-color: #CBD5E1;
+    background-color: #F8F9FA;
+}
+
+.iddi-membership-btn--active {
+    background-color: #ED6C32;
+    color: #FFFFFF;
+    border-color: #ED6C32;
+}
+
+.iddi-membership-btn--active:hover {
+    background-color: #D65A26;
+    color: #FFFFFF;
+    border-color: #D65A26;
+}
+
+/* Course Grid */
+.iddi-membership-course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .iddi-membership-course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Course Card */
+.iddi-membership-course-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.iddi-membership-course-card__thumb {
+    width: 100%;
+    height: 200px;
+    background-color: #F1F5F9;
+    position: relative;
+    overflow: hidden;
+}
+
+.iddi-membership-course-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.iddi-membership-course-card:hover .iddi-membership-course-card__thumb img {
+    transform: scale(1.1);
+}
+
+.iddi-membership-course-card__thumb-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #E2E8F0;
+}
+
+.iddi-membership-course-card__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.iddi-membership-course-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.iddi-membership-course-card__title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.iddi-membership-course-card__title a:hover {
+    color: #ED6C32;
+}
+
+.iddi-membership-course-card__excerpt {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.iddi-membership-course-card__progress-wrap {
+    margin-bottom: 24px;
+}
+
+.iddi-membership-course-card__progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.iddi-membership-course-card__progress-header .label {
+    color: #94A3B8;
+}
+
+.iddi-membership-course-card__progress-header .value {
+    color: #ED6C32;
+}
+
+.iddi-membership-course-card__progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #F1F5F9;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.iddi-membership-course-card__progress-fill {
+    height: 100%;
+    background-color: #22C55E;
+    border-radius: 3px;
+    transition: width 0.5s ease;
+}
+
+.iddi-membership-course-card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #ED6C32;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    gap: 8px;
+}
+
+.iddi-membership-course-card__btn:hover {
+    background-color: #D65A26;
+}
+
+/* Pagination & Empty State */
+.iddi-membership-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 24px;
+    color: #64748B;
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px dashed #CBD5E1;
+    font-size: 16px;
+}
+
+

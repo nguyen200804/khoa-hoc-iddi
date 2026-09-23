@@ -1,0 +1,164 @@
+/* ==========================================================================
+   SUPPORT TAB
+   ========================================================================== */
+
+.iddi-membership-support-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+}
+
+@media (max-width: 991px) {
+    .iddi-membership-support-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+.iddi-membership-support-col__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A2B4E;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.iddi-membership-support-col__title::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #ED6C32;
+    border-radius: 2px;
+}
+
+/* Contact Cards */
+.iddi-membership-contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.iddi-membership-contact-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.iddi-membership-contact-card__icon {
+    width: 48px;
+    height: 48px;
+    background-color: #FFF3EE;
+    color: #ED6C32;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.iddi-membership-contact-card__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin-bottom: 4px;
+}
+
+.iddi-membership-contact-card__desc {
+    font-size: 13px;
+    color: #64748B;
+    margin-bottom: 16px;
+}
+
+.iddi-membership-contact-card__desc strong {
+    color: #ED6C32;
+    font-weight: 600;
+}
+
+.iddi-membership-contact-card__link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ED6C32;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.iddi-membership-contact-card__link:hover {
+    color: #c9511a;
+}
+
+/* FAQ Accordion */
+.iddi-membership-faqs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.iddi-membership-faq {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.iddi-membership-faq--active {
+    border-color: #ED6C32;
+    box-shadow: 0 4px 16px rgba(237, 108, 50, 0.1);
+}
+
+.iddi-membership-faq__header {
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
+.iddi-membership-faq__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin: 0;
+}
+
+.iddi-membership-faq__icon {
+    color: #8C98A4;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iddi-membership-faq--active .iddi-membership-faq__icon {
+    transform: rotate(180deg);
+    color: #ED6C32;
+}
+
+.iddi-membership-faq__content {
+    display: none;
+    padding: 0 24px 24px;
+}
+
+.iddi-membership-faq__text {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.iddi-membership-faq__text a {
+    color: #ED6C32;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.iddi-membership-faq__text a:hover {
+    text-decoration: underline;
+}

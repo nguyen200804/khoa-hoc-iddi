@@ -1,0 +1,638 @@
+/* ===========================================
+WORLD EMBASSIES PAGE STYLES (PURE BEM)
+=========================================== */
+.world-embassies {
+    background-color: #fff;
+}
+
+/* --- Hero Section --- */
+.world-embassies__hero {
+    padding: 30px 0 0;
+}
+
+.world-embassies__hero .container {
+    display: grid;
+    grid-template-columns: 9fr 5fr;
+}
+
+.world-embassies__hero-content {
+    align-self: center;
+}
+
+.world-embassies__hero-subtitle {
+    font-weight: 500;
+    color: var(--color-flame-orange);
+    font-style: italic;
+    font-size: 28px;
+}
+
+.world-embassies__hero-title {
+    font-size: 48px;
+    margin-top: 8px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.1em;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__hero-title--highlight {
+    color: var(--color-flame-orange);
+}
+
+.world-embassies__hero-desc {
+    margin-bottom: 56px;
+    margin-top: 24px;
+    line-height: 1.6em;
+    max-width: 650px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__hero-actions {
+    display: flex;
+    gap: 24px;
+}
+
+.world-embassies__hero-btn {
+    padding: 1em 2em;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 400;
+    border-radius: 1em;
+}
+
+.world-embassies__hero-btn--primary {
+    background-color: var(--color-flame-orange);
+    color: var(--color-white);
+}
+
+.world-embassies__hero-btn--primary:hover {
+    background-color: #ae471c;
+}
+
+.world-embassies__hero-btn--secondary {
+    background-color: var(--color-oxford-blue);
+    color: var(--color-white);
+}
+
+.world-embassies__hero-btn--secondary:hover {
+    background-color: #0e1833;
+}
+
+.world-embassies__hero-map img {
+    width: 100%;
+}
+
+/* --- About Section --- */
+.world-embassies__about {
+    padding: 24px 0 50px;
+}
+
+.world-embassies__about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.world-embassies__about-image {
+    padding-right: 100px;
+}
+
+.world-embassies__about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.world-embassies__about-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    font-style: italic;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__about-title--highlight {
+    color: var(--color-flame-orange);
+}
+
+.world-embassies__about-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.world-embassies__about-item {
+    display: flex;
+    gap: 16px;
+}
+
+.world-embassies__about-item-icon svg {
+    width: 24px;
+    fill: var(--color-flame-orange);
+}
+
+.world-embassies__about-item-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__about-item-desc {
+    font-size: 16px;
+    color: var(--color-oxford-blue);
+    font-weight: 300;
+}
+
+/* --- Presidents Section --- */
+.world-embassies__presidents {
+    padding: 64px 0;
+}
+
+.world-embassies__presidents-header {
+    text-align: center;
+    margin: 0 auto 60px;
+    max-width: 670px;
+}
+
+.world-embassies__presidents-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--color-flame-orange);
+    letter-spacing: 0.2em;
+    margin-bottom: 6px;
+}
+
+.world-embassies__presidents-title {
+    font-size: 42px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__presidents-title--highlight {
+    color: var(--color-oxford-blue); /* Meet our Embassy Presidents - blue */
+}
+
+.world-embassies__presidents-desc {
+    font-size: 18px;
+    color: var(--color-oxford-blue);
+    margin-top: 18px;
+    line-height: 1.6em;
+}
+
+.world-embassies__presidents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 32px;
+}
+
+/* --- Process Section --- */
+.world-embassies__process {
+    padding: 80px 0;
+    background: linear-gradient(360deg, rgb(239 245 252 / 15%) 0%, rgb(207 213 229 / 15%) 100%);
+}
+
+.world-embassies__process-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 60px;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__process-title--highlight {
+    color: var(--color-flame-orange);
+}
+
+.world-embassies__process-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+}
+.world-embassies__process-step {
+    flex: 1;
+    text-align: center;
+    z-index: 0;
+}
+
+.world-embassies__process-step-icon-wrap {
+    font-size: 24px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.world-embassies__process-step-icon {
+    width: 3em;
+    height: 3em;
+    background: linear-gradient(360deg, #EFF5FC 0%, #CFD5E5 100%);
+    border-radius: 0.666667em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.world-embassies__process-step-icon::before, .world-embassies__process-step-icon::after {
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
+	display: inline-block;
+	background: linear-gradient(360deg, #EFF5FC 0%, #CFD5E5 100%);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.world-embassies__process-step-icon::before {
+	left: 1em;
+}
+
+.world-embassies__process-step:first-child .world-embassies__process-step-icon::before,
+.world-embassies__process-step:last-child .world-embassies__process-step-icon::after {
+	content: unset;
+}
+
+.world-embassies__process-step-icon::after {
+	right: 1em;
+}
+
+.world-embassies__process-step-icon svg {
+    width: 1em;
+    height: 1em;
+    fill: var(--color-oxford-blue);
+    opacity: 0.6;
+}
+
+/* Connecting Dotted Line */
+.world-embassies__process-step-icon-wrap::after {
+    content: '';
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 50%;
+    border-top: 2px dashed #192954;
+    left: calc(100% - 1em);
+    width: calc(100% - 2em);
+    color: #D1D5DB;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.world-embassies__process-step:last-child .world-embassies__process-step-icon-wrap::after {
+    display: none;
+}
+
+.world-embassies__process-step-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.world-embassies__process-step-desc {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: var(--color-oxford-blue);
+}
+
+/* --- CTA Section --- */
+.world-embassies__cta {
+    padding-bottom: 120px;
+    padding-top: 80px;
+}
+
+.world-embassies__cta-box {
+    background-color: var(--color-white);
+    border-radius: 24px;
+    padding: 48px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #192954;
+}
+
+.world-embassies__cta-text {
+    padding-right: 120px;
+    width: 68%;
+}
+
+.world-embassies__cta-title {
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 16px;
+    color: var(--color-oxford-blue);
+}
+
+.world-embassies__cta-title--highlight {
+    color: var(--color-flame-orange);
+}
+
+.world-embassies__cta-desc {
+    font-size: 18px;
+    color: var(--color-oxford-blue);
+    line-height: 1.5em;
+}
+
+.world-embassies__cta-btn {
+    width: 32%;
+    text-align: center;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 400;
+    font-size: 18px;
+    display: inline-block;
+    background-color: var(--color-flame-orange);
+    color: var(--color-white);
+    border-radius: 0.8em;
+}
+
+.world-embassies__cta-btn:hover {
+    background-color: #ae471c;
+}
+
+@media (max-width: 1600px) {
+    /* Hero */
+	.world-embassies__hero-subtitle {
+        font-size: 22px;
+    }
+	.world-embassies__hero-title {
+        font-size: 42px;
+    }
+    .world-embassies__hero-desc,
+    .world-embassies__presidents-desc,
+    .world-embassies__cta-desc {
+        font-size: 17px;
+    }
+	
+    /* Process */
+	.world-embassies__process-title {
+        font-size: 38px;
+    }
+	
+    /* CTA */
+	.world-embassies__cta-text {
+        padding-right: 100px;
+        width: 68%;
+    }
+	.world-embassies__cta-title {
+        font-size: 30px;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 1366px) {
+    /* General */
+    .world-embassies {
+        font-size: 17px;
+    }
+
+    /* Hero */
+	.world-embassies__hero .container {
+		grid-template-columns: 8.5fr 5.5fr;
+	}
+    
+    /* Process */
+    .world-embassies__process-steps {
+        gap: 80px;
+    }
+	
+/* 	CTA */
+	.world-embassies__cta-box {
+    padding: 40px 48px;
+}
+	.world-embassies__cta-title {
+    font-size: 28px;
+}
+}
+
+@media (max-width: 1200px) {
+    /* General */
+    .world-embassies {
+        font-size: 16px;
+    }
+
+    /* Hero */
+    .world-embassies__hero-title {
+        font-size: 42px;
+    }
+    
+    /* About */
+    .world-embassies__about-image {
+        padding-right: 40px;
+    }
+    
+    /* Presidents */
+    .world-embassies__presidents-grid {
+        gap: 40px 24px;
+    }
+    
+    /* CTA */
+    .world-embassies__cta-text {
+        padding-right: 40px;
+    }
+
+    /* Typography */
+    .world-embassies__hero-desc,
+    .world-embassies__presidents-desc,
+    .world-embassies__cta-desc,
+    .world-embassies__about-item-desc,
+    .world-embassies__process-step-desc {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 996px) {
+    /* Hero */
+    .world-embassies__hero .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .world-embassies__hero-map {
+        margin-top: 40px;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .world-embassies__hero-content {
+        text-align: center;
+    }
+    
+    .world-embassies__hero-actions {
+        justify-content: center;
+    }
+    
+    .world-embassies__hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Presidents */
+    .world-embassies__presidents-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Process */
+    .world-embassies__process-steps {
+        gap: 40px;
+    }
+    
+    /* CTA */
+    .world-embassies__cta-box {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* General */
+    .world-embassies {
+        font-size: 15px;
+    }
+
+    /* Hero */
+    .world-embassies__hero {
+        padding-top: 60px;
+    }
+    
+    .world-embassies__hero-title {
+        font-size: 36px;
+    }
+    
+    /* About */
+    .world-embassies__about-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .world-embassies__about-image {
+        padding-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .world-embassies__about-title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    /* Presidents */
+    .world-embassies__presidents-title {
+        font-size: 32px;
+    }
+    
+    .world-embassies__presidents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+    
+    /* Process */
+    .world-embassies__process-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .world-embassies__process-step-icon-wrap::after {
+        display: none;
+    }
+    
+    /* CTA */
+    .world-embassies__cta-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    
+    .world-embassies__cta-text {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .world-embassies__cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Typography */
+    .world-embassies__hero-desc,
+    .world-embassies__presidents-desc,
+    .world-embassies__cta-desc,
+    .world-embassies__about-item-desc,
+    .world-embassies__process-step-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* General */
+    .world-embassies {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .world-embassies__hero-subtitle {
+        font-size: 22px;
+    }
+    
+    .world-embassies__hero-title {
+        font-size: 30px;
+    }
+    
+    .world-embassies__hero-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .world-embassies__hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* About */
+    .world-embassies__about-title {
+        font-size: 28px;
+    }
+    
+    /* Presidents */
+    .world-embassies__presidents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* CTA */
+    .world-embassies__cta-title {
+        font-size: 24px;
+    }
+    
+    /* Process */
+    .world-embassies__process-title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .world-embassies__cta-box {
+        padding: 30px 20px;
+    }
+
+    /* Typography */
+    .world-embassies__hero-desc,
+    .world-embassies__presidents-desc,
+    .world-embassies__cta-desc,
+    .world-embassies__about-item-desc,
+    .world-embassies__process-step-desc {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,140 @@
+#iddi-courses {
+    background: url(/wp-content/uploads/2026/02/background-scroll.webp) center /cover;
+    background-attachment: fixed;
+}
+
+/* Why Join */
+.iddi-courses__why-join {
+    padding: calc(90 / var(--vw)) 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.iddi-courses__why-join-video-wrapper {
+	margin-top: calc(108 / var(--vw));
+}
+.iddi-courses__why-join-content {
+	margin-top: calc(80 / var(--vw));
+}
+.iddi-courses__why-join-col {
+    width: calc(680 / var(--vw));
+    padding: calc(66 / var(--vw)) 0;
+	gap: calc(120 / var(--vw));
+}
+.iddi-courses__why-join-line-col {
+	width: 1px;
+	background-color: rgba(184, 189, 202, 1);
+}
+.iddi-courses__why-join-card-media > img {
+    width: calc(620 / var(--vw));
+    height: calc(354 / var(--vw));
+}
+
+
+
+/* Online Tutorial Courses Included with IDDA Membership */
+.iddi-courses__online-tutorial-courses {
+    padding: calc(80 / var(--vw)) 0;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.iddi-courses__online-tutorial-courses-filter {
+    margin: calc(90 / var(--vw));
+}
+.iddi-courses__online-tutorial-courses-search {
+    width: calc(1070 / var(--vw));
+}
+.iddi-courses__online-tutorial-courses-search form {
+    background-color: rgba(234, 239, 245, 0.6);
+    border: 1px solid rgba(221, 223, 229, 1);
+}
+.iddi-courses__online-tutorial-courses-search-input {
+	height: calc(64 / var(--vw));
+}
+.iddi-courses__online-tutorial-courses-search-submit {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+.iddi-courses__online-tutorial-courses-list {
+	grid-gap: calc(60 / var(--vw)) calc(80 / var(--vw));
+}
+.iddi-courses__online-tutorial-courses-action {
+    margin-top: calc(80 / var(--vw));
+}
+
+
+
+
+.iddi-courses__table-price {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: calc(120 / var(--vw)) 0;
+}
+
+
+
+
+
+.iddi-section-testimomials {
+    padding: calc(120 / var(--vw)) 0;
+}
+.iddi-section-testimomials__video-featured {
+    margin: calc(100 / var(--vw)) auto;
+	width: calc(1320 / var(--vw));
+}
+.iddi-section-testimomials__column {
+    width: calc(720 / var(--vw));
+    padding: calc(44 / var(--vw)) 0;
+	gap: calc(120 / var(--vw));
+}
+.iddi-section-testimomials__line-column {
+    width: 1px;
+    background-color: #B8BDCA;
+}
+.iddi-section-testimomials__card-avatar {
+    width: calc(248 / var(--vw));
+    min-width: calc(248 / var(--vw));
+}
+.iddi-section-testimomials__card-avatar > img {
+    background-color: #fff;
+    aspect-ratio: 1 !important;
+    object-fit: cover;
+}
+
+
+
+
+/* 2026 - DIGITAL DENTISTRY EVENTS */
+.iddi-event-detail__related-events {
+    background-color: #FFFFFF59;
+    padding-top: calc(125 / var(--vw));
+    padding-bottom: calc(185 / var(--vw));
+}
+.iddi-event-detail__related-events-list {
+    margin: calc(70 / var(--vw)) auto 0;
+    width: calc(1288 / var(--vw));
+    grid-gap: calc(88 / var(--vw));
+}
+.iddi-event-detail__related-events-excerpt {
+	margin-bottom: auto;
+}
+
+.iddi-event-detail__related-events-thumb img {
+    aspect-ratio: 2;
+}
+.iddi-event-detail__related-events-enrol {
+	width: 50%;
+}
+
+
+
+
+.iddi-event-detail__contact {
+    background-image: linear-gradient(to bottom, #FFFFFFF2, #EAEFF5);
+    padding: calc(90 / var(--vw)) 0;
+}
+
+
+
+

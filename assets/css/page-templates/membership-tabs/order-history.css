@@ -1,0 +1,211 @@
+/* ==========================================================================
+   ORDER HISTORY TAB
+   ========================================================================== */
+
+/* Overview Stats */
+.iddi-membership-order-stats {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .iddi-membership-order-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.iddi-membership-order-stat-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.iddi-membership-order-stat-card__label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8C98A4;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.iddi-membership-order-stat-card__value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1A2B4E;
+}
+
+/* Table */
+.iddi-membership-table-wrap {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.iddi-membership-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.iddi-membership-table th {
+    background-color: #F8F9FA;
+    padding: 16px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #64748B;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.iddi-membership-table td {
+    padding: 24px;
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: top;
+}
+
+.iddi-membership-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive Table */
+@media (max-width: 991px) {
+    .iddi-membership-table thead {
+        display: none;
+    }
+    
+    .iddi-membership-table tbody,
+    .iddi-membership-table tr,
+    .iddi-membership-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .iddi-membership-table tr {
+        border-bottom: 1px solid #E2E8F0;
+        position: relative;
+    }
+    
+    .iddi-membership-table td {
+        padding: 12px 24px 12px 120px;
+        position: relative;
+        border-bottom: none;
+    }
+    
+    .iddi-membership-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 24px;
+        top: 12px;
+        font-weight: 700;
+        font-size: 12px;
+        color: #64748B;
+        text-transform: uppercase;
+    }
+}
+
+/* Specific Cell Styles */
+.iddi-membership-order-id {
+    font-weight: 600;
+    color: #1A2B4E;
+    font-size: 14px;
+}
+
+.iddi-membership-order-date {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.iddi-membership-order-item-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin-bottom: 4px;
+}
+
+.iddi-membership-order-item-cat {
+    font-size: 12px;
+    color: #94A3B8;
+}
+
+.iddi-membership-order-amount {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1A2B4E;
+}
+
+.iddi-membership-order-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #F1F5F9;
+    color: #64748B;
+}
+
+.iddi-membership-order-status--completed {
+    background-color: #ECFDF5;
+    color: #10B981;
+}
+
+.iddi-membership-order-status--pending {
+    background-color: #FFFBEB;
+    color: #F59E0B;
+}
+
+.iddi-membership-order-status--failed {
+    background-color: #FEF2F2;
+    color: #EF4444;
+}
+
+/* Pagination Footer */
+.iddi-membership-table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #F8F9FA;
+    border-top: 1px solid #E2E8F0;
+}
+
+.iddi-membership-table-info {
+    font-size: 13px;
+    color: #64748B;
+    font-weight: 500;
+}
+
+.iddi-membership-table-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.iddi-membership-table-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    color: #64748B;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.iddi-membership-table-btn:hover:not(:disabled) {
+    background-color: #F1F5F9;
+    color: #1E293B;
+}
+
+.iddi-membership-table-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

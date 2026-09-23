@@ -1,0 +1,238 @@
+#iddi-events {
+	background: url(/wp-content/uploads/2026/02/background-scroll.webp) center /cover;
+	background-attachment: fixed;
+}
+
+.iddi-events__container {
+	padding: calc(100 / var(--vw)) 0 calc(150 / var(--vw)) 0;
+	background: #FFFFFF99;
+}
+
+.iddi-events__subtitle {
+	color: #1E3A8AB2;
+	letter-spacing: 0.07em;
+}
+
+/* Tìm kiếm events */
+.iddi-filter__form {
+	margin-top: calc(36 / var(--vw));
+}
+
+.iddi-events__filter-search .search-input {
+	width: calc(1070 / var(--vw));
+	margin: 0 auto;
+	background: #EAEFF599;
+	border: 1px solid #DDDFE5;
+	border-radius: 100px;
+	overflow: hidden;
+}
+
+.iddi-events__filter-search .search-input>* {
+	background: transparent;
+}
+
+.iddi-events__filter-search .search-input input {
+	height: calc(64 / var(--vw));
+	border: 0;
+	outline: 0;
+	font-size: 1em;
+	padding: 0 1em;
+}
+
+.iddi-events__filter-search .search-input button {
+	border: 0;
+	outline: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 0 1.5em;
+	cursor: pointer;
+	font-size: unset;
+}
+
+.iddi-events__filter-search .search-input button svg {
+	width: 1.5em;
+}
+
+.iddi-events__filter-action {
+	margin-top: calc(24/ var(--vw));
+}
+
+.iddi-events__filter-action * {
+	font-size: 1em;
+}
+
+.iddi-events__filter-action .dropdown-selected {
+	padding: 0.5em 1em;
+	cursor: pointer;
+	box-sizing: content-box;
+	border: 0;
+	outline: 0;
+	appearance: none;
+	background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M505.183 123.179c-9.087-9.087-23.824-9.089-32.912.002l-216.266 216.27L39.729 123.179c-9.087-9.087-23.824-9.089-32.912.002-9.089 9.089-9.089 23.824 0 32.912L239.55 388.82a23.27 23.27 0 0 0 32.91-.001l232.721-232.727c9.091-9.088 9.091-23.824.002-32.913'/%3E%3C/svg%3E") right 1em center / 0.9em no-repeat;
+}
+
+.iddi-events__filter-action .date-placeholder {
+	padding: 0.5em 1em;
+	gap: 1em;
+}
+
+.iddi-events__filter-action .date-placeholder+input[type="month"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+.iddi-events__filter-action .date-placeholder svg {
+	width: 0.9em;
+}
+
+
+
+
+
+.iddi-events__wrapper {
+	margin-top: calc(80 / var(--vw));
+}
+
+
+
+
+
+@media (max-width: 1279px) {
+	#iddi-events {
+		background-attachment: scroll;
+	}
+
+	.iddi-events__container {
+		padding: 80px 0 110px;
+	}
+
+	.iddi-events__container .iddi__container {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	.iddi-events__filter-search .search-input {
+		width: 710px;
+	}
+
+	.iddi-events__filter-search .search-input input {
+		height: 45px;
+	}
+
+	.iddi-filter__form {
+		margin-top: 28px;
+	}
+
+	.iddi-events__filter-action {
+		margin-top: 16px;
+	}
+
+
+	.iddi-events__wrapper {
+		margin-top: 48px;
+	}
+
+	.iddi-events__grid {
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 40px 16px;
+	}
+
+
+
+
+}
+
+@media (max-width: 1024px) {
+	.iddi-events__container {
+		padding: 64px 0 90px;
+	}
+
+	.iddi-events__container .iddi__container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+
+	.iddi-events__wrapper {
+		margin-top: 48px;
+	}
+
+	.iddi-events__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+
+}
+
+@media (max-width: 768px) {
+	.iddi-events__container {
+		padding: 50px 0 70px;
+	}
+
+	.iddi-events__container .iddi__container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.iddi-events__header-wrapper {
+		max-width: 100%;
+	}
+
+	.iddi-events__subtitle {
+		margin-top: 5px;
+	}
+
+	.iddi-events__filter-search .search-input {
+		width: 100%;
+	}
+
+	.iddi-events__filter-search .search-input input {
+		height: 40px;
+	}
+
+	.iddi-events__wrapper {
+		margin-top: 36px;
+	}
+
+	.iddi-events__grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 36px 12px;
+	}
+
+
+
+
+
+
+}
+
+
+@media (max-width: 576px) {
+	.iddi-events__container {
+		padding: 40px 0 56px;
+	}
+
+	.iddi-events__container .iddi__container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	.iddi-events__filter-action .dropdown-list {
+		min-width: 150px;
+	}
+
+	.iddi-events__wrapper {
+		margin-top: 28px;
+	}
+
+	.iddi-events__grid {
+		grid-template-columns: 1fr;
+	}
+
+
+
+
+}

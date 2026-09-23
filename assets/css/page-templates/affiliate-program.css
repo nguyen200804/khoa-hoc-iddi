@@ -1,0 +1,300 @@
+/* ==========================================================================
+   AFFILIATE PROGRAM PAGE STYLES
+   ========================================================================== */
+
+.affiliate-page {
+    background-color: var(--color-white);
+    color: var(--color-dark-charcoal);
+    overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.affiliate-hero {
+    padding: 150px 0 0px;
+    background: #EAEFF5;
+	position: relative;
+	z-index: 0;
+}
+.affiliate-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #ffffff6b;
+    z-index: -1;
+}
+
+.affiliate-hero > .container {
+    margin-bottom: 120px;
+}
+
+.affiliate-hero__title {
+    font-size: 52px;
+    margin-bottom: 16px;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: var(--color-oxford-blue);
+}
+
+.affiliate-hero__subtitle {
+    margin-bottom: 45px;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    color: #1E3A8AB2;
+}
+.affiliate-hero__desc {
+    color: var(--color-oxford-blue);
+    max-width: 800px;
+    font-size: 17px;
+    margin: 0 auto 86px;
+    line-height: 1.6;
+}
+
+.affiliate-hero__actions {
+    margin-bottom: 84px;
+}
+
+.affiliate-hero__actions a {
+    font-size: 17px;
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 0.7em 1.8em;
+    border-radius: 0.5em;
+    min-width: 200px;
+    font-weight: 600;
+}
+
+.affiliate-hero__actions a.iddi-btn--orange {
+    background: var(--color-flame-orange);
+    color: #fff;
+    box-shadow: 0px 4px 6px -4px #E75D234D, 0px 10px 15px -3px #E75D231A;
+}
+
+.affiliate-hero__actions a.iddi-btn--outline {
+    box-shadow: 0px 4px 6px -4px #E75D234D, 0px 10px 15px -3px #E75D231A;
+    border: 1px solid var(--Foundation-Brown-Light, #FCEFE9);
+    color: var(--color-flame-orange);
+    background: var(--color-white);
+}
+
+.affiliate-hero__badges {
+    display: inline-flex;
+    gap: 68px;
+}
+
+.trust-badge {
+    color: #9CA3AF;
+    font-size: 17px;
+    gap: 0.5em;
+}
+
+.trust-badge svg {
+    width: 1em;
+    height: 1em;
+    fill: var(--color-flame-orange);
+}
+
+/* --- Steps Section --- */
+.affiliate-steps {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+}
+.section-header {
+    margin-bottom: 94px;
+}
+
+.section-tag {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 30px;
+}
+
+.section-title {
+    font-size: 52px;
+    font-weight: 300;
+}
+
+.step-card {
+    background-color: var(--color-white);
+    padding: 0px 40px 40px;
+    border-radius: 20px;
+    border: 1px solid #E2E8F0;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: var(--color-flame-orange);
+}
+
+.step-card__number {
+    margin-top: -1.25em;
+    width: 2.5em;
+    height: 2.5em;
+    background: linear-gradient(360deg, #EFF5FC 0%, #CFD5E5 100%);
+    color: #B8BDCA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 300;
+    border: 8px solid var(--color-white);
+    transition: all 0.3s ease;
+    align-self: center;
+    position: relative;
+    z-index: 0;
+}
+
+.step-card__number::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-flame-orange);
+    z-index: -1;
+    border-radius: 50%;
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+.step-card:hover .step-card__number {
+    background-color: var(--color-flame-orange);
+    color: var(--color-white);
+}
+.step-card:hover .step-card__number::before {
+	opacity: 1;
+}
+.step-card__desc {
+    color: var(--color-oxford-blue);
+    line-height: 1.6em;
+    opacity: 0.8;
+}
+
+/* --- FAQ Section --- */
+.affiliate-faq {
+    padding: 100px 0 150px;
+    background-color: #fff;
+}
+
+.faq-title {
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.faq-accordion {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid var(--color-oxford-blue);
+}
+
+
+.faq-item__header {
+    padding: 26px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-item:hover .faq-item__header {
+    background-color: transparent;
+}
+
+.faq-item__question {
+    margin: 0;
+    color: var(--color-oxford-blue);
+    opacity: 0.5;
+    transition: all 0.3s;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.is-active .faq-item__question {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.faq-item__icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.faq-item__icon::before,
+.faq-item__icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-oxford-blue);
+    transition: all 0.3s;
+}
+
+.faq-item__icon::before {
+    width: 2px;
+    height: 14px;
+    left: 11px;
+    top: 5px;
+}
+
+.faq-item__icon::after {
+    width: 14px;
+    height: 2px;
+    left: 5px;
+    top: 11px;
+}
+
+.is-active .faq-item__icon::before {
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+.is-active .faq-item__icon::after {
+    background-color: var(--color-flame-orange);
+}
+
+.faq-item__content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 20px 0px;
+    box-sizing: content-box;
+}
+
+.is-active .faq-item__content {
+    max-height: 1000px; /* Increased to accommodate longer content */
+    padding: 0 20px 26px;
+    opacity: 1;
+}
+
+.faq-item__text {
+    color: var(--color-oxford-blue);
+    line-height: 1.6em;
+    font-size: 17px;
+    padding-top: 0;
+    border-top: none;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+    .affiliate-hero { padding: 60px 0; }
+    .affiliate-hero__title { font-size: 36px; }
+    .affiliate-hero__desc { font-size: 14px; }
+    .step-card { padding: 40px 24px 24px; }
+}

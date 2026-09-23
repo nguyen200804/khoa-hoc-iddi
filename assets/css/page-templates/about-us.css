@@ -1,0 +1,591 @@
+.about-us-wrapper {
+	background: url(/wp-content/uploads/2026/02/background-scroll.webp) center /cover;
+	background-attachment: fixed;
+}
+
+
+
+.iddi-about__intro {
+	background-color: #FFFFFF99;
+	padding: calc(150 / var(--vw)) 0;
+}
+.iddi-about__intro .iddi__container {
+	padding-left: calc(240 / var(--vw));
+	padding-right: calc(240 / var(--vw));
+	gap: calc(80 / var(--vw));
+}
+.iddi-about__intro__content {
+	width: 73%;
+}
+.iddi-about__intro__description {
+	margin-top: calc(24 / var(--vw));
+}
+.iddi-about__intro__brand {
+	margin: calc(24 / var(--vw)) 0 calc(8 / var(--vw));
+}
+.iddi-about__intro__button {
+	padding: 0.7em 2em;
+	border-radius: 0.5em;
+	box-shadow: 0px 4px 6px -4px #E65C234D, 0px 10px 15px -3px #E65C234D;
+	margin-top: calc(32/ var(--vw));
+}
+.iddi-about__intro__description * {
+	line-height: 1.7em;
+}
+.iddi-about__intro__media {
+	width: 27%;
+}
+.iddi-about__intro__video-element {
+	aspect-ratio: 1;
+	object-fit: contain;
+	border-radius: calc(24 / var(--vw));
+}
+
+
+
+
+.iddi-about__awards {
+	background-color: #0B1226;
+	padding: calc(100 / var(--vw)) 0 calc(32 / var(--vw));
+}
+.iddi-about__awards-wave {
+	width: 100%;
+	bottom: calc(100% - 1px);
+}
+.iddi-about__awards__trophy {
+	width: fit-content;
+	margin: 0 auto;
+	z-index: 0;
+}
+.iddi-about__awards__trophy::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(50% 50% at 50% 50%, rgba(255, 226, 97, 0.2) 0%, rgba(25, 41, 84, 0) 100%);
+	z-index: 0;
+}
+.iddi-about__awards__trophy-icon > img {
+	width: calc(216 / var(--vw));
+}
+.iddi-about__awards__trophy-content {
+	width: calc(160 / var(--vw));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.iddi-about__awards__trophy-content > * {
+	min-width: calc(460 / var(--vw));
+}
+.iddi-about__awards__trophy-label {
+	background: var(--Award, linear-gradient(90deg, #D09305 0%, #FFF2BC 48.08%, #E7AA1D 100%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.iddi-about__awards__trophy-title {
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: transparent;
+	background: linear-gradient(106deg, #E7AA1D 6.97%, #FFF2BC 49.72%, #E7AA1D 94.09%);
+	background-clip: text;
+	color: #0B1226;
+	margin: calc(20 / var(--vw)) 0;
+	line-height: 1.05em;
+}
+.iddi-about__awards__trophy-year {
+	background: var(--Award, linear-gradient(90deg, #D09305 0%, #FFF2BC 48.08%, #E7AA1D 100%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.iddi-about__awards__badge-border-2, .iddi-about__awards__badge-border-1 {
+	padding: calc(8 / var(--vw));
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50%;
+}
+.iddi-about__awards__badge-border-2 {
+	border-color: #FF980033;
+}
+.iddi-about__awards__badge-border-1 {
+	border-color: #FF980099;
+}
+.iddi-about__awards__badge-circle {
+	max-width: calc(150 / var(--vw));
+	aspect-ratio: 1;
+	border-radius: 50%;
+	padding: 1px;
+	background-image: linear-gradient(105.55deg, #E7AA1D 6.97%, #FFF2BC 49.72%, #E7AA1D 94.09%);
+}
+.iddi-about__awards__badge-content {
+	width: 100%;
+	height: 100%;
+	align-content: center;
+	text-align: center;
+	border-radius: 50%;
+	padding: 0 calc(10 / var(--vw));
+}
+.iddi-about__awards__badge-item {
+	flex: 1;
+}
+.iddi-about__awards__badge-title, .iddi-about__awards__badge-label {
+	background: var(--award-xo, linear-gradient(106deg, #E7AA1D 6.97%, #FFF2BC 49.72%, #E7AA1D 94.09%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.iddi-about__awards__badges-list {
+	gap: calc(12 / var(--vw));
+	margin: calc(80 / var(--vw)) auto calc(100 / var(--vw));
+	width: fit-content;
+	z-index: 0;
+}
+.iddi-about__awards__badges-list::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(50% 50% at 50% 50%, rgba(255, 226, 97, 0.2) 0%, rgba(25, 41, 84, 0) 100%);
+	z-index: -1;
+}
+.iddi-about__awards__info-text > * {
+	margin-bottom: 2em;
+}
+.iddi-about__awards__info-text * {
+	line-height: 1.7em;
+}
+
+
+
+.iddi-about__future {
+	padding: calc(72 / var(--vw)) 0;
+	background-color: #FFFFFF33;
+}
+.iddi-about__future__container {
+	padding-left: calc(240 / var(--vw));
+	padding-right: calc(240 / var(--vw));
+}
+.iddi-about__future__header > * {
+	width: 50%;
+}
+.iddi-about__future__title {
+	line-height: 1.1em;
+}
+.iddi-about__future__subtitle {
+	line-height: 1.7em;
+}
+
+.iddi-about__future__content-wrapper {
+	margin-top: calc(80 / var(--vw));
+	padding: 0 calc(40 / var(--vw));
+	gap: calc(100 / var(--vw));
+}
+.iddi-about__future__divider {
+	width: 3px;
+}
+.iddi-about__future__column {
+	width: 50%;
+	padding: calc(32 / var(--vw)) 0;
+}
+.iddi-about__future__item ~ .iddi-about__future__item {
+	margin-top: calc(32 / var(--vw));
+}
+.iddi-about__future__item-desc {
+	line-height: 1.6em;
+	margin-top: calc(16 / var(--vw));
+}
+
+
+
+
+
+.iddi-about__team__container.iddi__container {
+	padding-left: calc(240 / var(--vw));
+	padding-right: calc(240 / var(--vw));
+}
+.iddi-about__team {
+	padding: calc(72/ var(--vw) ) 0;
+	background-color: #FFFFFF99;
+}
+p.iddi-about__team__subtitle {
+	letter-spacing: 0.07em;
+	color: #1E3A8AB2;
+	margin-top: calc(8 / var(--vw));
+}
+
+.iddi-about__team__grid {
+	grid-gap: calc(40 / var(--vw));
+	margin-top: calc(40 / var(--vw));
+}
+.iddi-about__team__content {
+	margin-top: calc(16 / var(--vw));
+}
+p.iddi-about__team__position {
+	margin-top: calc(5 / var(--vw));
+}
+.iddi-about__team__socials {
+	gap: 5px;
+	margin: calc(16 / var(--vw)) 0;
+}
+.iddi-about__team__social-link {
+	padding: calc(10 / var(--vw));
+	border: 2px solid #fff;
+}
+.iddi-about__team__social-link > svg {
+	width: calc(20 / var(--vw));
+	height: calc(20 / var(--vw));
+	fill: #fff;
+}
+p.iddi-about__team__degree {
+	line-height: 1.6em;
+}
+.iddi-about__team__bio {
+	line-height: 1.7em;
+	margin-top: calc(12 / var(--vw));
+}
+.iddi-about__team__bio * {
+	line-height: 1.6em;
+}
+.iddi-about__team__bio p {
+	margin-bottom: 1em;
+	display: block;
+}
+
+
+
+
+
+.iddi-about__testimonials {
+	padding: calc(120 / var(--vw)) 0  calc(70 / var(--vw));
+}
+.iddi-about__testimonials__container {
+	padding-left: calc(240 / var(--vw));
+	padding-right: calc(240 / var(--vw));
+}
+.iddi-about__testimonials__list {
+	padding: calc(80 / var(--vw)) 0;
+}
+.iddi-about__testimonials__item ~ .iddi-about__testimonials__item {
+	margin-top: calc(24 / var(--vw));
+}
+.iddi-about__testimonials__item-text {
+	margin-top: calc(12 / var(--vw));
+}
+.iddi-about__testimonials__list--top .iddi-about__testimonials__item-inner {
+	padding: 8px 0;
+	padding-left: 12px;
+	padding-right: 25%;
+	border-left: 3px solid #E45E25;
+}
+.iddi-about__testimonials__list--bottom .iddi-about__testimonials__item-inner {
+	padding: 8px 0;
+	padding-right: 12px;
+	padding-left: 25%;
+	border-right: 3px solid #E45E25;
+}
+.iddi-about__testimonials__video-wrapper {
+	width: calc(1050 / var(--vw));
+	margin: 0 auto;
+}
+.iddi-about__testimonials__video-element {
+	border-radius: calc(24 / var(--vw));
+}
+
+
+
+
+.iddi-about__contact {
+	padding: calc(110 / var(--vw)) 0 calc(300 / var(--vw));
+	background-image: linear-gradient(to bottom, #FFFFFFF2, #EAEFF5);
+}
+
+@media (max-width: 1279px) {
+	.iddi-about__intro {
+		padding: 100px 0;
+	}
+	.iddi-about__intro .iddi__container {
+		padding-left: 32px;
+		padding-right: 32px;
+		gap: 56px;
+	}
+	.iddi-about__intro__description {
+		margin-top: 16px;
+	}
+	.iddi-about__intro__brand {
+		margin: 16px 0 5px;
+	}
+	.iddi-about__intro__button {
+		margin-top: 20px;
+	}
+
+
+	.iddi-about__awards {
+		padding: 66px 0 21px;
+	}
+	.iddi-about__awards__trophy-content {
+		width: 106px;
+	}
+	.iddi-about__awards__trophy-content > * {
+		min-width: 307px;
+	}
+	.iddi-about__awards__trophy-title {
+		margin: 13px 0;
+	}
+	.iddi-about__awards__trophy-icon > img {
+		width: 143px;
+	}
+	.iddi-about__awards__badge-circle {
+		max-width: 110px;
+	}
+	.iddi-about__awards__badges-list {
+		gap: 8px;
+		margin: 53px auto 64px;
+	}
+	.iddi-about__awards__badge-border-2, .iddi-about__awards__badge-border-1 {
+		padding: 6px;
+	}
+
+
+
+	.iddi-about__future__container {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.iddi-about__future {
+		padding: 50px 0;
+	}
+	.iddi-about__future__content-wrapper {
+		margin-top: 50px;
+		padding: 0 24px;
+		gap: 64px;
+	}
+	.iddi-about__future__item-desc {
+		margin-top: 11px;
+	}
+	.iddi-about__future__item ~ .iddi-about__future__item {
+		margin-top: 21px;
+	}
+
+
+
+	.iddi-about__team {
+		padding: 48px 0;
+	}
+	.iddi-about__team__container.iddi__container {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	p.iddi-about__team__subtitle {
+		margin-top: 5px;
+	}
+	.iddi-about__team__grid {
+		grid-gap: 24px;
+		margin-top: 28px;
+	}
+	.iddi-about__team__social-link {
+		padding: 8px;
+	}
+	.iddi-about__team__social-link > svg {
+		width: 14px;
+		height: 14px;
+	}
+
+
+
+	.iddi-about__testimonials {
+		padding: 80px 0  50px;
+	}
+	.iddi-about__testimonials__container {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	.iddi-about__testimonials__list {
+		padding: 54px 0;
+	}
+	.iddi-about__testimonials__item-text {
+		margin-top: 8px;
+	}
+	.iddi-about__testimonials__video-wrapper {
+		width: 100%;
+		max-width: 700px;
+	}
+
+
+
+	.iddi-about__contact {
+		padding: 72px 0 200px;
+	}
+}
+
+
+@media (max-width: 1024px) {
+	.iddi-about__intro {
+		padding: 80px 0;
+	}
+	.iddi-about__intro .iddi__container {
+		padding-left: 24px;
+		padding-right: 24px;
+		gap: 36px;
+	}
+
+
+	.iddi-about__awards {
+		padding: 60px 0 20px;
+	}
+	.iddi-about__awards__badges-list {
+		gap: 5px;
+		margin: 45px auto 54px;
+	}
+	.iddi-about__awards__badge-border-2, .iddi-about__awards__badge-border-1 {
+		padding: 4px;
+	}
+
+
+
+	.iddi-about__future__container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.iddi-about__future__content-wrapper {
+		padding: 0 16px;
+		gap: 50px;
+	}
+	.iddi-about__future__item-desc {
+		margin-top: 8px;
+	}
+
+
+
+	.iddi-about__team__container.iddi__container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.iddi-about__team__grid {
+		grid-gap: 20px;
+	}
+	.iddi-about__team__social-link {
+		padding: 7px;
+	}
+
+
+
+
+	.iddi-about__testimonials {
+		padding: 64px 0  32px;
+	}
+	.iddi-about__testimonials__container {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+	.iddi-about__testimonials__list {
+		padding: 40px 0;
+	}
+	.iddi-about__testimonials__item ~ .iddi-about__testimonials__item {
+		margin-top: 12px;
+	}
+
+
+
+	.iddi-about__contact {
+		padding: 64px 0 150px;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.iddi-about__intro {
+		padding: 50px 0;
+	}
+	.iddi-about__intro .iddi__container {
+		padding-left: 20px;
+		padding-right: 20px;
+		gap: 36px;
+	}
+	.iddi-about__intro__media, .iddi-about__intro__content {
+		width: 100%;
+	}
+	.iddi-about__intro__video-element {
+		aspect-ratio: unset;
+	}
+
+
+
+
+
+	.iddi-about__future__container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.iddi-about__future__header > * {
+		width: 100%;
+	}
+	.iddi-about__future__subtitle {
+		margin-top: 16px;
+	}
+	.iddi-about__future__content-wrapper {
+		padding: 0 0px;
+		gap: 10px;
+	}
+	.iddi-about__future__column {
+		width: 100%;
+		padding: 0;
+	}
+	.iddi-about__future__item ~ .iddi-about__future__item {
+		margin-top: 20px;
+	}
+
+
+
+	.iddi-about__team__container.iddi__container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+
+
+	.iddi-about__testimonials__container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.iddi-about__testimonials__list--top .iddi-about__testimonials__item-inner {
+		padding-right: 0;
+	}
+	.iddi-about__testimonials__list--bottom .iddi-about__testimonials__item-inner {
+		padding-left: 0;
+	}
+	
+	
+	.iddi-about__contact {
+		padding: 50px 0 100px;
+	}
+}
+
+
+
+
+@media (max-width: 576px) {
+	.iddi-about__intro .iddi__container {
+		padding-left: 12px;
+		padding-right: 12px;
+		gap: 36px;
+	}
+
+
+	.iddi-about__future__container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+
+	.iddi-about__team__container.iddi__container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.iddi-about__team__grid {
+		grid-gap: 12px;
+	}
+
+
+
+	.iddi-about__testimonials__container {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+}

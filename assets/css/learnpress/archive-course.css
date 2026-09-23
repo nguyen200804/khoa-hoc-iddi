@@ -1,0 +1,152 @@
+.iddi-taxonomy-course-catetory-courses {
+    padding-top: calc(100 / var(--vw));
+    padding-bottom: calc(100 / var(--vw));
+    background-color: #FFFFFF99;
+}
+
+
+
+.iddi-taxonomy-course-catetory-courses-filter {
+    margin: calc(40 / var(--vw)) 0 calc(90 / var(--vw));
+}
+
+.iddi-taxonomy-course-catetory-courses-search {
+    width: calc(1070 / var(--vw));
+}
+
+.iddi-taxonomy-course-catetory-courses-search form {
+    background-color: rgba(234, 239, 245, 0.6);
+    border: 1px solid rgba(221, 223, 229, 1);
+}
+
+.iddi-taxonomy-course-catetory-courses-search-input {
+    height: calc(64 / var(--vw));
+}
+
+.iddi-taxonomy-course-catetory-courses-search-submit {
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+.iddi-taxonomy-course-catetory-courses-filter-tabs .filter-item:hover>a,
+.iddi-taxonomy-course-catetory-courses-filter-tabs .filter-item.active>a,
+.iddi-taxonomy-course-catetory-courses-filter-tabs .filter-item:hover>.filter-select,
+.iddi-taxonomy-course-catetory-courses-filter-tabs .filter-item.active>.filter-select {
+    color: var(--color-flame-orange);
+}
+
+.iddi-taxonomy-course-catetory-courses-filter-tabs .filter-item.active {
+    border-bottom: 2px solid var(--color-flame-orange);
+}
+
+.iddi-taxonomy-course-catetory-courses-filter-tabs .iddi-author-dropdown-container>ul {
+    display: none;
+    font-size: 0.9em;
+    min-width: calc(200 / var(--vw));
+    box-shadow: 0px 0px 4px 1px #00000014;
+    top: calc(100% + 10px);
+    left: 0;
+    padding: 0;
+}
+
+.iddi-taxonomy-course-catetory-courses-filter-tabs .iddi-author-dropdown-container:hover>ul,
+.iddi-taxonomy-course-catetory-courses-filter-tabs .iddi-author-dropdown-container>ul:hover {
+    display: inline-block;
+}
+
+
+
+.iddi-taxonomy-course-catetory-courses__grid {
+    grid-gap: 50px 60px;
+}
+
+
+
+
+
+
+
+
+
+
+.iddi-courses__table-price {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: calc(120 / var(--vw)) 0;
+}
+
+
+
+
+
+.iddi-section-testimomials {
+    padding: calc(120 / var(--vw)) 0;
+    background-color: #FFFFFF40;
+}
+
+.iddi-section-testimomials__video-featured {
+    margin: calc(100 / var(--vw)) auto;
+    width: calc(1320 / var(--vw));
+}
+
+.iddi-section-testimomials__column {
+    width: calc(720 / var(--vw));
+    padding: calc(44 / var(--vw)) 0;
+    gap: calc(120 / var(--vw));
+}
+
+.iddi-section-testimomials__line-column {
+    width: 1px;
+    background-color: #B8BDCA;
+}
+
+.iddi-section-testimomials__card-avatar {
+    width: calc(248 / var(--vw));
+    min-width: calc(248 / var(--vw));
+}
+
+.iddi-section-testimomials__card-avatar>img {
+    background-color: #fff;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+
+
+
+
+.iddi-event-detail__contact {
+    background-image: linear-gradient(to bottom, #FFFFFFF2, #EAEFF5);
+    padding: calc(90 / var(--vw)) 0;
+}
+@media (max-width: 1600px) {
+	
+}
+
+
+@media (max-width: 1366px) {
+	
+}
+
+
+@media (max-width: 1200px) {
+	
+}
+
+
+@media (max-width: 996px) {
+	
+}
+
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 576px) {
+	.iddi-taxonomy-course-catetory-courses__grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

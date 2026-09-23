@@ -1,0 +1,173 @@
+/* 
+    CSS cho thanh bên giao diện học tập (Course Curriculum Sidebar) - Phong cách IDDI
+    File: assets/css/learnpress/popup-sidebar.css
+*/
+
+#popup-sidebar {
+    background: #fff;
+    height: 100%;
+    box-shadow: none !important;
+    border: 0;
+}
+
+#popup-sidebar * {
+    border: 0;
+}
+
+.iddi-curriculum-sidebar {
+    background: #fff;
+}
+
+/* Section Style */
+.iddi-sections {
+    padding: 0 !important;
+    margin: 0;
+}
+
+.iddi-section {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.iddi-section-header {
+    padding: 14px 20px;
+    background-color: #f7f8fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.iddi-section-header:hover {
+    background-color: #edeff1;
+}
+
+.iddi-section-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A2E5A;
+    line-height: 1.3em;
+}
+
+.iddi-section-meta {
+    font-size: 12px;
+    color: #616161;
+    display: block;
+    margin-top: 2px;
+}
+
+.iddi-toggle-icon {
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.iddi-section.closed .iddi-toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Items Style */
+.iddi-section-content {
+    padding: 0 !important;
+    margin: 0;
+    display: block;
+}
+
+.iddi-section.closed .iddi-section-content {
+    display: none;
+}
+
+.iddi-item {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.iddi-item:hover {
+    background-color: #f5f5f5;
+}
+
+.iddi-item.active {
+    background-color: #fff2e7; /* IDDI Active Color */
+}
+
+.iddi-item-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 12px 30px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.iddi-item-title {
+    font-size: 16px;
+    color: #323232;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.iddi-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.iddi-icon {
+    opacity: 0.6;
+}
+
+.iddi-item-status {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+/* Utility Classes */
+.d-flex { display: flex; }
+.flex-ai-center { align-items: center; }
+.flex-js-between { justify-content: space-between; }
+.flex-1 { flex: 1; }
+
+/* --- Locked Items --- */
+.iddi-item.is-locked {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.iddi-item.is-locked .iddi-item-title {
+    color: #94A3B8;
+}
+
+.iddi-item.is-locked .iddi-item-link {
+    cursor: not-allowed;
+}
+
+.iddi-item.is-locked .iddi-icon {
+    filter: grayscale(1);
+    opacity: 0.4;
+}
+
+.is-lock-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .iddi-section-title {
+        font-size: 16px;
+    }
+    .iddi-item-link {
+        padding: 12px 15px;
+    }
+    .iddi-item-title {
+        font-size: 15px;
+    }
+    .iddi-section-header {
+        padding: 12px 15px;
+    }
+}

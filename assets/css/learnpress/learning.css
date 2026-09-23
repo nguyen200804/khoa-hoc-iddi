@@ -1,0 +1,431 @@
+/* 
+    CSS cho trang giao diện học tập (Learning Page) 
+    File: assets/css/learnpress/learning.css
+*/
+
+body.course-item-popup {
+	overflow-y: unset !important;
+}
+#popup-content {
+    min-width: unset !important;
+}
+
+/* Breadcrumb Styling */
+.iddi-breadcrumb {
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.iddi-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.iddi-breadcrumb a:hover {
+    color: #ff6600;
+}
+
+.iddi-breadcrumb .sep {
+    color: #999;
+}
+
+.iddi-breadcrumb .current {
+    color: #1a2b4e;
+    font-weight: 600;
+}
+
+/* Video Styling */
+.iddi-lesson-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 12px;
+}
+
+.iddi-lesson-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.iddi-lesson-video-custom {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.iddi-lesson-video-embed iframe,
+.iddi-lesson-video-embed video,
+.iddi-lesson-video-embed div iframe {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 12px;
+}
+
+.iddi-lesson-video-embed > div {
+    width: 100% !important;
+    min-width: 100% !important;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+/* Course Progress Styling */
+.iddi-course-progress {
+    background: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #e0e6ed;
+    border-radius: 0;
+}
+
+.iddi-course-progress .progress-title {
+    font-size: 18px;
+    color: #1a2b4e;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.iddi-course-progress .progress-info {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iddi-course-progress .percent {
+    color: #718096;
+}
+
+.iddi-course-progress .count {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.iddi-course-progress .progress-bar-wrap {
+    background: #edf2f7;
+    height: 8px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.iddi-course-progress .progress-bar-fill {
+    background: #22c55e;
+    height: 100%;
+    border-radius: 100px;
+    transition: width 0.6s ease;
+}
+
+#popup-course {
+    display: flex;
+	position: static !important;
+    font-family: 'Inter', sans-serif;
+}
+
+#popup-course > .container {
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 100px;
+}
+
+#popup-course > .container > .course-wrapper {
+    display: grid;
+    gap: 32px;
+    margin-top: 24px;
+    grid-template-columns: 65fr 35fr;
+}
+
+div#learn-press-quiz-app {
+    background: #fff;
+    padding: 24px 24px;
+    border-radius: 12px;
+    border: 1px solid #E0E6ED;
+    margin-top: 36px;
+}
+
+.quiz-attempts {
+    margin-bottom: 0 !important;
+}
+
+
+/* Typography inside body */
+:where(.lesson-description, .quiz-content) {
+    font-size: 17px;
+    color: #45464D !important;
+}
+
+:where(.lesson-description, .quiz-content) img {
+	border-radius: 1em;
+}
+
+:where(.lesson-description, .quiz-content) * {
+	line-height: 1.5em;
+}
+
+:where(.lesson-description, .quiz-content) h1,
+:where(.lesson-description, .quiz-content) h2,
+:where(.lesson-description, .quiz-content) h3,
+:where(.lesson-description, .quiz-content) h4,
+:where(.lesson-description, .quiz-content) h5,
+:where(.lesson-description, .quiz-content) h6 {
+	display: block;
+	font-weight: 700;
+	line-height: 1.3em !important;
+}
+
+:where(.lesson-description, .quiz-content)  p,
+:where(.lesson-description, .quiz-content)  ul {
+	margin-bottom: 1em;
+	display: block;
+}
+:where(.lesson-description, .quiz-content) h1{
+	font-size: 2em; 
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
+}
+:where(.lesson-description, .quiz-content) h2{
+	font-size: 1.5em;
+	margin-top: 0.83em;
+	margin-bottom: 0.83em;
+}
+:where(.lesson-description, .quiz-content) h3{
+	font-size: 1.17em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+:where(.lesson-description, .quiz-content) h4{
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-bottom: 1.33em;
+}
+:where(.lesson-description, .quiz-content) h5{
+	font-size: .83em;
+	margin-top: 1.67em;
+	margin-bottom: 1.67em;
+}
+:where(.lesson-description, .quiz-content) h6{
+	font-size: .67em;
+	margin-top: 2.33em;
+	margin-bottom: 2.33em;
+}
+
+:where(.lesson-description, .quiz-content) blockquote {
+	font-style: italic;
+	font-size: 1em;
+	line-height: 1.5;
+	color: #45464D;
+	padding-left: 1.25em;
+	border-left: 3px solid #f26522;
+	margin: 2.5em 0;
+}
+
+
+/* Header */
+#popup-header {
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.course-content {
+}
+ 
+.course-content .content-item-wrap {
+    padding-top: 0;
+    width: 100%;
+}
+ 
+.course-sidebar {
+    align-self: flex-start;
+    position: sticky;
+    top: 100px;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#learn-press-item-comments {
+	padding-bottom: 0 !important;
+}
+#popup-sidebar, #popup-content {
+	width: 100% !important;
+}
+/* Sidebar bên trái */
+#popup-sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    overflow: unset !important;
+}
+#popup-sidebar .course-curriculum {
+    position: static !important;
+    width: 100% !important;
+}
+
+/* Nội dung bài học bên phải */
+#popup-content {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Footer cố định phía dưới */
+#popup-footer {
+    width: 100%;
+    background: #1a2b4e;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Tùy chỉnh Tab Bar LearnPress bên trong Content */
+.learn-press-nav-tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.learn-press-nav-tabs li a {
+    padding: 10px 0;
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.learn-press-nav-tabs li.active a {
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1366px) {
+    #popup-course > .container {
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #popup-course > .container > .course-wrapper {
+        gap: 24px;
+    }
+
+}
+
+@media (max-width: 996px) {
+	#popup-course > .container > .course-wrapper {
+    grid-template-columns: 1fr;
+}
+	
+    .course-content {
+        width: 100%;
+    }
+    .course-sidebar {
+        width: 100%;
+        position: static;
+        margin-top: 40px;
+    }
+    #popup-course > .container > .course-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    #popup-course > .container {
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    .iddi-breadcrumb {
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
+    .iddi-course-progress .progress-title {
+        font-size: 16px;
+    }
+    :where(.lesson-description, .quiz-content) {
+        font-size: 16px;
+    }
+    div#learn-press-quiz-app {
+        padding: 20px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+   
+    .iddi-breadcrumb {
+        font-size: 13px;
+    }
+    .iddi-lesson-video {
+        margin-left: -15px;
+        margin-right: -15px;
+        border-radius: 0;
+    }
+    .iddi-course-progress {
+        padding: 15px;
+    }
+    .course-sidebar {
+        border-radius: 12px;
+    }
+}
+
+
+/* Locked Message Styling */
+.iddi-locked-message {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 60px 40px;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.iddi-locked-message .locked-icon {
+    margin-bottom: 24px;
+}
+
+.iddi-locked-message h2 {
+    font-size: 24px;
+    color: #1e293b;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.iddi-locked-message p {
+    color: #64748b;
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto 24px auto;
+    line-height: 1.6;
+}
+
+.iddi-locked-message .lp-button {
+    background: #1a2b4e;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.iddi-locked-message .lp-button:hover {
+    background: #ff6600;
+}

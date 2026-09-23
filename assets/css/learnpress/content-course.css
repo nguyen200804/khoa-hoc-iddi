@@ -1,0 +1,150 @@
+/* ==========================================================================
+   LearnPress Reusable Course Card Stylesheet (content-course.css)
+   ========================================================================== */
+
+/* 1. Archive Course Card selectors */
+.iddi-taxonomy-course-catetory-courses__name {
+    margin-top: auto;
+}
+
+/* Giới hạn tên khóa học đúng 3 dòng, chiều cao cố định 3 dòng */
+.iddi-taxonomy-course-catetory-courses__name,
+.iddi-taxonomy-course-catetory-courses__name a,
+.iddi-courses__online-tutorial-courses-name,
+.iddi-courses__online-tutorial-courses-name a {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(3 * 1.3em);
+    line-height: 1.3em;
+}
+
+/* Giới hạn mô tả khóa học đúng 3 dòng, chiều cao cố định 3 dòng */
+.iddi-taxonomy-course-catetory-courses__excerpt,
+.iddi-taxonomy-course-catetory-courses__excerpt p,
+.iddi-courses__online-tutorial-courses-excerpt,
+.iddi-courses__online-tutorial-courses-excerpt p {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calc(3 * 1.5em);
+    line-height: 1.5em;
+}
+
+.iddi-course-details-info__card-footer {
+	justify-content: space-between;
+}
+
+/* .iddi-course-details-info__card-btn-wrapper {
+    width: 50%;
+} */
+
+/* 2. Related Course Card selectors (Single Page) */
+.iddi-courses__online-tutorial-courses-card {
+	border: 2px solid rgba(255, 255, 255, 1);
+	background: linear-gradient(180deg, #FFFFFF 6.65%, rgba(255, 255, 255, 0.841346) 39.51%, rgba(255, 255, 255, 0.658728) 53.65%, rgba(255, 255, 255, 0) 86.5%);
+}
+
+.iddi-courses__online-tutorial-courses-enrol {
+	width: 100%;
+}
+
+/* 3. Reusable Card Premium Interactions & Micro-animations */
+.iddi-taxonomy-course-catetory-courses__card,
+.iddi-courses__online-tutorial-courses-card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+
+/* Elegant Image Zoom */
+.iddi-taxonomy-course-catetory-courses__thumb,
+.iddi-courses__online-tutorial-courses-thumb {
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--radius-s, 8px);
+}
+
+.iddi-taxonomy-course-catetory-courses__thumb img,
+.iddi-courses__online-tutorial-courses-thumb img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.iddi-taxonomy-course-catetory-courses__card:hover .iddi-taxonomy-course-catetory-courses__thumb img,
+.iddi-courses__online-tutorial-courses-card:hover .iddi-courses__online-tutorial-courses-thumb img {
+    transform: scale(1.06);
+}
+
+/* Smooth Title Transitions */
+.iddi-taxonomy-course-catetory-courses__name a,
+.iddi-courses__online-tutorial-courses-name a {
+    transition: color 0.3s ease;
+}
+
+.iddi-taxonomy-course-catetory-courses__card:hover .iddi-taxonomy-course-catetory-courses__name a,
+.iddi-courses__online-tutorial-courses-card:hover .iddi-courses__online-tutorial-courses-name a {
+    color: var(--color-flame-orange, #E65C23) !important;
+}
+
+/* Button Micro-interactions */
+.iddi-course-details-info__card-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+    padding: 1em 20px;
+    font-size: 18px;
+}
+
+.iddi-course-details-info__card-btn:hover {
+    background-color: #c44c1a !important;
+    box-shadow: 0 4px 12px rgba(230, 92, 35, 0.3);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1600px) {
+	.iddi-courses__online-tutorial-courses-card {
+		padding: 20px;
+		gap: 12px;
+	}
+
+	.iddi-courses__online-tutorial-courses-name {
+		font-size: 22px;
+	}
+
+	.iddi-courses__online-tutorial-courses-excerpt {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1366px) {
+	
+}
+
+
+@media (max-width: 1200px) {
+	
+}
+
+
+@media (max-width: 996px) {
+	
+}
+
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 576px) {
+	.iddi-taxonomy-course-catetory-courses__price {
+    font-size: 18px;
+}
+	.iddi-taxonomy-course-catetory-courses__date {
+		font-size: 16px;
+	}
+}

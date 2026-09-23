@@ -1,0 +1,117 @@
+/* 
+    CSS cho phần Tài liệu khóa học (Course Materials) - Giao diện Card
+    File: assets/css/learnpress/materials.css
+*/
+
+.iddi-materials-section {
+    background: #fff;
+    padding: 24px 24px;
+    border-radius: 12px;
+    border: 1px solid #E0E6ED;
+    margin-top: 36px;
+}
+
+.iddi-materials-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.iddi-materials-icon {
+	display: flex;
+}
+
+.iddi-materials-icon svg {
+    width: 1em;
+}
+
+.iddi-materials-title {
+    margin: 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: #1A2E5A;
+}
+
+.iddi-materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styling */
+.iddi-material-card {
+    font-size: 14px;
+    background: #ffffff;
+    border: 1px solid #F1F5F9;
+    border-radius: 0.575em;
+    padding: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.iddi-material-card:hover {
+    border-color: #E2E8F0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+.material-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+}
+
+.material-icon-wrap {
+    width: 3em;
+    height: 3em;
+    border-radius: 0.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.material-icon-wrap svg {
+    width: 1.5em !important;
+    height: 1.5em !important;
+}
+
+.material-info {
+    flex: 1;
+}
+
+.material-name {
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #1A2E5A;
+    line-height: 1.4em;
+}
+
+.material-meta {
+    font-size: 0.8em;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.material-download-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #94A3B8;
+    transition: color 0.3s;
+}
+
+.material-download-link:hover {
+    color: #1A2B4E;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .iddi-materials-grid {
+        grid-template-columns: 1fr;
+    }
+}

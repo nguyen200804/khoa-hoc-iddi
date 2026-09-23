@@ -1,0 +1,127 @@
+.iddi-section-contact__form-wrapper {
+	width: calc(809/var(--vw));
+}
+.iddi-section-contact__form-wrapper br {
+    display: none;
+}
+.iddi-section-contact__field-group {
+	gap: calc(18/var(--vw));
+	margin-bottom: calc(36/var(--vw));
+}
+.iddi-section-contact__field-group p {
+    width: 100%;
+}
+.iddi-section-contact__field-group :where(input, textarea) {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #192954;
+    outline: 0;
+    min-height: 48px;
+    line-height: 1.7em;
+}
+.iddi-section-contact__submit-btn {
+    gap: calc(16/var(--vw));
+    margin-left: auto;
+    cursor: pointer;
+}
+/* 1. Hiệu ứng khi đang gửi (Submitting) */
+.iddi-section-contact__form-wrapper.submitting .iddi-section-contact__submit-btn {
+    opacity: 0.6;
+    pointer-events: none; /* Không cho nhấn lần nữa */
+    cursor: not-allowed;
+}
+
+/* 2. Hiệu ứng cho icon SVG xoay tròn khi đang xử lý */
+.wpcf7-spinner {
+    margin: 0 0 0 10px !important;
+    background-color: #192954 !important; /* Màu xanh đậm giống icon */
+}
+
+/* 3. Tùy chỉnh thông báo phản hồi (Gửi thành công/lỗi) */
+.wpcf7-response-output {
+    border: none !important;
+    margin: 20px 0 0 0 !important;
+    padding: 15px !important;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right; /* Căn phải giống nút Gửi ngay */
+}
+
+/* Màu khi gửi thành công */
+.wpcf7 form.sent .wpcf7-response-output {
+    color: #28a745 !important; /* Màu xanh lá */
+}
+
+/* Màu khi có lỗi */
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unconfirmed .wpcf7-response-output {
+    color: #dc3545 !important; /* Màu đỏ */
+}
+
+/* 4. Hiệu ứng gạch chân khi focus vào input */
+.iddi-section-contact__input:focus, 
+.iddi-section-contact__textarea:focus {
+    border-bottom: 2px solid #192954 !important;
+    transition: all 0.3s ease;
+}
+/* Ép chiều cao tương đương 2 dòng chữ */
+.iddi-section-contact__textarea {
+    height: 5em !important;
+    min-height: unset !important;
+    rows: 2 !important;
+    resize: none;
+    overflow-y: auto;
+}
+
+/* Đảm bảo khung bao ngoài không đẩy lên quá cao */
+.iddi-section-contact__field-group {
+    margin-bottom: 15px;
+}
+
+
+.iddi-section-contact__map-wrapper {
+	width: calc(677 / var(--vw));
+}
+.iddi-section-contact__map-frame iframe {
+	border-radius: calc(24/var(--vw));
+	width: 100%;
+	height: calc(633/var(--vw));
+}
+
+
+
+
+@media (max-width: 1279px) {
+	.iddi-section-contact__form-wrapper {
+		width: 520px;
+	}
+
+	.iddi-section-contact__map-wrapper {
+		width: 410px;
+	}
+	.iddi-section-contact__map-frame iframe {
+		height: 410px;
+	}
+}
+
+@media (max-width: 768px) { 
+	.iddi-section-contact__form-wrapper {
+		width: 100%;
+	}
+	.iddi-section-contact__form {
+    margin-top: 16px;
+}
+	.iddi-section-contact__map-wrapper {
+		width: 100%;
+		margin-top: 32px;
+	}
+}
+
+
+
+
+
+@media (max-width: 576px) { 
+
+}

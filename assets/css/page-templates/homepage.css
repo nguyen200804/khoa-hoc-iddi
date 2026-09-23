@@ -1,0 +1,1120 @@
+/* #iddi-homepage {
+	background: url(/wp-content/uploads/2026/02/background-scroll.webp) center /cover;
+	background-attachment: fixed;
+} */
+
+.iddi-homepage__hero {
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 0 !important;
+	width: 100%;
+/* 	aspect-ratio: 2500 / 1000; /* Khai báo tỷ lệ khung hình để giữ chỗ trên trình duyệt, tránh giật màn hình CLS */ */
+}
+
+.iddi-homepage__hero-img {
+	width: 100%;
+	height: auto;
+/* 	aspect-ratio: 2500 / 1000; */
+}
+
+.iddi-homepage__hero .swiper-button-prev,
+.iddi-homepage__hero .swiper-button-next {
+	width: calc(40 / var(--vw));
+	fill: #fff;
+}
+
+.iddi-homepage__hero .swiper-button-prev::after,
+.iddi-homepage__hero .swiper-button-next::after {
+	content: unset;
+}
+
+.iddi-homepage__hero .swiper-pagination {
+	bottom: 24px !important;
+}
+
+.iddi-homepage__hero .swiper-pagination-bullet {
+	background: #fff;
+	opacity: 0.4;
+}
+
+.iddi-homepage__hero .swiper-pagination-bullet-active {
+	opacity: 1;
+}
+
+
+/* Heading Number */
+.iddi-homepage__number {
+	font-size: calc(128 / var(--vw));
+	gap: 0.1em;
+}
+
+.iddi-homepage__number-number {
+	overflow: hidden;
+	-webkit-text-stroke-color: transparent;
+}
+
+.iddi-homepage__number-number span {
+	background-image: linear-gradient(to top, #c7d1de 0%, #B8BDCA 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: 0.75em;
+	display: block;
+}
+
+.iddi-homepage__number-text {
+	font-size: 0.33em;
+	margin-bottom: -0.15em;
+}
+
+
+
+
+.iddi-homepage__values {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.iddi-homepage__values-showcase {
+	padding-top: calc(50/var(--vw));
+	padding-bottom: calc(50/var(--vw));
+}
+
+.iddi-homepage__values-header {
+	padding-top: calc(90 / var(--vw));
+}
+
+
+
+.iddi-homepage__values-main {
+	margin-top: calc(50/var(--vw));
+}
+
+.iddi-homepage__values-title {
+	width: 50%;
+}
+
+.iddi-homepage__values-grid {
+	grid-gap: calc(68 / var(--vw));
+	margin-top: calc(45 / var(--vw));
+}
+
+.iddi-homepage__value-card:nth-of-type(1) {
+	--margin: 2;
+}
+
+.iddi-homepage__value-card:nth-of-type(2) {
+	--margin: 1;
+}
+
+.iddi-homepage__value-card:nth-of-type(3) {
+	--margin: 0;
+}
+
+.iddi-homepage__value-card:nth-of-type(4) {
+	--margin: -1;
+}
+
+.iddi-homepage__value-card {
+	margin-top: calc((110 / var(--vw)) * var(--margin));
+}
+
+.iddi-homepage__value-card-inner {
+	padding: 16px;
+	overflow: hidden;
+	border: 1px solid #f6f6f6;
+	border-radius: 12px;
+	background: #fff;
+}
+
+.iddi-homepage__value-card-info {
+	height: 100%;
+	/* 	background-image: linear-gradient(180deg, #FFFFFF 6.65%, rgba(255, 255, 255, 0.841346) 39.51%, rgba(255, 255, 255, 0.658728) 53.65%, rgba(255, 255, 255, 0) 86.5%); */
+}
+
+.iddi-homepage__value-card-desc {
+	margin-top: calc(12 / var(--vw));
+	line-height: 1.4em;
+}
+
+.iddi-homepage__value-card-img {
+	/*     height: 100%; */
+	border-radius: 10px;
+	margin-top: 28px;
+}
+
+.iddi-homepage__values-showcase-media {
+	width: 45%;
+	padding-right: calc(30 / var(--vw));
+}
+
+.iddi-homepage__values-implant-img-tooth-technology {
+	aspect-ratio: 1;
+}
+
+.iddi-homepage__values-implant-img-tooth-technology-group {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+}
+
+.iddi-homepage__values-implant-img-tooth-technology-img {
+	height: 100%;
+	transform: scale(90%);
+}
+
+.iddi-homepage__values-implant-img-tooth-technology-item {
+	width: 70%;
+	transition: transform 1s ease;
+}
+
+.iddi-homepage__values-implant-img-tooth-technology-item._1 {
+	transform: translateY(calc(0 / var(--vw)));
+}
+
+.iddi-homepage__values-implant-img-tooth-technology-item._3 {
+	transform: translateY(calc(-43 / var(--vw)));
+	z-index: -1;
+}
+
+.iddi-homepage__values-implant-img-tooth-technology:hover .iddi-homepage__values-implant-img-tooth-technology-item._1 {
+	transform: translateY(calc(-50 / var(--vw)));
+}
+
+.iddi-homepage__values-implant-img-tooth-technology:hover .iddi-homepage__values-implant-img-tooth-technology-item._3 {
+	transform: translateY(calc(7 / var(--vw)));
+}
+
+.iddi-homepage__values-label {
+	text-wrap: nowrap;
+}
+
+.iddi-homepage__values-label._1 {
+	top: 38%;
+	left: 0%;
+}
+
+.iddi-homepage__values-label._2 {
+	top: 60%;
+	left: -1%;
+}
+
+.iddi-homepage__values-label._3 {
+	top: 46%;
+	left: 73%;
+}
+
+.iddi-homepage__values-label._4 {
+	top: 62%;
+	left: 69%;
+}
+
+.iddi-homepage__values-showcase-content {
+	width: 50%;
+}
+
+.iddi-homepage__education {
+	background-color: #FFFFFFF2;
+	backdrop-filter: blur(30px);
+	padding-bottom: calc(150/ var(--vw));
+}
+
+.iddi-homepage__education-header {
+	padding-top: calc(84/ var(--vw));
+}
+
+.iddi-homepage__education-heading {
+	margin-top: calc(28 / var(--vw));
+}
+
+.iddi-homepage__education-grid {
+	grid-gap: calc(120/var(--vw));
+	margin: 0 auto;
+	max-width: max-content;
+	margin-top: calc(132/var(--vw));
+}
+
+.iddi-homepage__education-card {
+	width: calc(363/var(--vw));
+	min-height: calc(500 / var(--vw));
+	border: 2px solid transparent;
+	background-image: linear-gradient(#ffffff, white), linear-gradient(360deg, #EAEFF5 0%, #B8BDCA 100%);
+	background-origin: border-box;
+	background-clip: padding-box, border-box;
+}
+
+.iddi-homepage__education-card-desc {
+	margin-top: calc(12/var(--vw));
+}
+
+.iddi-homepage__education-stats {
+	margin-top: calc(100/var(--vw));
+}
+
+.iddi-homepage__education-stats-number {
+	font-size: calc(120 / var(--vw));
+	line-height: 0.8em;
+}
+
+.iddi-homepage__education-stats-row:nth-of-type(odd) .iddi-homepage__education-stats-item {
+	order: 1;
+}
+
+.iddi-homepage__education-stats-row+.iddi-homepage__education-stats-row {
+	margin-top: calc(80 / var(--vw));
+}
+
+.iddi-homepage__education-media {
+	width: calc(1330 / var(--vw));
+	margin: 0 auto;
+	margin-top: calc(100 / var(--vw));
+}
+
+.iddi-homepage__education-video-wrapper>video {
+	border-radius: calc(24/ var(--vw));
+	max-width: 100%;
+}
+
+.iddi-homepage__education-media-caption {
+	margin-top: calc(80/var(--vw));
+}
+
+.iddi-homepage__education-btn {
+	margin: 0 auto;
+	width: fit-content;
+	margin-top: calc(72/ var(--vw));
+}
+
+/* 03. Implant Systems */
+.iddi-homepage__systems {
+	background-color: #FFFFFF80;
+	padding-top: calc(84 / var(--vw));
+}
+
+.iddi-homepage__systems-main-title {
+	margin-top: calc(50/var(--vw));
+}
+
+.iddi-homepage__systems-diagram {
+	position: relative;
+}
+
+.iddi-homepage__systems-tag {
+	position: absolute;
+	text-wrap: nowrap;
+}
+
+.iddi-homepage__systems-tag._1 {
+	top: 51%;
+	left: -2%;
+}
+
+.iddi-homepage__systems-tag._2 {
+	top: 76%;
+	left: -3%;
+}
+
+.iddi-homepage__systems-tag._3 {
+	top: 43%;
+	left: 80%;
+}
+
+.iddi-homepage__systems-tag._4 {
+	top: 66%;
+	left: 74%;
+}
+
+.iddi-homepage__systems-core-visual {
+	width: calc(608/ var(--vw));
+	margin: 0 auto;
+	position: relative;
+	margin-top: calc(60 / var(--vw));
+}
+
+.iddi-homepage__systems-core-visual img {
+	width: 100%;
+}
+
+.iddi-homepage__systems-feature-left {
+	left: 0;
+}
+
+.iddi-homepage__systems-feature-right {
+	right: 0;
+}
+
+.iddi-homepage__systems-feature-right,
+.iddi-homepage__systems-feature-left {
+	position: absolute;
+	top: 0;
+	width: calc(516 / var(--vw));
+	padding-top: calc(50 /var(--vw))
+}
+
+.iddi-homepage__systems-card:not(._1) {
+	margin-top: calc(100/var(--vw));
+}
+
+.iddi-homepage__systems-card-desc {
+	margin-top: calc(8/var(--vw));
+}
+
+
+/* Section 04 */
+
+.iddi-homepage__evidence-based-education {
+	background-color: #FFFFFFF2;
+	padding-top: calc(80/var(--vw));
+	padding-bottom: calc(80/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-main-title {
+	margin-top: calc(60/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-number {
+	order: 1;
+}
+
+.iddi-homepage__evidence-based-education-hero {
+	width: calc(1330/var(--vw));
+	margin: 0 auto;
+	margin-top: calc(120/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-video-wrapper>video {
+	border-radius: calc(24 / var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-caption {
+	margin-top: calc(80/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-caption>p {
+	width: calc(1078 / var(--vw));
+	margin: 0 auto;
+}
+
+.iddi-homepage__evidence-based-education-content {
+	margin-top: calc(120 / var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-col {
+	width: calc(653/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-line-col {
+	width: 1px;
+	min-height: 100%;
+	background-color: #B8BDCA;
+}
+
+.iddi-homepage__evidence-based-education-col--left .iddi-homepage__evidence-based-education-card {
+	margin-bottom: calc(120/ var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-col--right .iddi-homepage__evidence-based-education-card {
+	margin-top: calc(120/ var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-card-desc {
+	margin-top: calc(12/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-card-media>img {
+	aspect-ratio: 620 / 354;
+	width: calc(620/var(--vw));
+	border-radius: calc(24/var(--vw));
+}
+
+.iddi-homepage__evidence-based-education-footer {
+	margin-top: calc(120/var(--vw));
+}
+
+
+.iddi-homepage__education-insights {
+	background-color: #FFFFFF80;
+	padding-top: calc(80/var(--vw));
+	padding-bottom: calc(80/var(--vw));
+}
+
+.iddi-homepage__education-insights-main-title {
+	margin-top: calc(80/var(--vw));
+	margin-bottom: calc(80/var(--vw));
+}
+
+.iddi-homepage__education-insights-card~.iddi-homepage__education-insights-card {
+	margin-top: calc(120/ var(--vw));
+}
+
+.iddi-homepage__education-insights-card:nth-of-type(even) .iddi-homepage__education-insights-card-info {
+	order: -1;
+}
+
+.iddi-homepage__education-insights-card-video {
+	width: calc(924 / var(--vw));
+}
+
+.iddi-homepage__education-insights-card-video>video {
+	border-radius: calc(24/var(--vw));
+}
+
+.iddi-homepage__education-insights-card-desc {
+	margin-top: calc(16/var(--vw));
+}
+
+.iddi-homepage__education-insights-card-info {
+	width: calc(598 / var(--vw));
+}
+
+.iddi-homepage__education-insights-footer {
+	margin-top: calc(130 / var(--vw));
+}
+
+
+
+.iddi-homepage__get-in-touch {
+	background-image: linear-gradient(to bottom, #FFFFFFF2, #EAEFF5);
+	padding-top: calc(80 / var(--vw));
+	padding-bottom: calc(296 / var(--vw));
+}
+
+.iddi-homepage__get-in-touch-header {
+	margin-bottom: calc(112 / var(--vw));
+}
+
+
+@media (max-width: 1279px) {
+
+
+
+
+
+	.iddi-homepage__number {
+		font-size: 85px;
+	}
+
+
+
+	.iddi-homepage__values-main {
+		margin-top: 32px;
+	}
+
+	.iddi-homepage__values-header {
+		padding-top: 50px;
+	}
+
+	.iddi-homepage__values-showcase {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.iddi-homepage__values-grid {
+		grid-gap: 28px;
+	}
+
+	.iddi-homepage__values-showcase-media {
+		width: 500px;
+	}
+
+	.iddi-homepage__values-description {
+		width: 100%;
+	}
+
+	.iddi-homepage__value-card-desc {
+		margin-top: 8px;
+	}
+
+
+
+	.iddi-homepage__education {
+		padding-bottom: 100px;
+	}
+
+	.iddi-homepage__education-header {
+		padding-top: 50px;
+	}
+
+	.iddi-homepage__education-heading {
+		margin-top: 20px;
+	}
+
+	.iddi-homepage__education-grid {
+		margin-top: 80px;
+	}
+
+	.iddi-homepage__education-stats-row+.iddi-homepage__education-stats-row {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__education-card {
+		width: 240px;
+		min-height: 333px;
+	}
+
+	.iddi-homepage__education-card-desc {
+		margin-top: 8px;
+	}
+
+	.iddi-homepage__education-stats {
+		margin-top: 64px;
+	}
+
+	.iddi-homepage__education-stats-number {
+		font-size: 80px;
+	}
+
+	.iddi-homepage__education-media {
+		width: 880px;
+		margin: 0 auto;
+		margin-top: 64px;
+	}
+
+	.iddi-homepage__education-media-caption {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__education-btn {
+		margin-top: 48px;
+	}
+
+
+
+	.iddi-homepage__systems {
+		padding-top: 50px;
+	}
+
+	.iddi-homepage__systems-main-title {
+		margin-top: 28px;
+	}
+
+	.iddi-homepage__systems-card:not(._1) {
+		margin-top: 64px;
+	}
+
+	.iddi-homepage__systems-card-desc {
+		margin-top: 5px;
+	}
+
+
+
+	.iddi-homepage__evidence-based-education {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-hero {
+		width: 880px;
+		margin-top: 80px;
+	}
+
+	.iddi-homepage__evidence-based-education-caption {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-caption>p {
+		width: 690px;
+	}
+
+	.iddi-homepage__evidence-based-education-content {
+		margin-top: 80px;
+	}
+
+	.iddi-homepage__evidence-based-education-col {
+		width: min(100%, 434px);
+	}
+
+	.iddi-homepage__evidence-based-education-col--left .iddi-homepage__evidence-based-education-card {
+		margin-bottom: 80px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--right .iddi-homepage__evidence-based-education-card {
+		margin-top: 80px;
+	}
+
+	.iddi-homepage__evidence-based-education-card-media>img {
+		width: calc(100% - 24px);
+	}
+
+	.iddi-homepage__evidence-based-education-card-desc {
+		margin-top: 8px;
+	}
+
+	.iddi-homepage__evidence-based-education-footer {
+		margin-top: 80px;
+	}
+
+
+
+
+	.iddi-homepage__education-insights {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.iddi-homepage__education-insights-main-title {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+
+	.iddi-homepage__education-insights-card~.iddi-homepage__education-insights-card {
+		margin-top: 80px;
+	}
+
+	.iddi-homepage__education-insights-card-info {
+		width: min(100%, 400px);
+	}
+
+	.iddi-homepage__education-insights-footer {
+		margin-top: 80px;
+	}
+
+
+
+	.iddi-homepage__get-in-touch {
+		padding-top: 50px;
+		padding-bottom: 190px;
+	}
+
+	.iddi-homepage__get-in-touch-header {
+		margin-bottom: 72px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.iddi-homepage__hero {
+		padding-bottom: 50px;
+	}
+
+
+
+
+
+	.iddi-homepage__number {
+		font-size: 72px;
+		gap: 0.1em;
+	}
+
+
+	.iddi-homepage__values-grid {
+		grid-gap: 12px;
+	}
+
+	.iddi-homepage__values-showcase {
+		padding-bottom: 24px;
+	}
+
+	.iddi-homepage__values-showcase-media {
+		width: 400px;
+	}
+
+	.iddi-homepage__values-description {
+		width: 100%;
+	}
+
+
+
+	.iddi-homepage__education {
+		padding-bottom: 50px;
+	}
+
+	.iddi-homepage__education-stats-number {
+		font-size: 60px;
+	}
+
+	.iddi-homepage__education-media {
+		width: min(100%, 720px);
+		margin-top: 64px;
+	}
+
+	.iddi-homepage__education-heading {
+		margin-top: 12px;
+	}
+
+	.iddi-homepage__education-grid {
+		margin-top: 50px;
+		grid-gap: 28px;
+		width: min(100%, 720px);
+	}
+
+	.iddi-homepage__education-card {
+		width: 100%;
+		min-height: 333px;
+	}
+
+	.iddi-homepage__education-stats-row+.iddi-homepage__education-stats-row {
+		margin-top: 36px;
+	}
+
+	.iddi-homepage__education-btn {
+		margin-top: 32px;
+	}
+
+
+
+
+	.iddi-homepage__systems-core-visual {
+		width: calc(700/ var(--vw));
+	}
+
+
+
+
+	.iddi-homepage__evidence-based-education-main-title {
+		margin-top: 20px;
+	}
+
+	.iddi-homepage__evidence-based-education-hero {
+		width: min(100%, 720px);
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-caption>p {
+		width: 100%;
+	}
+
+	.iddi-homepage__evidence-based-education-caption {
+		margin-top: 32px;
+	}
+
+	.iddi-homepage__evidence-based-education-content {
+		margin-top: 72px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--left .iddi-homepage__evidence-based-education-card {
+		margin-bottom: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--right .iddi-homepage__evidence-based-education-card {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-footer {
+		margin-top: 50px;
+	}
+
+
+	.iddi-homepage__education-insights-main-title {
+		margin-top: 28px;
+	}
+
+	.iddi-homepage__education-insights-card~.iddi-homepage__education-insights-card {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__education-insights-footer {
+		margin-top: 40px;
+	}
+
+
+	.iddi-homepage__get-in-touch {
+		padding-bottom: 100px;
+	}
+
+	.iddi-homepage__get-in-touch-header {
+		margin-bottom: 50px;
+	}
+
+}
+
+
+@media (max-width: 768px) {
+	.iddi-homepage__hero {
+		padding-bottom: 0;
+	}
+
+
+
+	.iddi-homepage__values-title {
+		width: 100%;
+	}
+
+	.iddi-homepage__values-grid {
+		grid-gap: 10px;
+		margin-top: 24px;
+	}
+
+	.iddi-homepage__values-label {
+		--vw: 1280 * 100 * 1vw;
+	}
+
+	.iddi-homepage__value-card {
+		margin-top: 0;
+	}
+
+	.iddi-homepage__value-card-inner {
+		height: 100%;
+	}
+
+	.iddi-homepage__values-showcase-content {
+		order: -1;
+		width: 100%;
+	}
+
+	.iddi-homepage__values-description {
+		width: 100%;
+	}
+
+
+
+
+	.iddi-homepage__education-stats {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__education-heading {
+		margin-top: 8px;
+	}
+
+	.iddi-homepage__education-grid {
+		margin-top: 32px;
+		grid-gap: 10px;
+	}
+
+	.iddi-homepage__education-stats-row+.iddi-homepage__education-stats-row {
+		margin-top: 28px;
+	}
+
+	.iddi-homepage__education-stats-text {
+		width: 60%;
+	}
+
+	.iddi-homepage__education-stats-number {
+		font-size: 36px;
+	}
+
+	.iddi-homepage__education-media-caption {
+		margin-top: 32px;
+	}
+
+
+
+
+
+	.iddi-homepage__systems-feature-right,
+	.iddi-homepage__systems-feature-left {
+		position: relative;
+		top: 0;
+		width: unset;
+		padding-top: 24px;
+	}
+
+	.iddi-homepage__systems-card:not(._1) {
+		margin-top: 0;
+	}
+
+	.iddi-homepage__systems-diagram {
+		flex-wrap: wrap;
+		margin-top: 12px;
+	}
+
+	.iddi-homepage__systems-core-visual {
+		order: 1;
+		width: 55%;
+	}
+
+	.iddi-homepage__systems-tag {
+		--vw: 1280 * 100 * 1vw;
+	}
+
+
+
+	.iddi-homepage__evidence-based-education-content {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-footer {
+		margin-top: 32px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--right .iddi-homepage__evidence-based-education-card {
+		margin-top: 32px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--left .iddi-homepage__evidence-based-education-card {
+		margin-bottom: 32px;
+	}
+
+
+
+	.iddi-homepage__education-insights-card~.iddi-homepage__education-insights-card {
+		margin-top: 32px;
+	}
+
+	.iddi-homepage__education-insights-footer {
+		margin-top: 32px;
+	}
+
+
+
+	.iddi-homepage__get-in-touch-header {
+		margin-bottom: 32px;
+	}
+
+}
+
+
+
+@media (max-width: 576px) {
+
+
+
+
+	.iddi-homepage__number {
+		font-size: 48px;
+	}
+
+	.iddi-homepage__values-header {
+		padding-top: 50px;
+	}
+
+	.iddi-homepage__values-grid {
+		grid-gap: 6px;
+		margin-top: 24px;
+	}
+
+
+	.iddi-homepage__value-card-inner {
+		padding: 8px;
+		border-radius: 8px;
+	}
+
+	.iddi-homepage__value-card-img {
+		margin-top: 16px;
+	}
+
+	.iddi-homepage__values-showcase-media {
+		width: 100%;
+	}
+
+	.iddi-homepage__values-label {
+		--vw: 1024 * 100 * 1vw;
+	}
+
+
+
+
+
+	.iddi-homepage__education {
+		padding-bottom: 50px;
+	}
+
+	.iddi-homepage__education-header {
+		padding-top: 42px;
+	}
+
+	.iddi-homepage__education-heading {
+		margin-top: 10px;
+	}
+
+	.iddi-homepage__education-card {
+		min-height: unset;
+	}
+
+	.iddi-homepage__education-grid {
+		grid-gap: 6px;
+	}
+
+	.iddi-homepage__education-stats-row+.iddi-homepage__education-stats-row {
+		margin-top: 28px;
+	}
+
+	.iddi-homepage__education-stats-row:nth-of-type(odd) .iddi-homepage__education-stats-item {
+		order: unset;
+	}
+
+	.iddi-homepage__education-stats {
+		margin-top: 45px;
+	}
+
+	.iddi-homepage__education-stats-text {
+		width: 100%;
+		margin-top: 8px;
+	}
+
+	.iddi-homepage__education-media {
+		margin-top: 42px;
+	}
+
+	.iddi-homepage__education-media-caption {
+		margin-top: 24px;
+	}
+
+	.iddi-homepage__education-btn {
+		margin-top: 20px;
+	}
+
+
+	.iddi-homepage__systems-core-visual {
+		width: calc(100% - 76px);
+	}
+
+	.iddi-homepage__systems-tag {
+		--vw: 768 * 100 * 1vw;
+	}
+
+
+	.iddi-homepage__evidence-based-education-hero {
+		margin-top: 40px;
+	}
+
+	.iddi-homepage__evidence-based-education-caption {
+		margin-top: 20px;
+	}
+
+	.iddi-homepage__evidence-based-education-col {
+		width: 100%;
+	}
+
+	.iddi-homepage__evidence-based-education-content {
+		margin-top: 50px;
+	}
+
+	.iddi-homepage__evidence-based-education-card-media {
+		order: 1;
+	}
+
+	.iddi-homepage__evidence-based-education-card-media>img {
+		width: 100%;
+	}
+
+	.iddi-homepage__evidence-based-education-col--left .iddi-homepage__evidence-based-education-card {
+		margin-bottom: 24px;
+	}
+
+	.iddi-homepage__evidence-based-education-col--right .iddi-homepage__evidence-based-education-card {
+		margin-top: 0;
+		margin-bottom: 24px;
+	}
+
+	.iddi-homepage__evidence-based-education-footer {
+		margin-top: 24px;
+	}
+
+
+	.iddi-homepage__education-insights {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.iddi-homepage__education-insights-card-video {
+		width: 100%;
+	}
+
+	.iddi-homepage__education-insights-card-video>video {}
+
+	.iddi-homepage__education-insights-card:nth-of-type(even) .iddi-homepage__education-insights-card-info {
+		order: unset;
+	}
+
+	.iddi-homepage__education-insights-footer {
+		margin-top: 32px;
+	}
+
+
+	.iddi-homepage__get-in-touch {
+		padding-bottom: 75px;
+	}
+
+	.iddi-homepage__get-in-touch-header {
+		margin-bottom: 32px;
+	}
+
+}

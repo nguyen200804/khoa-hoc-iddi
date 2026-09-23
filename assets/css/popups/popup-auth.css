@@ -1,0 +1,239 @@
+/* --- Shared Auth Popup Styles --- */
+
+#popup-login-global,
+#popup-register-global,
+#popup-auth-global {
+    background: rgba(25, 41, 84, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+.iddi-popup__container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    animation: popupFadeIn 0.3s ease-out;
+    --padding: 32px;
+    padding: var(--padding);
+    border-radius: 16px;
+}
+
+#iddi-login-form-popup > div, #iddi-register-form-popup > div {
+	gap: 6px;
+}
+
+#iddi-login-form-popup, #iddi-register-form-popup {
+    margin-top: 28px;
+    gap: 16px;
+}
+
+@keyframes popupFadeIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.iddi-popup__close {
+    cursor: pointer;
+    z-index: 10;
+    color: var(--color-oxford-blue);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    right: var(--padding);
+    top: var(--padding);
+}
+
+.iddi-popup__close:hover {
+    opacity: 1;
+}
+
+.iddi-popup__close svg {
+	--size-icon: 24px;
+    width: var(--size-icon);
+    height: var(--size-icon);
+}
+
+/* --- Tab Buttons (nếu dùng) --- */
+.auth-tab-btn {
+    opacity: 0.4;
+    transition: all 0.3s;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.auth-tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-flame-orange);
+    transition: width 0.3s;
+}
+
+.auth-tab-btn.is-active {
+    opacity: 1;
+    color: var(--color-oxford-blue);
+}
+
+.auth-tab-btn.is-active::after {
+    width: 100%;
+}
+
+.auth-tab-content {
+    display: none;
+}
+
+.auth-tab-content.is-active {
+    display: block;
+    animation: tabFade 0.3s ease;
+}
+
+@keyframes tabFade {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Input Styles --- */
+.iddi-auth-input {
+    background: #F8FAFC;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    padding: 0 1em;
+    height: 50px;
+}
+
+.iddi-auth-input:focus {
+    border-color: var(--color-flame-orange);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(228, 94, 37, 0.1);
+}
+
+.password-toggle {
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+}
+
+.password-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Messages --- */
+.auth-message {
+    margin-top: 10px;
+}
+
+.auth-message.error {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.auth-message.success {
+    background: #DCFCE7;
+    color: #166534;
+}
+
+/* --- Submit Button --- */
+.iddi-auth-submit {
+    border: 0;
+    font-size: 18px;
+    padding: 0 1em !important;
+    line-height: 50px;
+    transition: all 0.3s;
+    border-radius: 8px;
+}
+
+.iddi-auth-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(228, 94, 37, 0.2);
+}
+
+/* --- Footer --- */
+.iddi-auth-footer {
+    margin-top: 16px;
+}
+
+.iddi-auth-footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.iddi-auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Font Sizes for Auth Elements --- */
+.iddi-auth-header__title {
+    font-size: 32px;
+}
+
+.iddi-auth-header__subtitle {
+    font-size: 16px;
+}
+
+.iddi-auth-form__label {
+    font-size: 14px;
+}
+
+.iddi-auth-form__actions {
+    font-size: 15px;
+}
+
+.auth-message {
+    font-size: 14px;
+}
+
+.iddi-auth-footer__text {
+    font-size: 16px;
+}
+
+
+@media (max-width: 576px) {
+	.iddi-popup__container {
+    --padding: 20px;
+    padding: 32px var(--padding) ;
+    border-radius: 12px;
+}
+}
+
+@media (max-width: 480px) {
+	.iddi-popup__container {
+    --padding: 16px;
+    padding: 32px var(--padding) ;
+}
+	.iddi-auth-header__title {
+    font-size: 28px;
+}
+	.iddi-auth-header__subtitle {
+    font-size: 14px;
+}
+.iddi-auth-input {
+    font-size: 14px;
+    height: 44px;
+    border-radius: 5px;
+}
+	.iddi-auth-form__label {
+    font-size: 12px;
+}
+	.iddi-auth-form__actions {
+    font-size: 13px;
+}
+	.iddi-auth-submit {
+    font-size: 16px;
+    line-height: 44px;
+    border-radius: 5px;
+}
+	.iddi-auth-footer__text {
+    font-size: 14px;
+}
+	.iddi-popup__close svg {
+    --size-icon: 20px;
+}
+	
+}

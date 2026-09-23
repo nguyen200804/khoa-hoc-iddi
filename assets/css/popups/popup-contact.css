@@ -1,0 +1,203 @@
+/* ================================================================
+   1. CẤU TRÚC POPUP (OVERLAY & CONTENT)
+   ================================================================ */
+.cms-popup-overlay {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.cms-popup-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    width: calc(100% - 24px);
+    max-width: 600px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: fadeInDown 0.4s ease;
+    /* Khử răng cưa cho text trên Mac */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.cms-popup-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.cms-popup-close:hover { 
+    color: #000; 
+}
+
+.cms-popup-header h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ================================================================
+   2. TÙY CHỈNH CHI TIẾT FORM ĐĂNG KÝ (CF7)
+   ================================================================ */
+.custom-registration-form {
+    width: 100%;
+    background: #ffffff;
+}
+
+.custom-registration-form br {
+    display: none;
+}
+
+.custom-registration-form .form-group {
+    margin-bottom: 15px;
+}
+
+.custom-registration-form .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 15px;
+}
+
+/* STYLE CHUNG CHO INPUT/SELECT & FIX APPLE */
+.custom-registration-form input[type="text"],
+.custom-registration-form input[type="email"],
+.custom-registration-form input[type="tel"],
+.custom-registration-form input.wpcf7-date,
+.custom-registration-form select {
+    width: 100%;
+    padding: 0.75em 0.9em;
+    background-color: #f2f4f7;
+    border: 1px solid #e1e4e8;
+    border-radius: 0.6em;
+    font-size: 16px; /* Để 16px để iOS không bị auto-zoom */
+    color: #333;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    
+    /* Reset style mặc định của iOS Safari */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Custom Dropdown Arrow */
+.custom-registration-form select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+/* Hiệu ứng Focus */
+.custom-registration-form input:focus,
+.custom-registration-form select:focus {
+    background-color: #ffffff;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+/* ----------------------------------------------------------------
+   XỬ LÝ LỖI: HIỆN KHUNG ĐỎ (VALIDATION)
+   ---------------------------------------------------------------- */
+
+/* 1. Hiện khung đỏ khi có lỗi */
+.custom-registration-form .wpcf7-not-valid {
+    border: 2px solid #dc3545 !important; 
+    background-color: #fff8f8 !important; 
+    animation: shakeError 0.3s ease-in-out;
+}
+
+/* 2. ẨN HOÀN TOÀN THÔNG BÁO CHỮ DƯỚI INPUT */
+.custom-registration-form .wpcf7-not-valid-tip {
+    display: none !important;
+}
+
+/* 3. Nút Gửi đăng ký (Fix iOS) */
+.custom-registration-form input[type="submit"] {
+    -webkit-appearance: none; /* Khử style nút mặc định Apple */
+    width: 100%;
+    background-color: #1a237e;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.custom-registration-form input[type="submit"]:hover {
+    background-color: #0e1833;
+}
+
+/* Thông báo phản hồi cuối form */
+.wpcf7-response-output {
+    border: none !important;
+    padding: 12px !important;
+    margin: 15px 0 0 0 !important;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #dc3545;
+    background: #fff8f8;
+}
+
+/* ================================================================
+   3. HIỆU ỨNG & RESPONSIVE
+   ================================================================ */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@media (max-width: 576px) {
+    .cms-popup-content {
+        padding: 20px 15px;
+    }
+    .cms-popup-header h3 {
+        font-size: 22px;
+    }
+    .custom-registration-form input, 
+    .custom-registration-form select {
+        /* Giữ 16px trên mobile để chống iOS Auto-zoom */
+        font-size: 16px !important; 
+        padding: 12px;
+    }
+    .custom-registration-form .form-group label {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .wpcf7-response-output {
+        font-size: 12px;
+    }
+}

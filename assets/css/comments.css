@@ -1,0 +1,222 @@
+/* 
+    CSS cho khu vực bình luận (Discussion / Comments)
+    File: assets/css/comments.css
+*/
+div#learn-press-item-comments .learn-press-comments {
+    width: 100%;
+}
+
+.iddi-comments-area {
+    background: #fff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    border: 1px solid #E0E6ED;
+    margin-top: 36px;
+}
+
+.iddi-comments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EDF2F7;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.iddi-comments-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A2B4E;
+    margin: 0;
+}
+
+.iddi-comments-sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #64748B;
+}
+
+
+.iddi-comments-sort select {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #1A2B4E;
+    font-weight: 600;
+    outline: none;
+}
+
+/* Comment Form */
+#commentform {
+    margin-top: 24px;
+}
+
+.iddi-comment-form-inner {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+
+
+.iddi-comment-avatar img, .comment-author-avatar img, .iddi-comment-avatar img {
+    border-radius: 50%;
+    --size: 40px;
+    max-width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    border: 1px solid #e6e6e6;
+}
+
+.iddi-comment-textarea-wrap {
+    width: 100%;
+}
+
+.iddi-comment-textarea-wrap textarea {
+    width: 100%;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5em;
+    font-size: 16px;
+    padding: 1em;
+    min-height: 6em;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.iddi-comment-textarea-wrap textarea:focus {
+    border-color: #1A2B4E;
+}
+
+.iddi-comment-form-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.iddi-comment-submit-btn {
+    background: #1A2B4E;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+    line-height: 1.5em;
+    padding: 0.5em 1.5em;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.iddi-comment-submit-btn:hover {
+    background: #121F3A;
+}
+
+/* Comment List */
+.iddi-comment-list {
+    padding: 0 !important;
+    margin-top: 32px;
+}
+
+.iddi-comment-list li {
+    margin-bottom: 32px;
+}
+
+.iddi-comment-list > li {
+	margin-bottom: 50px;
+}
+
+.comment-body {
+    display: flex;
+    gap: 16px;
+}
+
+.comment-author-name {
+    font-size: 14px;
+    color: #1A2B4E;
+    font-weight: 700;
+}
+
+.comment-metadata {
+    display: flex;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #64748B;
+    margin-left: 8px;
+}
+
+.staff-badge {
+    background: #E65C231A;
+    color: #E65C23;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0.2em 0.8em;
+    border-radius: 0.4em;
+    margin-left: 12px;
+}
+
+.comment-content {
+    font-size: 16px;
+    color: #334155;
+    line-height: 1.5em;
+    margin: 8px 0 12px;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.comment-like-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #718096;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment-actions a.comment-reply-link {
+    font-size: 12px;
+    color: #64748B;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Nested Replies */
+.iddi-comment-list .children {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border-left: 1px solid #EDF2F7;
+    padding-bottom: 0;
+}
+
+/* Pagination Dots */
+.iddi-comments-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.iddi-comments-navigation .page-numbers {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #CBD5E0;
+    border-radius: 50%;
+    margin: 0 4px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.iddi-comments-navigation .page-numbers.current {
+    background: #1A2B4E;
+}

@@ -1,0 +1,154 @@
+/* ===========================================
+AUTH PAGES (LOGIN & REGISTER)
+=========================================== */
+.iddi-auth-page {
+    background-color: #f8fafc;
+    padding: 100px 0 200px;
+}
+
+.iddi-auth-card {
+    max-width: 630px;
+    margin: 0 auto;
+    width: 100%;
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 10px 30px rgba(25, 41, 84, 0.08);
+}
+
+.iddi-auth-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.iddi-auth-title {
+    font-size: 36px;
+    color: var(--color-oxford-blue);
+    margin-bottom: 10px;
+}
+
+.iddi-auth-subtitle {
+    color: #192954;
+    font-size: 16px;
+}
+
+.iddi-auth-form label {
+    display: block;
+    font-weight: 500;
+    color: var(--color-oxford-blue);
+    font-size: 16px;
+}
+
+.iddi-auth-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #F8FAFC;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.iddi-auth-input:focus {
+    border-color: var(--color-flame-orange);
+    box-shadow: 0 0 0 3px rgba(228, 94, 37, 0.1);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.lost-password {
+    color: var(--color-flame-orange);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.lost-password:hover {
+    text-decoration: underline;
+}
+
+.iddi-auth-submit {
+    width: 100%;
+    background-color: var(--color-flame-orange);
+    color: var(--color-white);
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.iddi-auth-submit:hover {
+    background-color: #d14d1b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(228, 94, 37, 0.3);
+}
+
+.iddi-auth-footer {
+    margin-top: 30px;
+    padding-top: 26px;
+    text-align: center;
+    color: #64748b;
+    font-size: 15px;
+    border-top: 1px solid #C6C6CD;
+}
+
+.iddi-auth-footer a {
+    color: var(--color-flame-orange);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.iddi-auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.auth-message {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: none;
+}
+
+.auth-message.error {
+    display: block;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+.auth-message.success {
+    display: block;
+    background-color: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+@media (max-width: 640px) {
+    .iddi-auth-card {
+        padding: 30px 20px;
+        border-radius: 0;
+    }
+}

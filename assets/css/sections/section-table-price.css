@@ -1,0 +1,21 @@
+.iddi-section-table-price__list {
+    margin-top: calc(120 / var(--vw));
+}
+.iddi-section-table-price__price-wrap {
+    font-size: calc(50 / var(--vw));
+    line-height: 0.7em;
+}
+.iddi-section-table-price__price-wrap > span {
+    line-height: 0.7em;
+}
+.iddi-section-table-price__price-wrap > .period {
+    font-size: 44%;
+}
+.iddi-section-table-price__benefit-item > svg {
+    min-width: 1em;
+    width: 1em;
+}
+.iddi-section-table-price__summary {
+    margin-bottom: auto;
+    letter-spacing: calc(-0.3 / var(--vw));
+}

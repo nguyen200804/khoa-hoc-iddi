@@ -1,0 +1,327 @@
+/* ==========================================================================
+   PATIENT PAGE STYLES
+   ========================================================================== */
+
+.patient-intro-wrapper {
+    background-color: #EAEFF5;
+	position: relative;
+	z-index: 0;
+}
+.patient-intro-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #ffffff94;
+    z-index: -1;
+}
+.patient-hero {
+    padding-top: 72px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.patient-hero__subtitle {
+    color: var(--color-flame-orange);
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.patient-hero__title {
+    color: var(--color-oxford-blue);
+    font-size: 52px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.patient-hero__description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-oxford-blue);
+    font-size: 17px;
+    line-height: 1.6em;
+    font-weight: 400;
+}
+
+/* --- Implant Intro Section --- */
+
+.implant-intro {
+    padding: 50px 0 100px;
+}
+
+.implant-intro__container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.implant-intro__content {
+    flex: 1;
+}
+
+.implant-intro__title {
+    font-size: 48px;
+    color: var(--color-oxford-blue);
+    font-weight: 300;
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+.implant-intro__title span {
+    color: var(--color-flame-orange);
+    font-style: italic;
+}
+
+.implant-intro__text p {
+    color: var(--color-oxford-blue);
+    font-size: 17px;
+    line-height: 1.6em;
+	 margin-bottom: 1.2em;
+}
+
+
+/* --- Implant Diagram --- */
+
+.implant-intro__visual {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.implant-diagram {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.implant-diagram__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Annotations */
+.implant-annotation {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    z-index: 2;
+}
+
+.implant-annotation--crown {
+    top: 10%;
+    right: -10%;
+}
+
+.implant-annotation--abutment {
+    top: 45%;
+    left: -15%;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.implant-annotation--fixture {
+    bottom: 20%;
+    right: -10%;
+}
+
+.implant-annotation__dot {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.implant-annotation--crown .implant-annotation__dot {
+    left: -25px;
+    top: 10px;
+}
+
+.implant-annotation--abutment .implant-annotation__dot {
+    right: -25px;
+    top: 10px;
+}
+
+.implant-annotation--fixture .implant-annotation__dot {
+    left: -25px;
+    top: 10px;
+}
+
+.implant-annotation__title {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.implant-annotation__desc {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .implant-intro__container {
+        flex-direction: column;
+    }
+    .implant-intro__visual {
+        margin-top: 60px;
+    }
+    .implant-annotation {
+        position: static;
+        margin-bottom: 20px;
+        max-width: 100%;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+    .implant-annotation__dot {
+        display: none;
+    }
+}
+/* --- Korea's First Dental Implant --- */
+
+.korea-implant {
+    padding: 72px 0 50px;
+}
+
+.korea-implant__subtitle {
+    color: var(--color-flame-orange);
+    font-size: 24px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.korea-implant__title {
+    color: var(--color-oxford-blue);
+    font-size: 48px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.korea-implant__media {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.korea-implant__image {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .korea-implant__title {
+        font-size: 36px;
+    }
+    .korea-implant__subtitle {
+        font-size: 24px;
+    }
+}
+/* --- Product Systems --- */
+
+.product-systems {
+    padding: 50px 0 150px;
+    background-color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 20px;
+    padding: 32px 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+
+
+.product-card__figure {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: linear-gradient(360deg, #EFF5FC 0%, #CFD5E5 100%);
+    margin: 0 auto 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 28px;
+}
+
+.product-card__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-card__tag {
+    display: inline-block;
+    color: var(--color-flame-orange);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.product-card__tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--color-flame-orange);
+    border-radius: 50%;
+}
+.product-card__title {
+    color: var(--color-oxford-blue);
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.product-card__desc {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-card {
+        padding: 40px 30px;
+    }
+}

@@ -1,0 +1,127 @@
+.iddi-footer {
+	padding-top: calc(120/var(--vw));
+	padding-bottom: calc(120/var(--vw));
+}
+.iddi-footer-wave {
+	top: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(calc(-100% + 1px));
+}
+.iddi-footer__column--about {
+	width: calc(386 / var(--vw));
+}
+
+/* .iddi-footer__about-text {
+	font-size: 18px;
+} */
+.iddi-footer__about-text * {
+    letter-spacing: calc(-0.3/var(--vw));
+    line-height: 1.4em;
+}
+
+.iddi-footer__column--links {
+	width: calc(492 / var(--vw));
+}
+.iddi-footer__link-list {
+	column-count: 2;
+}
+.iddi-footer__link-list li{
+	margin-bottom: calc(12 / var(--vw));
+}
+.iddi-footer__link-list a {
+	display: flex;
+	gap: calc(12/var(--vw));
+	transition: color .3s ease;
+}
+.iddi-footer__link-list a span{
+	margin-left: 0;
+	transition: margin-left .3s ease;
+}
+.iddi-footer__link-list a:hover,
+.iddi-footer__link-list li.current-menu-item a {
+	color: var(--color-flame-orange);
+}
+.iddi-footer__link-list a:hover span{
+	margin-left: calc(8 / var(--vw));
+}
+.iddi-footer__link-list a svg {
+	width: 0.5em;
+	stroke: var(--color-flame-orange);
+}
+
+
+.iddi-footer__widget-content {
+    gap: 8px;
+}
+.iddi-footer__column--contact {
+	width: calc(310 / var(--vw));
+}
+.iddi-footer__contact-item > a > svg {
+	width: 1em;
+	stroke: var(--color-flame-orange);
+}
+.iddi-footer__social-link {
+	width: calc(40/var(--vw));
+	height: calc(40/var(--vw));
+	border: calc(2/var(--vw)) solid var(--color-flame-orange);
+}
+.iddi-footer__social-link svg {
+	fill: var(--color-flame-orange);
+}
+
+
+
+@media (max-width: 1279px) {
+	.iddi-footer__column--about {
+		width: 295px;
+	}
+	.iddi-footer__column--links {
+		width: 360px;
+	}
+	.iddi-footer__column--contact {
+		width: 240px;
+	}
+	.iddi-footer__social-link {
+		width: 28px;
+		height: 28px;
+		padding: 5px;
+	}
+}
+
+
+@media (max-width: 1024px) {
+.iddi-footer__link-list li {
+    margin-bottom: 5px;
+}
+}
+
+
+@media (max-width: 768px) {
+	.iddi-footer__column--about {
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	.iddi-footer__column--links {
+		width: 66%;
+	}
+	.iddi-footer__column--contact {
+		width: 33%;
+	}
+	
+	.iddi-footer__bottom {
+    margin-top: 16px;
+}
+}
+
+
+@media (max-width: 576px) {
+	.iddi-footer__column--links {
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	.iddi-footer__column--contact {
+		width: 100%;
+	}
+}
+

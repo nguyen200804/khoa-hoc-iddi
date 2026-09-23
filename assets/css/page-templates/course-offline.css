@@ -1,0 +1,195 @@
+/* ==========================================================================
+   OFFLINE COURSE DETAIL STYLES
+   ========================================================================== */
+
+.page-course-offline {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+.course-offline__hero {
+    padding: 80px 0 60px;
+    background: radial-gradient(circle at 50% 0%, #F1F5F9 0%, #fff 70%);
+}
+
+.course-offline__hero-time {
+    letter-spacing: 0.05em;
+}
+
+.course-offline__hero-title {
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.1em;
+}
+
+.course-offline__hero-location {
+    align-items: center;
+}
+
+.course-offline__hero-location svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--color-flame-orange);
+}
+
+/* --- Speakers Section --- */
+.course-offline__speakers {
+    padding: 60px 0;
+}
+
+.course-offline__speakers-container {
+    box-shadow: 0 30px 60px rgba(25, 41, 84, 0.2);
+}
+
+.course-offline__speakers-title {
+    margin-bottom: 48px;
+    letter-spacing: 0.2em;
+    position: relative;
+    display: inline-block;
+}
+
+.course-offline__speakers-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-flame-orange);
+}
+
+.course-offline__speaker-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.course-offline__speaker-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.course-offline__speaker-avatar-wrap {
+    flex-shrink: 0;
+}
+
+.course-offline__speaker-avatar {
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--color-flame-orange);
+}
+
+.course-offline__speaker-name {
+    margin-bottom: 4px;
+}
+
+.course-offline__speaker-role {
+    margin-bottom: 12px;
+}
+
+.course-offline__speaker-desc {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.course-offline__speakers-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 40px;
+}
+
+.course-offline__patronage-logo {
+    height: 40px;
+    width: auto;
+}
+
+.course-offline__event-logo-img {
+    height: 60px;
+    width: auto;
+}
+
+/* --- Tickets Section --- */
+.course-offline__tickets {
+    padding: 80px 0;
+}
+
+.course-offline__tickets-highlight {
+    margin-bottom: 16px;
+}
+
+.course-offline__tickets-desc {
+    max-width: 800px;
+    margin: 0 auto 56px;
+    line-height: 1.5;
+}
+
+.course-offline__tickets-btn {
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(228, 94, 37, 0.3);
+}
+
+.course-offline__tickets-btn:hover {
+    background-color: #CA4E1A;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(228, 94, 37, 0.4);
+}
+
+/* --- Gain Section --- */
+.course-offline__gain {
+    border-top: 1px solid #f0f0f0;
+}
+
+.course-offline__gain-icon svg {
+    width: 64px;
+    height: 64px;
+    fill: var(--color-flame-orange);
+}
+
+.course-offline__gain-item-title {
+    color: var(--color-oxford-blue);
+    margin-bottom: 12px;
+}
+
+.course-offline__gain-item-desc {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .course-offline__hero-title { font-size: 48px; }
+    .course-offline__speaker-item { padding: 16px; }
+}
+
+@media (max-width: 996px) {
+    .course-offline__hero-title { font-size: 40px; }
+    .course-offline__speakers-footer { flex-direction: column; gap: 30px; text-align: center; }
+    .course-offline__patronage { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .course-offline__hero { padding: 60px 0; }
+    .course-offline__hero-title { font-size: 32px; }
+    .course-offline__hero-time { font-size: 20px; }
+    .course-offline__hero-location { font-size: 18px; }
+    
+    .course-offline__speakers-container { padding: 40px 20px; }
+    .course-offline__speakers-title { font-size: 24px; }
+    
+    .course-offline__tickets-desc { font-size: 18px; }
+    .course-offline__tickets-btn { width: 100%; padding-inline: 1em; }
+    
+    .course-offline__gain-title { font-size: 32px; }
+}
+
+@media (max-width: 576px) {
+    .course-offline__speaker-item { flex-direction: column; text-align: center; }
+    .course-offline__gain-grid { gap: 40px; }
+}

@@ -1,0 +1,489 @@
+.iddi-header {
+	--height-header: 85px;
+	height: var(--height-header);
+	position: sticky;
+	top: 0;
+	box-shadow: 0px 0px 2px 3px rgb(242 242 242 / 60%) inset, 0px 4px 20px 0px rgba(184, 189, 202, 0.59);
+	backdrop-filter: blur(36px);
+	border-width: 0px 0px 0px 0px;
+	border-style: solid;
+	border-image-source: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 30%);
+	background-color: rgba(255, 255, 255, 0.5);
+	--d: 0.3s;
+	transition: box-shadow var(--d) ease, background-color var(--d) ease;
+	z-index: 1;
+}
+.iddi-header > div {
+	height: var(--height-header);
+	gap: 16px;
+}
+.iddi-header:has(.iddi-header__nav-list > li > a:hover + .sub-menu),
+.iddi-header:has(.iddi-header__nav-list > li > .sub-menu:hover) {
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 2px 0px rgb(242 242 242 / 60%) inset, 0px 4px 20px 0px rgba(184, 189, 202, 0.59);
+}
+
+
+.iddi-header__logo {
+	height: 90%;
+}
+.iddi-header__logo > a {
+	display: flex;
+	height: 100%;
+	max-width: 100%;
+}
+.iddi-header__logo img {
+	height: 100%;
+	object-fit: contain;
+}
+
+/* .iddi-header__nav {
+width: 75%;
+} */
+.iddi-header__nav {
+	margin-left: 16px;
+	margin-right: auto;
+}
+.iddi-header__nav-list {
+	gap: 24px;
+}
+.iddi-header__nav-list > li > a {
+	height: var(--height-header);
+	display: inline-block;
+	align-content: center;
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-oxford-blue);
+	position: relative;
+	transition: color .3s ease;
+}
+
+.iddi-header__nav-list > li > a:hover,
+.iddi-header__nav-list > li > a:has(+ .sub-menu:hover),
+.iddi-header__nav-list > li.current-menu-item > a {
+	color: var(--color-flame-orange);
+}
+
+.iddi-header__nav-list > li > a:has(+ ul.sub-menu)::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	background-color: var(--color-flame-orange);
+	border-radius: 50%;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+.iddi-header__nav-list > li > a:has(+ ul.sub-menu):hover::before,
+.iddi-header__nav-list > li > a:has( + .sub-menu:hover):has(+ ul.sub-menu)::before {
+	opacity: 1;
+}
+
+
+
+.iddi-header__btn-search {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--color-oxford-blue);
+	transition: color 0.3s ease;
+	cursor: pointer;
+}
+
+.button-open-search {
+    font-size: 11px;
+    padding: 1em;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+}
+
+.button-open-search svg {
+	width: calc(2em - 4px);
+}
+.iddi-header__btn-search:hover {
+	color: var(--color-flame-orange);
+}
+
+.iddi-header-search {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	background-color: rgba(0,0,0,0.75);
+	transform: translateY(-100%);
+	transition: transform .3s ease;
+	z-index: 999;
+}
+.iddi-header-search.open-popup {
+	transform: translateY(0%);
+}
+.iddi-header-search > form {
+	width: 100%;
+	height: var(--height-header, 85px);
+	background: #fff;
+	border-radius: 0;
+	border: 0;
+	position: relative;
+}
+.iddi-header-search > form > input {
+	border: 0;
+	outline: 0;
+	padding: 0 1em;
+	font-size: 1.1em;
+}
+.iddi-header-search > form > button {
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0 1.5em;
+	border: 0;
+	cursor: pointer;
+}
+.iddi-header-search > form > button svg {
+	width: 1.5em;
+}
+button.close-popup-search {
+	align-self: center;
+	padding: 5px 16px;
+	cursor: pointer;
+}
+button.close-popup-search svg {
+	width: 20px;
+	fill: #ffffff;
+	display: block;
+}
+body:has(.iddi-header-search.open-popup)::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	background-color: rgba(0,0,0,0.75);
+}
+.iddi-header__avatar-wrap > a {
+	display: flex;
+}
+
+
+.iddi-header .button-header {
+	font-size: 16px;
+	border: 0;
+	height: 44px;
+	line-height: 1em;
+	display: flex;
+	outline: 0;
+	cursor: pointer;
+	padding: 0 1.3em;
+	border-radius: 1000px;
+	transition: background-color .5s ease;
+	color: #fff;
+	align-items: center;
+}
+.iddi-header .button-header > span {
+	display: flex;
+	gap: 0.3em;
+}
+
+.iddi-header .contact-now {
+	background-color: var(--color-flame-orange);
+}
+.iddi-header .contact-now:hover {
+	background-color: #ae471c;
+}
+.iddi-header .call-now {
+	background-color: var(--color-oxford-blue);
+}
+.iddi-header .call-now:hover {
+	background-color: #0e1833;
+}
+
+
+
+.iddi-header__nav-list > li > ul.sub-menu {
+	position: absolute;
+	z-index: -1;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: #FFFFFF;
+	border-top: 1px solid #E45E25;
+	padding: calc(48 / var(--vw)) calc(360 / var(--vw));
+	height: fit-content;
+	display: flex;
+	justify-content: start;
+	gap: calc(96 / var(--vw));
+	transform: scaleY(0);
+	transform-origin: top center;
+	opacity: 0;
+	--d: 0.3s;
+	transition: transform 0s ease var(--d), opacity var(--d) ease;
+	box-shadow: 0px 4px 10px 0px #0000001a;
+}
+
+.iddi-header__nav-list > li > a:hover + .sub-menu,
+.iddi-header__nav-list > li > .sub-menu:hover {
+	transform: scaleY(1);
+	opacity: 1;
+	transition: transform 0s ease, opacity var(--d) ease; 
+}
+
+.iddi-header__nav-list > li > ul.sub-menu a {
+	color: var(--color-oxford-blue);
+}
+
+.iddi-header__nav-list > li > ul.sub-menu > li > a {
+	font-size: calc(20 / var(--vw));
+	font-weight: 500;
+}
+.iddi-header__nav-list > li > ul.sub-menu > li > ul.sub-menu > li  > a {
+	font-size: calc(18 / var(--vw));
+	font-weight: 400;
+	color: var(--color-oxford-blue);
+	transition: color .3s ease;
+}
+.iddi-header__nav-list > li > ul.sub-menu > li > ul.sub-menu > li > a:hover {
+	color: var(--color-flame-orange);
+}
+.iddi-header__nav-list > li > ul.sub-menu > li > ul.sub-menu {
+	margin-top: calc(24 / var(--vw));
+}
+.iddi-header__nav-list > li > ul.sub-menu > li > ul.sub-menu > li ~ li {
+	margin-top: calc(16 / var(--vw));
+}
+
+.iddi-header__login-btn svg, .iddi-header__user img {
+	--w-logo: 44px;
+}
+
+.iddi-header__user img {
+	width: var(--w-logo);
+	max-width: var(--w-logo);
+	min-width: var(--w-logo);
+	height: var(--w-logo);
+	box-shadow: 0px 0px 0px 2px #F1F5F9;
+	border-radius: 50%;
+}
+
+
+
+.iddi-header__popup-menu {
+	position: fixed;
+	inset: 0;
+	height: 100vh;
+	transform: scaleY(0);
+	background-color: rgba(0,0,0,0);
+	z-index: 1;
+	transition: transform 0s ease 0.5s, background-color 0.5s ease;
+}
+.iddi-header__popup-menu.is-active {
+	transform: scaleY(1);
+	background-color: rgba(0,0,0,0.7);
+	transition: transform 0s ease, background-color 0.5s ease;
+}
+.iddi-header__popup-menu-button-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 1;
+}
+.iddi-header__popup-menu-button-close svg {
+	width: 16px;
+}
+.iddi-header__popup-menu-container {
+	position: absolute;
+	background-color: #fff;
+	top: 0;
+	left: 0%;
+	bottom: 0;
+	width: calc(min(100%, 600px) - 24px);
+	transform: translateX(-100%);
+	transition: transform 0.5s ease;
+}
+.iddi-header__popup-menu.is-active .iddi-header__popup-menu-container {
+	transform: translateX(0%);
+}
+.iddi-header__popup-menu-wrapper {
+	position: absolute;
+	inset: 0;
+	overflow: auto;
+	padding: 36px 0px;
+}
+.iddi-header__popup-menu-logo a.custom-logo-link {
+	width: 150px;
+	height: 80px;
+	display: inline-block;
+}
+.iddi-header__popup-menu-logo a.custom-logo-link img {
+	height: 100%;
+	object-fit: contain;
+}
+.iddi-header__popup-menu-nav ul.sub-menu {
+	padding-left: 0.625em;
+}
+.iddi-header__popup-menu-nav a {
+	padding: 0.8em 48px 0.8em 20px;
+	width: 100%;
+	display: inline-block;
+}
+.iddi-header__popup-menu-nav li.current-menu > a {
+	color: var(--color-flame-orange);
+}
+
+.iddi-header__btn-menu {
+
+}
+:where(.iddi-header__btn-menu) svg {
+	width: 20px;
+}
+
+
+
+
+/* Ẩn sub-menu mặc định */
+.iddi-header__popup-menu-nav .sub-menu {
+	display: none;
+	list-style: none;
+	/*     padding-left: 20px; 
+	margin-top: 10px; */
+}
+
+/* Style cho icon mũi tên */
+.dropdown-toggle-icon {
+	display: inline-block;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	font-size: 12px;
+	position: absolute;
+	top: calc(var(--height-menu-item) / 2);
+	transform: translateY(-50%)  rotate(0deg);
+	right: 24px;
+}
+.dropdown-toggle-icon > svg {
+	width: 1em;
+}
+
+/* Xoay mũi tên khi mở menu */
+.menu-item-has-children.is-open > .dropdown-toggle-icon {
+	transform: translateY(-50%)  rotate(180deg);
+}
+
+/* Đảm bảo vị trí tương đối để chứa icon nếu cần */
+.iddi-header__popup-menu-nav li {
+	position: relative;
+	/*     margin-bottom: 10px; */
+}
+
+
+.iddi-header__popup-menu-actions {
+	padding: 16px 20px;
+	gap: 10px;
+	border-color: #ffffff;
+	border-width: 1px 0px;
+	border-style: solid;
+}
+.iddi-header__popup-menu-actions .button-header {
+	display: flex;
+	width: 100%;
+	font-size: 16px;
+	gap: 8px;
+	justify-content: center;
+}
+
+@media (max-width: 1600px) {
+	.iddi-header__nav-list > li > a {
+		font-size: 17px;
+	}
+}
+
+
+@media (max-width: 1366px) {
+	.iddi-header > div {
+		gap: 14px;
+	}
+
+	.iddi-header .button-header {
+		font-size: 14px;
+	}
+
+	.iddi-header__nav-list {
+		gap: 20px;
+	}
+	.iddi-header__nav-list > li > a {
+		font-size: 16px;
+	}
+
+}
+
+
+@media (max-width: 1200px) {
+	.iddi-header__nav {
+		display: none;
+	}
+	.iddi-header__btn-menu {
+		display: inline-block;
+		margin-right: 62.5px;
+	}
+	.iddi-header .button-header {
+		display: none;
+	}
+
+	.iddi-header__login-btn svg, .iddi-header__user img {
+		--w-logo: 36px;
+	}
+	.iddi-header__logo {
+		margin: 0 auto;
+	}
+	.button-open-search {
+		font-size: 9px;
+	}
+	.iddi-header__popup-menu-actions .button-header {
+		display: flex;
+	}
+	.iddi-header {
+		--height-header: 70px;
+	}
+
+
+}
+@media (max-width: 768px) { 
+
+
+	.iddi-header__popup-menu-nav a {
+		padding: 0.7em 16px 0.7em 16px;
+		width: 100%;
+		display: inline-block;
+	}
+	.iddi-header__popup-menu-actions {
+		padding: 16px 16px;
+		gap: 8px;
+	}
+	.iddi-header__popup-menu-actions .button-header {
+		font-size: 15px;
+		gap: 8px;
+		padding: 0.7em 0;
+	}
+
+}
+
+@media (max-width: 576px) {
+	.iddi-header > div {
+		gap: 8px;
+	}
+	:where(.iddi-header__btn-menu) svg {
+		width: 18px;
+	}
+	.button-open-search {
+		font-size: 8px;
+	}
+	.iddi-header__login-btn svg, .iddi-header__user img {
+		--w-logo: 32px;
+	}
+
+}

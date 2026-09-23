@@ -1,0 +1,109 @@
+/* ==========================================================================
+   SHARED COMPONENTS STYLES
+   ========================================================================== */
+
+/* --- President Card --- */
+.iddi-card-president {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #EAEFF5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.iddi-card-president:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.iddi-card-president__thumb {
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.iddi-card-president__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iddi-card-president__tag {
+    position: absolute;
+    left: 0;
+    padding: 2em 0.3em;
+    writing-mode: vertical-rl;
+    text-align: right;
+    transform: rotate(180deg);
+    font-size: 16px;
+    height: 100%;
+    z-index: 1;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    background-color: var(--color-flame-orange);
+    color: var(--color-white);
+}
+
+.iddi-card-president__flag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.iddi-card-president__flag img {
+    width: 40px !important;
+    height: auto !important;
+}
+
+.iddi-card-president__body {
+    padding: 20px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.iddi-card-president__role {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-flame-orange);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.iddi-card-president__name {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-oxford-blue);
+    margin-bottom: 8px;
+}
+
+.iddi-card-president__desc {
+    font-size: 16px;
+    margin-bottom: 28px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.iddi-card-president__social {
+    margin-top: auto;
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 20px;
+}
+
+.iddi-card-president__social svg {
+    fill: var(--color-oxford-blue);
+    width: 20px;
+    transition: fill 0.3s;
+}
+
+.iddi-card-president__social a:hover svg {
+    fill: var(--color-flame-orange);
+}

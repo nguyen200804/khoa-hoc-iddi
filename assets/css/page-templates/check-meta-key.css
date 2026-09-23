@@ -1,0 +1,117 @@
+.check-meta-key {
+    padding: 60px 0;
+    min-height: 60vh;
+}
+
+.check-meta-key__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: var(--primary-color, #333);
+    text-align: center;
+}
+
+.check-meta-key__form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.check-meta-key__field {
+    margin-bottom: 20px;
+}
+
+.check-meta-key__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.check-meta-key__input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.check-meta-key__radio-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.check-meta-key__radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.check-meta-key__submit {
+    width: 100%;
+    padding: 12px;
+    background: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.check-meta-key__submit:hover {
+    background: #e55a2b;
+}
+
+.check-meta-key__results {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+.check-meta-key__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.check-meta-key__table th,
+.check-meta-key__table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.check-meta-key__table th {
+    background: #f8f9fa;
+    font-weight: 700;
+}
+
+.check-meta-key__table tr:last-child td {
+    border-bottom: none;
+}
+
+.check-meta-key__key {
+    font-family: monospace;
+    color: #d63384;
+}
+
+.check-meta-key__value {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 500px;
+}
+
+.check-meta-key__error {
+    background: #fff5f5;
+    color: #c53030;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #c53030;
+}

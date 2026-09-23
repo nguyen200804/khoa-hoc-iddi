@@ -1,0 +1,287 @@
+/* ==========================================================================
+   PERSONAL INFO TAB
+   ========================================================================== */
+
+/* Stats Cards */
+.iddi-membership-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+    .iddi-membership-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+.iddi-membership-stats__card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iddi-membership-stats__card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.04);
+}
+
+.iddi-membership-stats__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.iddi-membership-stats__icon--courses {
+    background-color: #FFF3EE;
+    color: #ED6C32;
+}
+
+.iddi-membership-stats__icon--certificates {
+    background-color: #FFF3EE;
+    color: #ED6C32;
+}
+
+.iddi-membership-stats__icon--invested {
+    background-color: #FFF3EE;
+    color: #ED6C32;
+}
+
+.iddi-membership-stats__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.iddi-membership-stats__value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1A2B4E;
+    line-height: 1.2;
+}
+
+.iddi-membership-stats__label {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Main Content Box */
+.iddi-membership-box {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+@media (max-width: 768px) {
+    .iddi-membership-box {
+        padding: 24px;
+    }
+}
+
+/* Profile Section */
+.iddi-membership-profile {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #F1F5F9;
+    margin-bottom: 40px;
+}
+
+.iddi-membership-profile__avatar-wrap {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 24px;
+    border-radius: 50%;
+}
+
+.iddi-membership-profile__avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.iddi-membership-profile__avatar-edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ED6C32;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.iddi-membership-profile__avatar-edit:hover {
+    background-color: #D65A26;
+}
+
+.iddi-membership-profile__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin-bottom: 4px;
+}
+
+.iddi-membership-profile__role {
+    font-size: 14px;
+    color: #64748B;
+    margin-bottom: 16px;
+}
+
+.iddi-membership-profile__btn {
+    background: transparent;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1E293B;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.iddi-membership-profile__btn:hover {
+    background-color: #F8F9FA;
+    border-color: #CBD5E1;
+}
+
+/* Forms */
+.iddi-membership-form__section {
+    margin-bottom: 40px;
+}
+
+.iddi-membership-form__section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A2B4E;
+    margin-bottom: 24px;
+}
+
+.iddi-membership-form__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .iddi-membership-form__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.iddi-membership-form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.iddi-membership-form__group--full {
+    grid-column: 1 / -1;
+}
+
+.iddi-membership-form__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.iddi-membership-form__input,
+.iddi-membership-form__select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #334155;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.iddi-membership-form__input:focus,
+.iddi-membership-form__select:focus {
+    outline: none;
+    border-color: #ED6C32;
+    box-shadow: 0 0 0 3px rgba(237, 108, 50, 0.1);
+}
+
+.iddi-membership-form__input:disabled {
+    background-color: #F8F9FA;
+    color: #94A3B8;
+    cursor: not-allowed;
+}
+
+.iddi-membership-form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.iddi-membership-form__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.iddi-membership-form__btn-cancel {
+    background: transparent;
+    border: none;
+    color: #64748B;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 12px 16px;
+    transition: color 0.3s;
+}
+
+.iddi-membership-form__btn-cancel:hover {
+    color: #1E293B;
+}
+
+.iddi-membership-form__btn-submit {
+    background-color: #ED6C32;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 12px rgba(237, 108, 50, 0.2);
+}
+
+.iddi-membership-form__btn-submit:hover {
+    background-color: #D65A26;
+}
