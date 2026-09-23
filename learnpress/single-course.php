@@ -90,15 +90,8 @@ if ($is_offline === 'yes') {
 								// 2. Lấy giá trị thô từ meta key
 								$regular_price = get_post_meta($course_id, '_lp_regular_price', true);
 								$sale_price    = get_post_meta($course_id, '_lp_sale_price', true);
-								$duration      = get_post_meta($course_id, '_lp_duration', true);
-
-								if ($duration) {
-									$search_vals  = array( 'minutes', 'minute', 'hours', 'hour', 'days', 'day', 'weeks', 'week', 'months', 'month' );
-									$replace_vals = array( 'phút', 'phút', 'giờ', 'giờ', 'ngày', 'ngày', 'tuần', 'tuần', 'tháng', 'tháng' );
-									$duration     = str_ireplace( $search_vals, $replace_vals, $duration );
-								} else {
-									$duration = 'Khóa học Online';
-								}
+								$raw_duration  = get_post_meta($course_id, '_lp_duration', true);
+								$duration      = function_exists('iddi_format_course_duration') ? iddi_format_course_duration($raw_duration) : ($raw_duration ? $raw_duration : 'Khóa học Online');
 
 								/**
  * Hàm hỗ trợ định dạng: Xóa số 0 thừa sau dấu phẩy
@@ -124,7 +117,7 @@ if ($is_offline === 'yes') {
 
 								// 3. Logic hiển thị
 								if ( empty($reg_clean) || $reg_clean == 0 ) { 
-									echo '<span class="iddi-course-details-info__card-price free-price">Free</span>';
+									echo '<span class="iddi-course-details-info__card-price free-price">' . esc_html( function_exists('iddi_tr') ? iddi_tr('Free') : 'Free' ) . '</span>';
 
 								} elseif ( !empty($sale_clean) && $sale_clean < $reg_clean ) { 
 								?>
@@ -225,11 +218,11 @@ if ($is_offline === 'yes') {
     if ( $is_completed && ! empty( $first_item_link ) ) {
         ?>
         <a href="<?php echo esc_url( $first_item_link ); ?>" class="iddi-course-details-info__card-btn padding-s__v center-text text-color-white radius-s bg-color_color-flame-orange d-block">
-            Xem lại bài học
+            <?php iddi_tr_e('Xem lại bài học'); ?>
         </a>
         <?php
     } elseif ( ( $is_enrolled || $is_free ) && ! empty( $first_item_link ) ) {
-        $button_text = ( $progress > 0 ) ? 'Tiếp tục học' : 'Bắt đầu học';
+        $button_text = ( $progress > 0 ) ? iddi_tr('Tiếp tục học') : iddi_tr('Bắt đầu học');
         ?>
         <a href="<?php echo esc_url( $first_item_link ); ?>" class="iddi-course-details-info__card-btn padding-s__v center-text text-color-white radius-s bg-color_color-flame-orange d-block">
             <?php echo esc_html( $button_text ); ?>
@@ -238,7 +231,7 @@ if ($is_offline === 'yes') {
     } elseif ( ! is_user_logged_in() ) {
         ?>
         <button type="button" onclick="window.openLoginPopup()" class="iddi-course-details-info__card-btn reset-button" style="cursor: pointer;">
-            Đăng nhập để học
+            <?php iddi_tr_e('Đăng nhập để học'); ?>
         </button>
         <?php
     } elseif ( isset( $course ) && $course ) {
@@ -249,7 +242,7 @@ if ($is_offline === 'yes') {
         // Fallback: Nếu không lấy được object $course, hiển thị nút tĩnh nhưng trỏ tới link mua
         ?>
         <a href="?purchase-course=<?php echo get_the_ID(); ?>" class="iddi-course-details-info__card-btn padding-s__v center-text text-color-white radius-s bg-color_color-flame-orange d-block">
-            Đăng ký học
+            <?php iddi_tr_e('Đăng ký học'); ?>
         </a>
         <?php
     }
@@ -326,12 +319,8 @@ if ($is_offline === 'yes') {
 							// Lấy Permalink của bài học hoặc trắc nghiệm
 							$item_link  = $item->get_permalink(); 
 
-							$duration   = get_post_meta($item_id, '_lp_duration', true);
-							if ( $duration ) {
-								$search_vals  = array( 'minutes', 'minute', 'hours', 'hour', 'days', 'day', 'weeks', 'week', 'months', 'month' );
-								$replace_vals = array( 'phút', 'phút', 'giờ', 'giờ', 'ngày', 'ngày', 'tuần', 'tuần', 'tháng', 'tháng' );
-								$duration     = str_ireplace( $search_vals, $replace_vals, $duration );
-							}
+							$raw_item_dur = get_post_meta($item_id, '_lp_duration', true);
+							$duration     = function_exists('iddi_format_course_duration') ? iddi_format_course_duration($raw_item_dur) : $raw_item_dur;
 
 							// Xác định icon dựa trên loại bài viết và sự hiện diện của video
 							$lesson_icon_html = '';
@@ -363,7 +352,7 @@ if ($is_offline === 'yes') {
 								<?php endforeach; ?>
 							</ul>
 							<?php else : ?>
-							<p class="no-content">Chương này chưa có nội dung.</p>
+							<p class="no-content"><?php iddi_tr_e('Chương này chưa có nội dung.'); ?></p>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -437,12 +426,12 @@ if ($is_offline === 'yes') {
 
 			</div>
 			<?php else : ?>
-			<p>No related courses found.</p>
+			<p><?php iddi_tr_e('Không tìm thấy khóa học liên quan.'); ?></p>
 			<?php endif; ?>
 
 			<div class="iddi-courses__online-tutorial-courses-action right-text">
 				<a href="#" class="iddi-courses__online-tutorial-courses-btn italic-font d-i-flex flex-ai-center text-color-oxford-blue">
-					<span>All Online Courses</span>
+					<span><?php iddi_tr_e('All Online Courses'); ?></span>
 					<?php echo get_my_svg('explore'); ?>
 				</a> 
 			</div>

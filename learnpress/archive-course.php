@@ -54,7 +54,7 @@ $page_title = learn_press_page_title( false );
 				?>
 
 				<form role="search" method="get" id="iddi-search-form" class="iddi__page-header__search-form lp-course-page__search-form">
-					<input type="search" id="iddi-search-input" class="iddi__page-header__search-input lp-course-page__search-input" placeholder="Search for courses" value="<?php echo esc_attr($search); ?>" name="s" />
+					<input type="search" id="iddi-search-input" class="iddi__page-header__search-input lp-course-page__search-input" placeholder="<?php echo esc_attr( function_exists('iddi_tr') ? iddi_tr('Tìm kiếm khóa học') : 'Search for courses' ); ?>" value="<?php echo esc_attr($search); ?>" name="s" />
 					<button type="submit" class="iddi__page-header__search-submit lp-course-page__search-submit">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 					</button>
@@ -64,11 +64,11 @@ $page_title = learn_press_page_title( false );
 					<ul class="iddi__page-header__filter-list lp-course-page__filter-list">
 						<?php 
 						$tabs = [
-							'all'          => 'TẤT CẢ',
-							'not-enrolled' => 'CHƯA ĐĂNG KÝ',
-							'newest'       => 'MỚI NHẤT',
-							'popular'      => 'PHỔ BIẾN',
-							'free'         => 'MIỄN PHÍ'
+							'all'          => function_exists('iddi_tr') ? iddi_tr('TẤT CẢ') : 'TẤT CẢ',
+							'not-enrolled' => function_exists('iddi_tr') ? iddi_tr('CHƯA ĐĂNG KÝ') : 'CHƯA ĐĂNG KÝ',
+							'newest'       => function_exists('iddi_tr') ? iddi_tr('MỚI NHẤT') : 'MỚI NHẤT',
+							'popular'      => function_exists('iddi_tr') ? iddi_tr('PHỔ BIẾN') : 'PHỔ BIẾN',
+							'free'         => function_exists('iddi_tr') ? iddi_tr('MIỄN PHÍ') : 'MIỄN PHÍ'
 						];
 						foreach ($tabs as $key => $label) : 
 						$args_url = array('lp-filter' => $key);
@@ -82,14 +82,14 @@ $page_title = learn_press_page_title( false );
 						?>
 						<li>
 							<a href="<?php echo esc_url($url); ?>" class="iddi__page-header__filter-link lp-course-page__filter-link<?php echo $active_class; ?>">
-								<?php echo $label; ?>
+								<?php echo esc_html($label); ?>
 							</a>
 						</li>
 						<?php endforeach; ?>
 
 						<li>
 							<select class="iddi__page-header__filter-select" onchange="location = this.value;" style="cursor: pointer;">
-								<option value="<?php echo esc_url(remove_query_arg(array('f-giang-vien', 'paged'))); ?>">GIẢNG VIÊN</option>
+								<option value="<?php echo esc_url(remove_query_arg(array('f-giang-vien', 'paged'))); ?>"><?php echo esc_html( function_exists('iddi_tr') ? iddi_tr('GIẢNG VIÊN') : 'GIẢNG VIÊN' ); ?></option>
 								<?php
 								$giang_viens = get_posts(array(
 									'post_type'      => 'giang-vien',
@@ -193,7 +193,7 @@ $page_title = learn_press_page_title( false );
 					</div>
 					<?php wp_reset_postdata(); ?>
 				<?php else : ?>
-					<p class="center-text full-width" style="margin-top: 40px;">Không tìm thấy khóa học nào phù hợp với lựa chọn của bạn.</p>
+					<p class="center-text full-width" style="margin-top: 40px;"><?php iddi_tr_e('Không tìm thấy khóa học nào phù hợp với lựa chọn của bạn.'); ?></p>
 				<?php endif; ?>
 
 			<?php if ( $course_query->max_num_pages > 1 ) : ?>
@@ -211,8 +211,8 @@ $page_title = learn_press_page_title( false );
 					'show_all'  => false,
 					'type'      => 'list',
 					'prev_next' => true,
-					'prev_text' => __( '< Trước', 'textdomain' ),
-					'next_text' => __( 'Tiếp >', 'textdomain' ),
+					'prev_text' => function_exists('iddi_tr') ? iddi_tr('< Trước') : '< Trước',
+					'next_text' => function_exists('iddi_tr') ? iddi_tr('Tiếp >') : 'Tiếp >',
 					'end_size'  => 1,
 					'mid_size'  => 2,
 				));

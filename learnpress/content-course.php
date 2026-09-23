@@ -5,15 +5,9 @@
 $course = learn_press_get_course(get_the_ID());
 
 if ($course) :
-    // Lấy thời lượng và việt hóa
-    $duration = get_post_meta(get_the_ID(), '_lp_duration', true);
-    if ($duration) {
-        $search_vals  = array( 'minutes', 'minute', 'hours', 'hour', 'days', 'day', 'weeks', 'week', 'months', 'month' );
-        $replace_vals = array( 'phút', 'phút', 'giờ', 'giờ', 'ngày', 'ngày', 'tuần', 'tuần', 'tháng', 'tháng' );
-        $duration     = str_ireplace( $search_vals, $replace_vals, $duration );
-    } else {
-        $duration = 'Khóa học Online';
-    }
+    // Lấy thời lượng đa ngôn ngữ
+    $raw_duration = get_post_meta(get_the_ID(), '_lp_duration', true);
+    $duration     = function_exists('iddi_format_course_duration') ? iddi_format_course_duration($raw_duration) : ($raw_duration ? $raw_duration : 'Khóa học Online');
 ?>
 <article class="iddi-taxonomy-course-catetory-courses__card iddi-courses__online-tutorial-courses-card padding-xl d-flex flex-column gap-l radius-l bg-color_color-white">
     
@@ -48,7 +42,7 @@ if ($course) :
         </div>
         <div class="iddi-course-details-info__card-btn-wrapper">
             <a href="<?php the_permalink(); ?>" class="iddi-course-details-info__card-btn iddi-courses__online-tutorial-courses-enrol fs-24 fw-600 padding-s__v center-text text-color-white radius-s bg-color_color-flame-orange d-block" style="min-width: 100px;">
-                Xem chi tiết
+                <?php iddi_tr_e('Xem chi tiết'); ?>
             </a>
         </div>
     </div>

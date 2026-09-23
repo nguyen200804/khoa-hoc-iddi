@@ -40,7 +40,7 @@ get_header(); ?>
         <div class="iddi__container">
             <div class="iddi-event-detail__speakers-container radius-xl padding-2xl padding-xl__xl padding-l__md padding-xs__sm">
                 <div class="iddi-event-detail__speakers-header">
-                    <h2 class="iddi-event-detail__speakers-title fs-32 fw-500 fs-24__xl fs-20__md upper-text">Báo cáo viên</h2>
+                    <h2 class="iddi-event-detail__speakers-title fs-32 fw-500 fs-24__xl fs-20__md upper-text"><?php iddi_tr_e('Báo cáo viên'); ?></h2>
                 </div>
                 <div class="iddi-event-detail__speakers-list d-grid g-column-1">
                     <?php if (have_rows('event_speakers_list')) : ?>
@@ -93,12 +93,12 @@ get_header(); ?>
                 $a_data = get_sub_field('afternoon_session');
             ?>
             <h2 class="iddi-event-detail__schedule-heading fs-32 fw-600 text-color-flame-orange center-text fs-24__xl">
-                Ngày <?php echo $day_count; ?> <?php $dt = get_sub_field('day_title'); if ($dt) echo ': ' . esc_html($dt); ?>
+                <?php iddi_tr_e('Ngày'); ?> <?php echo $day_count; ?> <?php $dt = get_sub_field('day_title'); if ($dt) echo ': ' . esc_html($dt); ?>
             </h2>
             <div class="iddi-event-detail__schedule-grid d-flex flex-jc-between gap-2xl__xl gap-xl__lg gap-l__md flex-column__sm">
                 <?php if (!empty($m_data['morning_session_list'])) : ?>
                 <div class="iddi-event-detail__schedule-col iddi-event-detail__schedule-col--morning d-flex flex-column">
-                    <div class="iddi-event-detail__schedule-label fs-28 fw-600 text-color-flame-orange fs-20__xl">Sáng</div>
+                    <div class="iddi-event-detail__schedule-label fs-28 fw-600 text-color-flame-orange fs-20__xl"><?php iddi_tr_e('Sáng'); ?></div>
                     <ul class="iddi-event-detail__timeline d-flex flex-column">
                         <?php foreach ($m_data['morning_session_list'] as $m_item): 
                             $st = $m_item['start_time'] ?? ''; $et = $m_item['end_time'] ?? '';
@@ -124,7 +124,7 @@ get_header(); ?>
 
                 <?php if (!empty($a_data['afternoon_session_list'])) : ?>
                 <div class="iddi-event-detail__schedule-col iddi-event-detail__schedule-col--afternoon d-flex flex-column">
-                    <div class="iddi-event-detail__schedule-label fs-28 fw-600 text-color-flame-orange fs-20__xl">Chiều</div>
+                    <div class="iddi-event-detail__schedule-label fs-28 fw-600 text-color-flame-orange fs-20__xl"><?php iddi_tr_e('Chiều'); ?></div>
                     <ul class="iddi-event-detail__timeline d-flex flex-column">
                         <?php foreach ($a_data['afternoon_session_list'] as $a_item): 
                             $st = $a_item['start_time'] ?? ''; $et = $a_item['end_time'] ?? '';
@@ -172,7 +172,7 @@ get_header(); ?>
     onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()" 
     class="iddi-event-detail__tickets-btn fw-600 bg-color_color-flame-orange d-i-block text-color-white radius-m padding-xl__v padding-1xl__h"
 >
-    <?php if ($price) echo esc_html($price) . ' - '; ?>Đăng ký ngay!
+    <?php if ($price) echo esc_html($price) . ' - '; ?><?php iddi_tr_e('Đăng ký ngay'); ?>!
 </button>
                 </div>
 				
@@ -252,23 +252,21 @@ get_header(); ?>
                     <div class="d-flex flex-jc-between flex-ai-end">
                         <div class="iddi-event-detail__related-events-meta d-flex flex-column gap-m">
                             <span class="price d-block fs-32 fw-700 text-color-flame-orange fs-20__xl fs-18__lg fs-16__md">
-                                <?php echo $p_price ? esc_html($p_price) : 'Liên hệ'; ?>
+                                <?php echo $p_price ? esc_html($p_price) : esc_html( function_exists('iddi_tr') ? iddi_tr('Liên hệ') : 'Liên hệ' ); ?>
                             </span>
                             <?php if ($p_date) : ?><span class="date fs-20 fw-300 text-color-flame-orange fs-16__xl fs-14__lg fs-12__md"><?php echo esc_html($p_date); ?></span><?php endif; ?>
                         </div>
-<!--                         <?php $c_url = get_field('url_get_your_ticket', $p_id); ?>
-                        <a href="<?php echo $c_url ? esc_url($c_url) : get_permalink($p_id); ?>" class="iddi-event-detail__related-events-enrol fs-24 fw-600 d-i-block center-text bg-color_color-flame-orange padding-s__v radius-s text-color-white fs-16__xl fs-14__md">Đăng ký ngay</a> -->
 						<button 
 								data-event-title="<?php echo esc_attr(get_the_title($p_id)); ?>" 
 								class="iddi-event-detail__related-events-enrol open-event-popup fs-24 fw-600 d-i-block center-text bg-color_color-flame-orange padding-s__v radius-s text-color-white fs-16__xl fs-14__md"
 								>
-							Đăng kí ngay
+							<?php iddi_tr_e('Đăng ký ngay'); ?>
 						</button>
                     </div>
                 </article>
                 <?php endforeach; ?>
             </div>
-            <?php else : ?><p style="text-align: center;">Chưa có sự kiện liên quan.</p><?php endif; ?>
+            <?php else : ?><p style="text-align: center;"><?php iddi_tr_e('Chưa có sự kiện liên quan.'); ?></p><?php endif; ?>
         </div>
     </section>
 

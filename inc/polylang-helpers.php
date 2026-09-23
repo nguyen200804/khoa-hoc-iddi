@@ -66,6 +66,14 @@ function iddi_register_polylang_strings() {
 	pll_register_string( 'Course View Details', 'Xem chi tiết', 'IDDI LearnPress' );
 	pll_register_string( 'Course Enroll Now', 'Đăng ký khóa học', 'IDDI LearnPress' );
 	pll_register_string( 'Course Continue Learning', 'Tiếp tục học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Start Learning', 'Bắt đầu học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Review Lesson', 'Xem lại bài học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Login to Learn', 'Đăng nhập để học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Enroll Now Btn', 'Đăng ký học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Empty Section', 'Chương này chưa có nội dung.', 'IDDI LearnPress' );
+	pll_register_string( 'Course Online Course', 'Khóa học Online', 'IDDI LearnPress' );
+	pll_register_string( 'Course Free Label', 'Free', 'IDDI LearnPress' );
+	pll_register_string( 'Course All Online Courses', 'All Online Courses', 'IDDI LearnPress' );
 	pll_register_string( 'Course Curriculum', 'Nội dung khóa học', 'IDDI LearnPress' );
 	pll_register_string( 'Course Instructor', 'Giảng viên', 'IDDI LearnPress' );
 	pll_register_string( 'Course Duration', 'Thời lượng', 'IDDI LearnPress' );
@@ -74,6 +82,22 @@ function iddi_register_polylang_strings() {
 	pll_register_string( 'Course Price', 'Học phí', 'IDDI LearnPress' );
 	pll_register_string( 'Course Free', 'Miễn phí', 'IDDI LearnPress' );
 	pll_register_string( 'Course Overview', 'Tổng quan', 'IDDI LearnPress' );
+	pll_register_string( 'Course Search Placeholder', 'Tìm kiếm khóa học', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter All', 'TẤT CẢ', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter Not Enrolled', 'CHƯA ĐĂNG KÝ', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter Newest', 'MỚI NHẤT', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter Popular', 'PHỔ BIẾN', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter Free', 'MIỄN PHÍ', 'IDDI LearnPress' );
+	pll_register_string( 'Course Filter Lecturer', 'GIẢNG VIÊN', 'IDDI LearnPress' );
+	pll_register_string( 'Course No Match Found', 'Không tìm thấy khóa học nào phù hợp với lựa chọn của bạn.', 'IDDI LearnPress' );
+
+	// --- Events Strings ---
+	pll_register_string( 'Event Speakers Title', 'Báo cáo viên', 'IDDI Event' );
+	pll_register_string( 'Event Day Label', 'Ngày', 'IDDI Event' );
+	pll_register_string( 'Event Morning Label', 'Sáng', 'IDDI Event' );
+	pll_register_string( 'Event Afternoon Label', 'Chiều', 'IDDI Event' );
+	pll_register_string( 'Event Contact Price', 'Liên hệ', 'IDDI Event' );
+	pll_register_string( 'Event No Related Events', 'Chưa có sự kiện liên quan.', 'IDDI Event' );
 
 	// --- Common Buttons & Labels ---
 	pll_register_string( 'Common Read More', 'Xem thêm', 'IDDI Common' );
@@ -81,8 +105,36 @@ function iddi_register_polylang_strings() {
 	pll_register_string( 'Common Back', 'Quay lại', 'IDDI Common' );
 	pll_register_string( 'Common Send', 'Gửi thông tin', 'IDDI Common' );
 	pll_register_string( 'Common Success', 'Thành công', 'IDDI Common' );
+	pll_register_string( 'Pagination Prev', '< Trước', 'IDDI Common' );
+	pll_register_string( 'Pagination Next', 'Tiếp >', 'IDDI Common' );
 }
 add_action( 'after_setup_theme', 'iddi_register_polylang_strings' );
+
+/**
+ * Định dạng và dịch thời lượng khóa học phù hợp với ngôn ngữ hiện tại
+ *
+ * @param string $duration Thời lượng gốc từ meta LearnPress (vd: "10 hours", "5 weeks")
+ * @return string
+ */
+if ( ! function_exists( 'iddi_format_course_duration' ) ) {
+	function iddi_format_course_duration( $duration ) {
+		if ( empty( $duration ) ) {
+			return iddi_tr( 'Khóa học Online' );
+		}
+
+		$current_lang = function_exists( 'pll_current_language' ) ? pll_current_language( 'slug' ) : 'vi';
+
+		// Nếu là tiếng Việt thì dịch đơn vị thời gian
+		if ( $current_lang === 'vi' ) {
+			$search_vals  = array( 'minutes', 'minute', 'hours', 'hour', 'days', 'day', 'weeks', 'week', 'months', 'month', 'years', 'year' );
+			$replace_vals = array( 'phút', 'phút', 'giờ', 'giờ', 'ngày', 'ngày', 'tuần', 'tuần', 'tháng', 'tháng', 'năm', 'năm' );
+			return str_ireplace( $search_vals, $replace_vals, $duration );
+		}
+
+		// Nếu là tiếng Anh thì giữ nguyên
+		return $duration;
+	}
+}
 
 /**
  * 3. Render bộ chuyển đổi ngôn ngữ (Language Switcher)
