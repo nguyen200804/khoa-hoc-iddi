@@ -168,7 +168,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					</button>
 				</div>
 
-
+				<div class="iddi-header__lang">
+					<?php echo do_shortcode('[gtranslate]'); ?>
+				</div>
 
 				<div class="iddi-header__user d-flex flex-ai-center gap-m">
 					<?php if ( is_user_logged_in() ) : 
