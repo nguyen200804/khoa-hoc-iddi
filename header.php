@@ -170,11 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				
 
 				<div class="iddi-header__lang">
-					<?php 
-					if ( function_exists( 'iddi_render_language_switcher' ) ) {
-						iddi_render_language_switcher();
-					}
-					?>
+					<?php echo do_shortcode( '[gtranslate]' ); ?>
 				</div>
 
 				<button class="button-header contact-now d-none__xl" onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()"><span><?php iddi_tr_e('Đăng ký ngay'); ?></span></button>
