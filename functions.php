@@ -19,8 +19,8 @@ function homenest_enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'homenest_enqueue_styles');
 
-// Nạp các helper đa ngôn ngữ Polylang cho IDDI Academy
-require_once get_template_directory() . '/inc/polylang-helpers.php';
+// Nạp các helper đa ngôn ngữ cho IDDI Academy (GTranslate)
+require_once get_template_directory() . '/inc/translation-helpers.php';
 
 
 

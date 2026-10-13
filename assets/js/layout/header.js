@@ -101,6 +101,10 @@
             $switcher.toggleClass('is-open');
         });
 
+        $(document).on('click', '.gt_options a', function() {
+            $('.gt_switcher, .iddi-header__lang-dropdown').removeClass('is-open is-hovered');
+        });
+
         $(document).on('click', function(e) {
             if (!$(e.target).closest('.gt_switcher, .iddi-header__lang-dropdown').length) {
                 $('.gt_switcher, .iddi-header__lang-dropdown').removeClass('is-open is-hovered');

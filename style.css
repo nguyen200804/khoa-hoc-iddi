@@ -268,6 +268,11 @@ Blog / Pagination
 	z-index: 999 !important;
 }
 
+.iddi-header__lang .gtranslate_wrapper {
+	display: inline-flex !important;
+	align-items: center !important;
+}
+
 .iddi-header__lang .gt_switcher,
 .iddi-header__lang .iddi-header__lang-dropdown {
 	position: relative !important;
@@ -311,14 +316,15 @@ Blog / Pagination
 
 .iddi-header__lang .gt_selected a img,
 .iddi-header__lang .iddi-header__lang-toggle img,
-.iddi-header__lang-flag img {
+.iddi-header__lang-flag img,
+.iddi-header__lang .gt_flag {
 	width: 18px !important;
 	height: auto !important;
 	max-height: 13px !important;
 	border-radius: 2px !important;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
 	object-fit: cover !important;
-	display: block !important;
+	display: inline-block !important;
 	margin: 0 !important;
 	vertical-align: middle !important;
 }
@@ -440,6 +446,7 @@ Blog / Pagination
 }
 
 .iddi-header__lang .gt_options a.is-active,
+.iddi-header__lang .gt_options a.selected,
 .iddi-header__lang .iddi-header__lang-menu a.is-active,
 .iddi-header__lang-link.is-active {
 	color: #E45E25 !important;

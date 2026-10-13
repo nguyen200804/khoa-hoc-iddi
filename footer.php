@@ -40,13 +40,6 @@
                         <?php
                             if(!empty($col2['select_menu'])) {
                                 $footer_menu_id = $col2['select_menu'];
-                                // Tự động lấy ID menu dịch tương ứng với ngôn ngữ hiện tại nếu có
-                                if ( function_exists('pll_get_term') && is_numeric($footer_menu_id) ) {
-                                    $trans_menu_id = pll_get_term( $footer_menu_id );
-                                    if ( $trans_menu_id ) {
-                                        $footer_menu_id = $trans_menu_id;
-                                    }
-                                }
                                 wp_nav_menu(array(
                                     'menu'            => $footer_menu_id,
                                     'container'       => false,
