@@ -61,6 +61,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 		<header class="iddi-header">
+			<?php
+			$header_phone = function_exists( 'iddi_get_field_option' ) ? iddi_get_field_option( 'so_dien_thoai_tren_header' ) : ( function_exists( 'get_field' ) ? get_field( 'so_dien_thoai_tren_header', 'option' ) : '' );
+			if ( empty( $header_phone ) && function_exists( 'get_field' ) ) {
+				$header_phone = get_field( 'so_dien_thoai_tren_header', 'chinh-sua-header' );
+			}
+			if ( empty( $header_phone ) ) {
+				$header_phone = '0369 750 194';
+			}
+			$header_phone_tel = preg_replace( '/[^0-9+]/', '', $header_phone );
+			?>
 			<div class="container d-flex flex-ai-center flex-jc-between">
 
 
@@ -115,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <?php iddi_tr_e('Đăng ký ngay'); ?>
 </button>
 
-								<a class="button-header call-now" href="tel:0369750194"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span>0369 750 194</span></a>
+								<a class="button-header call-now" href="tel:<?php echo esc_attr( $header_phone_tel ); ?>"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span><?php echo esc_html( $header_phone ); ?></span></a>
 							</div>
 						</div>
 					</div>
@@ -175,7 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 				<button class="button-header contact-now d-none__xl" onclick="jQuery('#popup-contact-global').css('display', 'flex').hide().fadeIn()"><span><?php iddi_tr_e('Đăng ký ngay'); ?></span></button>
 
-				<a class="button-header call-now d-none__xl" href="tel:0369750194"><span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span>0369 750 194</span></span></a>
+				<a class="button-header call-now d-none__xl" href="tel:<?php echo esc_attr( $header_phone_tel ); ?>"><span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 52 52" xml:space="preserve"><path d="M48.5 37.9 42.4 33c-1.4-1.1-3.4-1.2-4.8-.1l-5.2 3.8c-.6.5-1.5.4-2.1-.2l-7.8-7-7-7.8c-.6-.6-.6-1.4-.2-2.1l3.8-5.2c1.1-1.4 1-3.4-.1-4.8l-4.9-6.1c-1.5-1.8-4.2-2-5.9-.3L3 8.4c-.8.8-1.2 1.9-1.2 3 .5 10.2 5.1 19.9 11.9 26.7S30.2 49.5 40.4 50c1.1.1 2.2-.4 3-1.2l5.2-5.2c1.9-1.5 1.8-4.3-.1-5.7"/></svg><span><?php echo esc_html( $header_phone ); ?></span></span></a>
 
 
 				<div class="iddi-header__btn-search">
