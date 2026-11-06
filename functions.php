@@ -2929,6 +2929,17 @@ function iddi_add_defer_attribute($tag, $handle) {
         return $tag;
     }
 
+    // Không defer script lõi WordPress (wp-i18n, lodash, wp-api-fetch, wp-data...) và plugin LearnPress.
+    // Các script này có inline script "before/after" chạy ngay lập tức; nếu bị defer thì
+    // lỗi "wp is not defined" / "lodash is not defined" và nút Buy Now của LearnPress không hoạt động.
+    if (strpos($tag, '/wp-includes/') !== false || strpos($tag, '/plugins/learnpress') !== false || strpos($tag, '/plugins/learnpress-') !== false) {
+        return $tag;
+    }
+    $wp_scripts = wp_scripts();
+    if ($wp_scripts->get_data($handle, 'before') || $wp_scripts->get_data($handle, 'after') || $wp_scripts->get_data($handle, 'data')) {
+        return $tag;
+    }
+
     // Chỉ thêm defer nếu thẻ script chưa có defer hoặc async
     if (strpos($tag, ' defer') === false && strpos($tag, ' async') === false) {
         $tag = str_replace(' src=', ' defer src=', $tag);
