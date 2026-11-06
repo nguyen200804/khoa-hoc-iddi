@@ -185,6 +185,34 @@ if ( class_exists( 'LP_Email' ) ) {
 
 }
 
+/**
+ * Show the "Recipient(s)" field on every admin-targeted LearnPress email
+ * (New Order, Enrolled Course, ...) and use the saved value as the recipient.
+ */
+add_action( 'learn-press/emails-init', function( $emails_manager ) {
+	if ( empty( $emails_manager->emails ) || ! class_exists( 'LP_Settings' ) ) {
+		return;
+	}
+
+	foreach ( $emails_manager->emails as $email ) {
+		if ( ! is_object( $email ) || empty( $email->id ) ) {
+			continue;
+		}
+
+		// Only admin emails (id ends with "-admin" / "_admin", e.g. new-order-admin).
+		if ( ! preg_match( '/[-_]admin$/', $email->id ) ) {
+			continue;
+		}
+
+		$email->enable_recipients = true;
+
+		$saved = LP_Settings::instance()->get( 'emails_' . $email->id . '.recipients', '' );
+		if ( ! empty( $saved ) ) {
+			$email->recipient = $saved;
+		}
+	}
+}, 99 );
+
 // Register settings section
 add_filter( 'learn-press/email-section-classes', function( $groups ) {
 	if ( class_exists( 'LP_Settings_Emails_Group' ) ) {
